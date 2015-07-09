@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -29,6 +29,12 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+		<style>
+			.backgrounds {
+				opacity: .7;
+			}
+		</style>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -40,7 +46,9 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+
+				<!-- INTRO -->
+				<section id="hello" >
 					<h1>Meteor</h1>
 					<h3>It came for the dinosaurs and now it's coming for you</h3>
 					<p>
@@ -48,11 +56,65 @@
 					</p>
 				</section>
 
-				<section>
-					
-				</section>
+				<section id="overview">
+					<h2>Overview</h2>
 
+					<ul>
+						<li><b>Who</b> <span class="fragment"> ... introductions</span></li>
+						<li><b>What</b> <span class="fragment"> ... is Meteor</span></li>
+						<li><b>Why</b> <span class="fragment"> ... should I care?</span></li>
+						<li><b>How</b> <span class="fragment"> ... demo time!</span></li>
+						<li><b>Where</b> <span class="fragment"> ... can I get more resources?</span></li>
+					</ul>
+				</section>
 				
+
+
+				<!-- INTRODCUTIONS -->
+				<section >
+					<section id="introductions">
+						<h1>Introductions</h1>
+					</section>
+
+					<section id="whoami">
+						<h2>Who Am I</h2>
+						<p>
+							Software Development Tech Lead at the Vermont Department of Health
+						</p>
+						<p>
+							Some places I visit online:
+						</p>
+						
+						<ul>
+							<li>GitHub</li>
+							<li>StackOverflow</li>
+							<li>Twitter</li>
+
+						</ul>
+
+						<aside class="notes">
+							No, this isn't an existential crisis.
+						</aside>
+					</section>
+
+					<section id="whoareyou">
+						
+						<h2>Show of Hands</h2>
+
+						<h3>How many people....</h3>
+
+						<ul >
+							<li class="fragment" >Have ever used Meteor?</li>
+							<li class="fragment" >Have ever used jQuery?</li>
+							<li class="fragment" >Have ever used AngularJS?</li>
+
+						</ul>
+
+						<aside class="notes">
+							Don't worry, I won't have you go around the room and tell me your name and a fact about yourself
+						</aside>
+					</section>
+				</section>
 
 				<section style="text-align: left;">
 					<h1>THE END</h1>
@@ -76,9 +138,12 @@
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 				parallaxBackgroundImage: "http://i.imgur.com/UwqrdpO.jpg",
+
+				//parallaxBackgroundImage: "http://i.imgur.com/YonwL38.jpg",
+				parallaxBackgroundSize: "1600px 1200px",
 
 				// Optional reveal.js plugins
 				dependencies: [
