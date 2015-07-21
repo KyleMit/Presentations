@@ -40,6 +40,21 @@
 				line-height: 2rem;
 				padding-left: 10px;
 			}
+
+			.col-xs-6 {
+				width: 50%;
+				float: left;
+			}
+			img.plain.plain {
+				margin: 0;
+				background: none;
+				border: none;
+				box-shadow: none;
+			}
+			article.nametag {
+				margin-left: 25%;
+			}
+
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -215,12 +230,16 @@
 								</li>
 								<li>Full Stack
 									<ul>
+										<li>Client (browser)</li>
+										<li>Server (node.js container)</li>
 										<li>Runs on server - Server contains Object Relational Mapping to MongoDatabase</li>
+										<li>Isomorphic API</li>
 									</ul>
 								</li>		
 								<li>Development
 									<ul>
 										<li>CLT enabled shell execution</li>
+										<li>Isomorphic Packages</li>
 									</ul>
 								</li>
 							</ul>
@@ -228,7 +247,9 @@
 							More Buzzwords:
 							<ul>
 								<li>Latency Compensation</li>
-								<li>Isomorphic API</li>
+								<li>Database Everywhere</li>
+								<li>Data on the Wire</li>
+								
 							</ul>
 						</aside>
 					</section>
@@ -246,16 +267,137 @@
 				</section>
 
 
+				<!-- WHY METEOR -->
+				<section >
+					<section id="whyshouldicare">
+						<h1>Why Should I care?</h1>
+					</section>
+
+					<section id="dataonthewire">
+						<h2>Data on the Wire</h2>
+						
+						<br>
+						<h4>
+							Blob of Info 
+							&nbsp;&nbsp;&nbsp;
+							<i>vs</i>
+							&nbsp;&nbsp;&nbsp;
+							Raw Data + Template
+				  		</h4>
+				  		<br>
+
+						<div>
+							<div class="col-xs-6">
+								<img class="plain" src="data:image/jpeg;base64,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" alt="">
+								<p><b>Image</b></p>
+							</div>
+							<div class="col-xs-6">
+								<article class="nametag"> 
+								    <header class="top"> 
+								        <h1>Hello</h1> 
+								        <p>my name is</p> 
+								    </header> 
+								    <div class="bottom"> 
+								        <p class="name">Kyle</p> 
+								        <address class="twitter">
+								        	<a href="http://twitter.com/kylemit">
+								        		@kylemit2
+								        	</a>
+							        	</address> 
+								    </div>
+								</article>
+								<style >
+									.nametag {
+									    width: 300px; 
+									    height: 200px;
+									    background: #e00;
+									    border-radius: 10px;
+									    box-shadow: 1px 2px 5px rgba(0,0,0,.5), inset 0 0 20px rgba(0,0,0,.25); 
+									    text-align: center;
+									}
+									.nametag .top {
+									    height: 65px;
+									    padding-top: 5px;
+									}
+									.nametag .top h1,
+									.nametag .top p {
+									    color: #fff;
+									    font-family: Helvetica, Arial, sans-serif;
+									    text-transform: uppercase;
+									    letter-spacing: .2rem;
+									}
+									.nametag h1,
+									.nametag p {
+									    padding: 0; margin: 0;
+									}
+									.nametag .top h1 {
+									    font-size: 2rem;
+									}
+									.nametag .top p {
+										font-size: 1rem;
+									}
+									.nametag .bottom {
+									    background: #fff;    
+									    height: 120px;
+									    font-family: "Comic Sans MS", cursive;
+									    padding-top: 5px;
+									    color: black;
+									}
+									.nametag .name {
+									    font-size: 3rem;
+									    font-weight: bold;
+									}    
+									.nametag .twitter {
+									    font-size: 1.5rem;
+									    font-weight: bold;
+									    font-style: normal;
+									} 
+									.nametag .twitter a {
+										text-decoration: none;
+										color: black;
+									}
+
+								</style>
+								<p><b>HTML + CSS</b></p>
+							</div>
+						</div>
+						<aside class="notes">
+							Transmitting data and the ability to template out that data is like making a nametag out of HTML &amp; CSS instead of sending over a glob of data that can't be changed.
+						</aside>
+					</section>
+
+					<section id="imperative-vs-delcarative">
+						<h3>Imperative vs Declarative</h3>
+						<dl>
+
+						
+							<dt>Imperative</dt>
+							<dd class="fragment">
+								Describes step by step instructions
+							</dd>
+							
+							<br>
+
+							<dt>Declarative</dt>
+							<dd class="fragment">
+								Describes desired end state, not <i>how</i> to get there
+							</dd>
+						
+						</dl>
+					</section>
+				</section>
+
+
 
 				<!-- HOW TO METEOR -->
 				<section>
 					<section id="howtometeor">
 						<h2>How to Meteor</h2>
-						<h3>Demos!</h3>
+						<h3>Demo Time!</h3>
 
 						<aside class="notes">
 							<ul>
-								<li>This demo, or any meteor demo is not about css.  Any monkey with an infinite amount of patience and stack overflow can figure out how to center a div verticaly. 70% Javascript and 30% Html and 10% teamwork</li>
+								<li>This demo, or any meteor demo is not about css.  Any monkey with an infinite amount of patience and full access to stack overflow can figure out how to center a div verticaly. Presentation will be 70% Javascript and 30% Html and 10% teamwork</li>
 							</ul>
 						</aside>
 					</section>
@@ -266,7 +408,7 @@
 						<br/>
 						<h3>New Project</h3>
 						<pre><code class="bash" data-trim >
-meteor new-project-name
+meteor create new-project-name
 cd new-project
 meteor
 						</code></pre>
@@ -292,6 +434,9 @@ if (Meteor.isServer) {
 // runs on client and server
 						</code></pre>
 						beter option ...
+						<aside class="notes">
+							Ruby people will like convention over configuration
+						</aside>
 					</section>
 					<section id="directory">
 						<h3>Directory Structure</h3>
@@ -310,6 +455,17 @@ if (Meteor.isServer) {
 							</ul>
 						</aside>
 					</section>
+
+					<section id="datacontext">
+						<h3>Data Contexts</h3>
+						<blockquote class="twitter-tweet" lang="en">
+							<p lang="en" dir="ltr">
+								Sometimes when I&#39;m writing Javascript I want to throw up my hands and say &quot;this is bullshit!&quot; but I can never remember what &quot;this&quot; refers to
+							</p>
+							&mdash; Ben Halpern (@bhalp1) 
+							<a href="https://twitter.com/bhalp1/status/578925947245633536">March 20, 2015</a>
+						</blockquote>
+					</section>
 					
 					<section id="mongodb">
 						<h3>Mongo DB</h3>
@@ -321,7 +477,7 @@ if (Meteor.isServer) {
 							&mdash; Hacker News Onion (@HackerNewsOnion) 
 							<a href="https://twitter.com/HackerNewsOnion/status/382578547069837312">September 24, 2013</a>
 						</blockquote>
-						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 					</section>
 
 					<section id="deployment">
@@ -361,9 +517,48 @@ if (Meteor.isServer) {
 						</aside>
 					</section>
 
+					<section id="customDeployment">
+						<h3>Custom Deployment</h3>
+						<pre><code class="js" data-trim>
+npm install -g mup
+
+mkdir ~/app-deploy
+cd ~/app-deploy
+
+mup init
+open mup.json
+
+mup setup
+mup deploy
+
+						</code></pre>
+
+						<aside class="notes">
+							<b>mup.json</b> - configure:
+							<ul>
+								<li>hostname</li>
+								<li>SSH pem file</li>
+								<li>App Path</li>
+								<li>env.ROOT_URL</li>
+							</ul>
+
+							Once setup, you'll only need to run <code>mup deploy</code> again in the future.
+						</aside>
+					</section>
+
 				</section>
 
 
+
+				<!-- MORE RESOURCES -->
+				<section id="MoreResources">
+					<h2>More Resources</h2>
+
+					<ul>
+						<li><b>First Step</b> -  <a href="https://www.meteor.com/tutorials/blaze/creating-an-app">Official Meteor Tutorial</a></li>
+						<li><b>Next Step</b> - <a href="https://www.discovermeteor.com/">Discover Meteor</a></li>
+					</ul>
+				</section>
 
 
 				<!-- THE END -->
@@ -408,6 +603,6 @@ if (Meteor.isServer) {
 			});
 
 		</script>
-
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</body>
 </html>
