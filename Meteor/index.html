@@ -61,6 +61,40 @@
 			.align-left {
 				text-align: left;
 			}
+			.commit {
+			  position: fixed;
+			  left: 0;
+			  bottom: 0;
+			  font-family: consolas;
+			  color: #eee;
+			  font-size: 1rem;
+			}
+			img.plain {
+				margin: 0;
+			  background: none;
+			  border: none;
+			  box-shadow: none;
+			}
+			p.handwriting {
+			  font-family: comic sans MS;
+			  color: rgb(147, 38, 35);
+			  font-weight: bolder;
+			  font-size: 2.5rem;
+			}
+			div.img-with-cite img {
+				margin-bottom: 0;
+			}
+			div.img-with-cite cite {
+				display: block;
+				text-align: left;
+				margin-left: 5%;
+			}
+			code.hljs {
+				tab-size: 2;
+			}
+			.slides .has-commit-1 {	margin-top: 100px; }
+			.slides .has-commit-2 {	margin-top: 200px; }
+			.slides .has-commit-3 {	margin-top: 300px; }
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -204,21 +238,24 @@
 						</p>
 						<ul>
 							<li class="fragment" data-fragment-index="1">
-								Reactive
+								<span class="fragment highlight-current-blue" 
+								  data-fragment-index="1"> Reactive</span>
 								<ul>
 									<li><b>Application</b> - Hot Code Pushes</li>
 									<li><b>Database</b> - Distributed Data Protocol</li>
 								</ul>
 							</li><br/>
 							<li class="fragment" data-fragment-index="2">
-								Full Stack
+								<span class="fragment highlight-current-blue" 
+								  data-fragment-index="2"> Full-Stack</span>
 								<ul>
 									<li>Runs on Client</li>
 									<li>Runs on Server</li>
 								</ul>
 							</li><br/>
 							<li class="fragment" data-fragment-index="3">
-								Development
+								<span class="fragment highlight-current-blue" 
+								  data-fragment-index="3"> Development Framework</span>
 								<ul>
 									<li>Command Line Tool</li>
 									<li>Build Pipeline</li>
@@ -270,17 +307,40 @@
 							<a href="https://www.meteor.com/features">Meteor Overview</a>
 						</aside>
 					</section>
+					
+					<section id="frameworks">
+							<h3>Framework Proliferation</h3>
+
+							<div class="img-with-cite">
+								<a href="http://geek-and-poke.com/geekandpoke/2014/11/8/frameworks">
+									<img src="images/frameworks.png" alt="Frameworks - Geek and Poke">	
+								</a>
+								<cite> - 	
+									<a href="">
+										geek-and-poke
+									</a>
+								</cite>
+							</div>
+						
+					</section>
 
 					<section id="MDG">
 						<h3>Meteor Development Group</h3>
-						<br>
+
+						<br/>
+
 						<h4>Fully Funded</h4>
 						<h4>Fully Open</h4>
+						<h4>Fully Awesome</h4>
 
 						<aside class="notes">
-							Meteor is like Apache
-							<h4>Links</h4>
-							<a href="https://www.meteor.com/features">Meteor Overview</a>
+							<ul>
+								<li>May, 2015 raised an additional $20 Million</li>
+								<li>Funded means it won't dissapear</li>
+								<li>Active Development by full time employees</li>
+								<li>Monetization Strategy: Galaxy  - premier hosting platform</li>
+								<li>Meteor is MIT licensed - host anywhere - you own the code</li>
+							</ul>
 						</aside>
 					</section>
 
@@ -391,11 +451,11 @@
 						<div>
 							<div class="col-xs-6">
 								<p><b>Blob of Info</b></p>
-								<img src="images/Nametag-Image.png" alt="Nametag Image">
+								<img src="images/nametag-image.png" alt="Nametag Image">
 							</div>
 							<div class="col-xs-6">
 								<p><b>Data + Template</b></p>					
-								<img src="images/Nametag-HTML.png" alt="Nametag HTML">
+								<img src="images/nametag-html.png" alt="Nametag HTML">
 							</div>
 						</div>
 					</section>
@@ -405,11 +465,11 @@
 						<div>
 							<div class="col-xs-6">
 								<p><b>View Source</b></p>
-								<img src="images/View-Source.png" alt="View Source">
+								<img src="images/view-source.png" alt="View Source">
 							</div>
 							<div class="col-xs-6">
 								<p><b>Web Socket</b></p>					
-								<img src="images/Meteor-Frame.png" alt="Web Socket Frames">
+								<img src="images/meteor-frame.png" alt="Web Socket Frames">
 							</div>
 						</div>
 					</section>
@@ -439,22 +499,24 @@ meteor add kylemit:nametag
 
 					<section id="imperative-vs-delcarative">
 						<h3>Imperative vs Declarative</h3>
+						<p>Which would you rather write?</p>
 						<dl>
 
 						
-							<dt>Imperative</dt>
+							<dt>Imperative...</dt>
 							<dd class="fragment">
 								Describes step by step instructions
 							</dd>
 							
 							<br>
 
-							<dt>Declarative</dt>
+							<dt>Declarative...</dt>
 							<dd class="fragment">
 								Describes desired end state, not <i>how</i> to get there
 							</dd>
 						
 						</dl>
+
 					</section>
 				</section>
 
@@ -463,8 +525,23 @@ meteor add kylemit:nametag
 				<!-- HOW TO METEOR -->
 				<section>
 					<section id="howtometeor">
-						<h2>How to Meteor</h2>
+						<h2 class="has-commit-1" >How to Meteor</h2>
 						<h3>Demo Time!</h3>
+						
+						<br/><br/>
+
+						<p class="handwriting" style="margin-bottom:-25px;">
+							Follow Along!
+						</p>
+						<img src="images/arrow.png" class="plain" style="transform:translateX(-100px)rotate(220deg);" alt="Arrow">
+
+						<div class="stretch">
+							<div class="commit">
+								<code>
+									git checkout tags/<i>[tagname]</i>
+								</code>
+							</div>
+						</div>
 
 						<aside class="notes">
 							<ul>
@@ -474,7 +551,7 @@ meteor add kylemit:nametag
 					</section>
 						
 					<section id="installation">
-						<h3>Installation</h3>
+						<h3 class="has-commit-1">Installation</h3>
 						<pre><code class="bash" data-trim>curl https://install.meteor.com/ | sh</code></pre>
 						<br/>
 						<h3>New Project</h3>
@@ -483,6 +560,15 @@ meteor create new-project-name
 cd new-project
 meteor
 						</code></pre>
+
+						<div class="stretch">
+							<div class="commit">
+								<code>
+									git co p0
+								</code>
+							</div>
+						</div>
+
 						<aside class="notes">
 							<h4>Links</h4>
 							<ul>
@@ -527,7 +613,7 @@ if (Meteor.isServer) {
 						</aside>
 					</section>
 					<section id="directory">
-						<h3>Directory Structure</h3>
+						<h3 class="has-commit-2">Directory Structure</h3>
 						<ul>
 							<li><code><b>/Client</b></code> - Runs only on the client</li>
 							<li><code><b>/Server</b></code> - Runs only on the server</li>
@@ -535,12 +621,22 @@ if (Meteor.isServer) {
 							<li><code><b>/Lib</b></code> - loaded <i>before</i> anything else</li>
 							<li><code><b>main.*</b></code> - loaded <i>after</i> everything else</li>
 						</ul>
+
+						<div class="stretch">
+							<div class="commit">
+								<code>
+									git co p1
+								</code>
+							</div>
+						</div>
+
 						<aside class="notes">
 							
 							<ul>
 								<li>Everything else is flat - all files are combined and minified </li>
 								<li>Tricky - Deeper folders are loaded first</li>
 								<li>Interesting - No specific file includes - everything is built automaticaly</li>
+								<li>/Private/* - for things you don't want to publish</li>
 								<li> 
 									Links:
 									<ul>
@@ -573,7 +669,7 @@ if (Meteor.isServer) {
 					</section>
 
 					<section id="InitializeDatabase">
-						<h3>Initialize Database</h3>
+						<h3 class="has-commit-1" >Initialize Database</h3>
 
 						<p>Create a collection and seed some data</p>
 
@@ -587,12 +683,59 @@ if (Questions.find().count() === 0) {
 }
 						</code></pre>
 
+						<div class="stretch">
+							<div class="commit">
+								<code>
+									git co p2
+								</code>
+							</div>
+						</div>
+
 					</section>
 
 
 					<section id="JavaScriptBasics">
 						<h3>To Var or not To Var?</h3>
 
+						<pre><code class="js" data-trim >
+Questions = new Mongo.Collection('quest');
+						</code></pre>
+						
+						<br/>
+
+						<div class="fragment">
+							<p>What's This?</p>
+							<pre><code class="js" data-trim >
+(function() {
+  /* ... */
+})()
+							</code></pre>
+						</div>
+						<p class="fragment" >
+							Immediately-Invoked Function Expression (IIFE)
+						</p>
+
+						<aside class="notes">
+							<ul>
+								<li>Where will this colleciton be available</li>
+								<li>What does the var keyword do?</li>
+								<li><a href="https://www.discovermeteor.com/blog/javascript-for-meteor/">JavaScript Primer For Meteor</a></li>
+								<li>But wait, normally var'd variables are available everywhere, right</li>
+								<li>Meteor wraps all javascript files in IIFE (immediately invoked function expression) blocks
+						<pre><code class="js" data-trim >
+(function(){
+  var msg = 'Hello'  
+})()
+						</code></pre>
+								</li>
+								<li><a href="http://plnkr.co/edit/JLQu1g?p=preview">
+									Var Example
+								</a></li>
+								<li><a href="http://localhost:3000/lib/collections.js">
+									localhost:3000/lib/collections.js
+								</a></li>
+							</ul>
+						</aside>
 					</section>
 
 					<section id="Templates">
