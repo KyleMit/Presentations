@@ -25,9 +25,12 @@
 				opacity: .3;
 			}
 			iframe.twitter-tweet {
+					/* important to override local styles */
 				  width: 75% !important;
-				  margin-left: 12.5% !important;
+				  margin-left: 25% !important;
 				  height: 400px !important;
+				  /* tweets are at most 520px */
+				  max-width: 520px !important;
 			}
 			blockquote.twitter-tweet {
 				background-color: white;
@@ -740,7 +743,7 @@ if (Meteor.isServer) {
 
 					</section>
 
-			<section id="JavaScriptBasics">
+					<section id="JavaScriptBasics">
 						<h3>To Var or not To Var?</h3>
 
 						<pre><code class="js" data-trim >
@@ -784,9 +787,79 @@ Questions = new Mongo.Collection('quest');
 						</aside>
 					</section>
 
-					<section id="mongoDb1">
-						<h3>Mongo v SQL - Taxonomy</h3>
 
+					<!-- MONGO DB -->
+					<section id="mongodb">
+						<h3>Mongo DB</h3>
+
+						<blockquote class="twitter-tweet" lang="en" >
+							<p lang="en" dir="ltr">
+								MongoDB adds a &quot;PLEASE&quot; keyword for inserts, boosting chance that data is stored to above 75%.
+							</p>
+							&mdash; Hacker News Onion (@HackerNewsOnion) 
+							<a href="https://twitter.com/HackerNewsOnion/status/382578547069837312">September 24, 2013</a>
+						</blockquote>
+						<aside class="notes">
+							<ul>
+								<li> Native Support
+									<a href="https://trello.com/c/Gf6YxFp2/42-sql-support">
+										Meteor Roadmap
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/storeness/meteor-postgres">
+										Postgres
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/storeness/sql">
+										Any SQL
+									</a>
+								</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section id="mongodbwhynot">
+						<h3>MongoDB: Why Not?</h3>
+						<p><small>
+							I'll be available after the presentation for slogan writing 
+						</small></p>
+
+						<img src="images/whynot.jpg" alt="Why Not">
+					</section>
+
+					<section id="mongoDb1">
+						<h3>Mongo v SQL - Overview</h3>
+						<a href="http://docs.mongodb.org/manual/reference/sql-comparison/">docs.mongodb.org/manual/reference/sql-comparison/</a>
+
+						<h4>Taxonomy</h4>
+						<table>
+							<thead>
+								<tr>
+									<th>SQL</th>
+									<th>Mongo</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Table</td>
+									<td>Collection</td>
+								</tr>
+								<tr>
+									<td>Row</td>
+									<td>Document</td>
+								</tr>
+								<tr>
+									<td>Column</td>
+									<td>Field</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<br/>
+
+						<h4>Conceptual</h4>
 						<table>
 							<thead>
 								<tr>
@@ -800,15 +873,14 @@ Questions = new Mongo.Collection('quest');
 									<td>Denormalized</td>
 								</tr>
 								<tr>
-									<td>Table</td>
-									<td>Collection</td>
-								</tr>
-								<tr>
-									<td>Row</td>
-									<td>Document</td>
+									<td>PK - any unique column(s)</td>
+									<td>PK - always set to <code>_id</code></td>
 								</tr>
 							</tbody>
 						</table>
+
+
+
 					</section>
 
 					<section id="mongodb2">
@@ -856,18 +928,6 @@ new Mongo.Collection('col_name');
 						</blockquote>
 					</section>
 					
-					<section id="mongodb">
-						<h3>Mongo DB</h3>
-
-						<blockquote class="twitter-tweet" lang="en" >
-							<p lang="en" dir="ltr">
-								MongoDB adds a &quot;PLEASE&quot; keyword for inserts, boosting chance that data is stored to above 75%.
-							</p>
-							&mdash; Hacker News Onion (@HackerNewsOnion) 
-							<a href="https://twitter.com/HackerNewsOnion/status/382578547069837312">September 24, 2013</a>
-						</blockquote>
-
-					</section>
 
 					<section id="deployment">
 						<h3>Deployment</h3>
