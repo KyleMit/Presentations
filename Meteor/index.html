@@ -95,6 +95,15 @@
 			.slides .has-commit-1 {	margin-top: 100px; }
 			.slides .has-commit-2 {	margin-top: 200px; }
 			.slides .has-commit-3 {	margin-top: 300px; }
+			tr.code-row td pre {
+			  width: 100%;
+				padding: 5px;
+			}
+			tr.code-row td code {
+		    padding-left: 0;
+			  font-size: 1rem;
+			  line-height: 1rem;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -537,15 +546,19 @@ meteor add kylemit:nametag
 
 						<div class="stretch">
 							<div class="commit">
-								<code>
-									git checkout tags/<i>[tagname]</i>
-								</code>
+								<a href="https://github.com/KyleMit/MeteorDemo/tags" target="_blank">
+									<code>
+										git checkout tags/<i>[tagname]</i>
+									</code>
+								</a>
 							</div>
 						</div>
 
 						<aside class="notes">
 							<ul>
 								<li>This demo, or any meteor demo is not about css.  Any monkey with an infinite amount of patience and full access to stack overflow can figure out how to center a div verticaly. Presentation will be 70% Javascript and 30% Html and 10% teamwork</li>
+								<li>Don't really follow along</li>
+								<li><b>Alias</b> - <code>git config --global alias.co checkout</code></li>
 							</ul>
 						</aside>
 					</section>
@@ -563,9 +576,11 @@ meteor
 
 						<div class="stretch">
 							<div class="commit">
-								<code>
-									git co p0
-								</code>
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p0" target="_blank">
+									<code>
+										git co p0
+									</code>	
+								</a>
 							</div>
 						</div>
 
@@ -624,9 +639,11 @@ if (Meteor.isServer) {
 
 						<div class="stretch">
 							<div class="commit">
-								<code>
-									git co p1
-								</code>
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p1" target="_blank">
+									<code>
+										git co p1
+									</code>	
+								</a>
 							</div>
 						</div>
 
@@ -676,23 +693,80 @@ if (Meteor.isServer) {
 						<pre><code class="js" data-trim >
 Questions = new Mongo.Collection('quest');
 
-if (Questions.find().count() === 0) {
-  Questions.insert(
-    {text: "Seed Question?"}
-  );
-}
+Questions.insert(
+  { text: "Seed Question?" }
+);
 						</code></pre>
 
 						<div class="stretch">
 							<div class="commit">
-								<code>
-									git co p2
-								</code>
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p2" target="_blank">
+									<code>
+										git co p2
+									</code>									
+								</a>
 							</div>
 						</div>
 
+						<aside class="notes">
+							<pre><code class="js" data-trim >
+Questions = new Mongo.Collection('questions');
+
+
+if (Meteor.isServer) {
+	if (Questions.find().count() === 0) {
+	  Questions.insert(
+	    {text: "Seed Question?"}
+	  );
+	}	
+}
+							</code></pre>	
+							<ul>
+								
+								<li>Two things I want to briefly expand on in next slides</li>
+							</ul>						
+						</aside>
+
 					</section>
 
+					<section id="mongoDbBasics">
+						<h3>MongoDB Basics</h3>
+
+						<table>
+							<thead>
+								<tr>
+									<th>SQL</th>
+									<th>Mongo</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Normalized</td>
+									<td>Denormalized</td>
+								</tr>
+								<tr>
+									<td>Table</td>
+									<td>Collection</td>
+								</tr>
+								<tr>
+									<td>Row</td>
+									<td>Document</td>
+								</tr>
+								<tr class="code-row">
+									<td>
+										<pre><code class="sql" data-trim >
+CREATE TABLE table_name
+										</code></pre>
+									</td>
+									<td>
+										<pre><code class="js" data-trim >
+new Mongo.Collection('col_name');
+										</code></pre>
+									</td>									
+								</tr>
+							</tbody>
+						</table>
+					</section>
 
 					<section id="JavaScriptBasics">
 						<h3>To Var or not To Var?</h3>
@@ -703,7 +777,7 @@ Questions = new Mongo.Collection('quest');
 						
 						<br/>
 
-						<div class="fragment">
+						<div class="fragment" >
 							<p>What's This?</p>
 							<pre><code class="js" data-trim >
 (function() {
