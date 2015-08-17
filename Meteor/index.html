@@ -95,14 +95,9 @@
 			.slides .has-commit-1 {	margin-top: 100px; }
 			.slides .has-commit-2 {	margin-top: 200px; }
 			.slides .has-commit-3 {	margin-top: 300px; }
-			tr.code-row td pre {
-			  width: 100%;
-				padding: 5px;
-			}
-			tr.code-row td code {
-		    padding-left: 0;
-			  font-size: 1rem;
-			  line-height: 1rem;
+			.slides .text-left {
+				text-align: left;
+				margin-left: 5%;
 			}
 		</style>
 
@@ -321,11 +316,11 @@
 							<h3>Framework Proliferation</h3>
 
 							<div class="img-with-cite">
-								<a href="http://geek-and-poke.com/geekandpoke/2014/11/8/frameworks">
+								<a href="http://www.isaacchansky.me/days-since-last-new-js-framework/" target="_blank">
 									<img src="images/frameworks.png" alt="Frameworks - Geek and Poke">	
 								</a>
 								<cite> - 	
-									<a href="">
+									<a href="http://geek-and-poke.com/geekandpoke/2014/11/8/frameworks">
 										geek-and-poke
 									</a>
 								</cite>
@@ -338,8 +333,18 @@
 
 						<br/>
 
-						<h4>Fully Funded</h4>
-						<h4>Fully Open</h4>
+						<h4>
+							Fully 
+							<a href="https://www.crunchbase.com/organization/meteor">
+								Funded
+							</a>
+						</h4>
+						<h4>
+							Fully 
+							<a href="https://github.com/search?q=stars:%3E1&s=stars&type=Repositories">
+								Open
+							</a>
+						</h4>
 						<h4>Fully Awesome</h4>
 
 						<aside class="notes">
@@ -349,6 +354,8 @@
 								<li>Active Development by full time employees</li>
 								<li>Monetization Strategy: Galaxy  - premier hosting platform</li>
 								<li>Meteor is MIT licensed - host anywhere - you own the code</li>
+								<li>Just passed Rails as the 9th most starred GitHub library</li>
+								<li>Huge Community Efforts (they're spending real money)</li>
 							</ul>
 						</aside>
 					</section>
@@ -722,53 +729,18 @@ if (Meteor.isServer) {
 }
 							</code></pre>	
 							<ul>
-								
-								<li>Two things I want to briefly expand on in next slides</li>
+								<li>Two things I want to briefly expand on in next slides:
+									<ol>
+										<li>Global Variabals</li>
+										<li>SQL vs Mongo</li>
+									</ol>
+								</li>
 							</ul>						
 						</aside>
 
 					</section>
 
-					<section id="mongoDbBasics">
-						<h3>MongoDB Basics</h3>
-
-						<table>
-							<thead>
-								<tr>
-									<th>SQL</th>
-									<th>Mongo</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Normalized</td>
-									<td>Denormalized</td>
-								</tr>
-								<tr>
-									<td>Table</td>
-									<td>Collection</td>
-								</tr>
-								<tr>
-									<td>Row</td>
-									<td>Document</td>
-								</tr>
-								<tr class="code-row">
-									<td>
-										<pre><code class="sql" data-trim >
-CREATE TABLE table_name
-										</code></pre>
-									</td>
-									<td>
-										<pre><code class="js" data-trim >
-new Mongo.Collection('col_name');
-										</code></pre>
-									</td>									
-								</tr>
-							</tbody>
-						</table>
-					</section>
-
-					<section id="JavaScriptBasics">
+			<section id="JavaScriptBasics">
 						<h3>To Var or not To Var?</h3>
 
 						<pre><code class="js" data-trim >
@@ -811,6 +783,53 @@ Questions = new Mongo.Collection('quest');
 							</ul>
 						</aside>
 					</section>
+
+					<section id="mongoDb1">
+						<h3>Mongo v SQL - Taxonomy</h3>
+
+						<table>
+							<thead>
+								<tr>
+									<th>SQL</th>
+									<th>Mongo</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Normalized</td>
+									<td>Denormalized</td>
+								</tr>
+								<tr>
+									<td>Table</td>
+									<td>Collection</td>
+								</tr>
+								<tr>
+									<td>Row</td>
+									<td>Document</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<section id="mongodb2">
+						<h3>Mongo v SQL - New Table</h3>
+
+						<br/>
+
+						<h4 class="text-left">SQL</h4>
+						<pre><code class="sql" data-trim >
+CREATE TABLE table_name
+						</code></pre>
+
+						<br/>
+
+						<h4 class="text-left">Mongo</h4>
+						<pre><code class="js" data-trim >
+new Mongo.Collection('col_name');
+						</code></pre>
+
+					</section>
+		
 
 					<section id="Templates">
 						<h3>Templates</h3>
