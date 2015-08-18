@@ -106,6 +106,10 @@
 				color: #1b91ff;
 				font-weight: bold;
 			}
+			.red-comment    .hljs-comment { color: #CC9393;}
+			.yellow-comment .hljs-comment { color: #E3CEAB;}
+			.blue-comment   .hljs-comment { color: #8CD0D3;}
+			.green-comment  .hljs-comment { color: #238223;}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -937,27 +941,28 @@ db.users.insert({
 
 					</section>
 
-					<section id="mongodb3">
+					<section id="mongodb4">
 						<h3>Mongo v SQL - C<span class="highlight">R</span>UD</h3>
 
 						<br/>
 
 						<h4 class="text-left">SQL</h4>
-						<pre><code class="sql" data-trim >
-SELECT _id, name, address -- Projection
-FROM   users              -- Table
-WHERE  age > 18           -- Criteria
-LIMIT  5                  -- Cursor Modifier
+						<!-- There's no escape!!! -->						
+						<pre><code class="sql" data-trim data-noescape>
+SELECT _id, name, address -- <span class="blue-comment">Projection</span>
+FROM   users              -- <span class="red-comment">Table</span>
+WHERE  age > 18           -- <span class="yellow-comment">Criteria</span>
+LIMIT  5                  -- <span class="green-comment">Cursor Modifier</span>
 						</code></pre>
 
 						<br/>
 
 						<h4 class="text-left">Mongo</h4>
-						<pre><code class="js" data-trim >
-db.users.find(            // Collection
- { age: { $gt: 18 } },    // Criteria
- { name: 1, address: 1 }  // Projection
-).limit(5)                // Cursor Modifier
+						<pre><code class="js" data-trim data-noescape>
+db.users.find(            // <span class="red-comment">Collection</span>
+ { age: { $gt: 18 } },    // <span class="yellow-comment">Criteria</span>
+ { name: 1, address: 1 }  // <span class="blue-comment">Projection</span>
+).limit(5)                // <span class="green-comment">Cursor Modifier</span>
 						</code></pre>
 
 						<aside class="notes">
@@ -966,6 +971,11 @@ db.users.find(            // Collection
 									<a href="http://docs.mongodb.org/manual/core/read-operations-introduction/">
 										docs.mongodb.org/manual/core/read-operations-introduction/
 									</a>
+								</li>
+								<li>Generally speaking:
+									<pre><code class="js" data-trim >
+db.users.find( { /* Query Criteria */ } [, { /* Projection */ } );
+									</code></pre>
 								</li>
 							</ul>
 						</aside>
