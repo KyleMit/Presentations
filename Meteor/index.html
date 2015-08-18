@@ -102,6 +102,10 @@
 				text-align: left;
 				margin-left: 5%;
 			}
+			.slides .highlight {
+				color: #1b91ff;
+				font-weight: bold;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -823,7 +827,7 @@ Questions = new Mongo.Collection('quest');
 					<section id="mongodbwhynot">
 						<h3>MongoDB: Why Not?</h3>
 						<p><small>
-							I'll be available after the presentation for slogan writing 
+							I'll be available after the presentation to write slogans
 						</small></p>
 
 						<img src="images/whynot.jpg" alt="Why Not">
@@ -831,7 +835,6 @@ Questions = new Mongo.Collection('quest');
 
 					<section id="mongoDb1">
 						<h3>Mongo v SQL - Overview</h3>
-						<a href="http://docs.mongodb.org/manual/reference/sql-comparison/">docs.mongodb.org/manual/reference/sql-comparison/</a>
 
 						<h4>Taxonomy</h4>
 						<table>
@@ -879,6 +882,14 @@ Questions = new Mongo.Collection('quest');
 							</tbody>
 						</table>
 
+						<aside class="notes">
+							<ul>
+								<li>
+									<a href="http://docs.mongodb.org/manual/reference/sql-comparison/">docs.mongodb.org/manual/reference/sql-comparison/</a>
+
+								</li>
+							</ul>
+						</aside>
 
 
 					</section>
@@ -900,6 +911,64 @@ CREATE TABLE table_name
 new Mongo.Collection('col_name');
 						</code></pre>
 
+					</section>
+
+					<section id="mongodb3">
+						<h3>Mongo v SQL - <span class="highlight">C</span>RUD</h3>
+
+						<br/>
+
+						<h4 class="text-left">SQL</h4>
+						<pre><code class="sql" data-trim >
+INSERT INTO users(user_id, age, status)
+VALUES           ("bcd001", 45, "A")
+						</code></pre>
+
+						<br/>
+
+						<h4 class="text-left">Mongo</h4>
+						<pre><code class="js" data-trim >
+db.users.insert({
+  user_id: "bcd001",
+  age: 45,
+  status: "A"
+})
+						</code></pre>
+
+					</section>
+
+					<section id="mongodb3">
+						<h3>Mongo v SQL - C<span class="highlight">R</span>UD</h3>
+
+						<br/>
+
+						<h4 class="text-left">SQL</h4>
+						<pre><code class="sql" data-trim >
+SELECT _id, name, address -- Projection
+FROM   users              -- Table
+WHERE  age > 18           -- Criteria
+LIMIT  5                  -- Cursor Modifier
+						</code></pre>
+
+						<br/>
+
+						<h4 class="text-left">Mongo</h4>
+						<pre><code class="js" data-trim >
+db.users.find(            // Collection
+ { age: { $gt: 18 } },    // Criteria
+ { name: 1, address: 1 }  // Projection
+).limit(5)                // Cursor Modifier
+						</code></pre>
+
+						<aside class="notes">
+							<ul>
+								<li>
+									<a href="http://docs.mongodb.org/manual/core/read-operations-introduction/">
+										docs.mongodb.org/manual/core/read-operations-introduction/
+									</a>
+								</li>
+							</ul>
+						</aside>
 					</section>
 		
 
