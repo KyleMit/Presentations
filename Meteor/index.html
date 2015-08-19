@@ -1121,7 +1121,7 @@ db.users.remove(              // <span class="red-comment">Collection</span>
 
 					<!-- Templates -->
 					<section id="demo-road-map-2">
-						<h3>Roadmap</h3>
+						<h3>Roadmap - Still with me?</h3>
 						<img src="images/meteor-stack.png" alt="Meteor Stack">
 						<aside class="notes">
 							<ul>
@@ -1257,6 +1257,16 @@ Template.question_list.helpers({
 						</ul>
 
 						<aside class="notes">
+							<ul>
+								<li>Print will automaticaly sanitize any output.  If you don't want to sanitize output, you can use three brackets, but be careful with user input</li>
+								<li>if has counterpart <code>{{#unless}}</code></li>
+								<li>You can even make your own keywords and call methods with parameters</li>
+								<li>Packages can install templates.  So sometimes templates are available without you having to define them 
+								i.e. 
+								<a href="https://atmospherejs.com/meteor/accounts-ui">
+									<code>{{login-buttons}}</code>
+								</a></li>
+							</ul>
 							<p>That's all you really need - much more than that and too much logic is going into the view.  Do it with helpers.  You might object: but that's fewer directives than angular provides: on the grounds that the more of something you can possibly have, the better it is.  Yeah, but things like ng-src only existed to prevent the flash of unstyled content issues.  There's a fundamental difference in ownership.  In angular, HTML owns all the code.  it's right there in the body.  In meteor, meteor owns everything.  So in angular, I put all that markup in regular HTML and then rely on angular kicking in at the last minute and saying, hey, there's a new element that matches my directive, I guess I'll do something about it.  In meteor, you write your templates and meteor renders good old fashioned mark up.</p>
 						</aside>
 					</section>
@@ -1279,11 +1289,8 @@ Template.question_list.helpers({
 						<p>Data</p>
 						<pre><code class="js" data-trim >
 {
-	name: 'Kyle',
-	comments: [
-		{text: 'Great Job!'},
-		{text: 'Only OK'}
-	]
+	name:     'Kyle',
+	comments: ['Great Job!','Only OK'	]
 }
 						</code></pre>	
 
@@ -1292,10 +1299,19 @@ Template.question_list.helpers({
 						<p>Template</p>
 						<pre><code class="html" data-trim >
 <template name="data">
-	Name: {{name}}
-	{{}}
+	Name:     {{name}}
+	Comments: {{#each comments}}
+							{{this}}
+						{{/each}}						
 </template>
 						</code></pre>	
+
+						<aside class="notes">
+							<ul>
+								<li>More about data contexts:</li>
+								<li>In console<code>$0</code> will select whatever element is highlighted</li>
+							</ul>
+						</aside>
 					</section>
 
 
