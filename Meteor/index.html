@@ -1159,7 +1159,31 @@ db.users.remove(              // <span class="red-comment">Collection</span>
 					</section>
 
 					<section id="template-helper">
-						
+						<h3>Template Helpers</h3>
+
+						<p>General Case</p>
+						<pre><code class="js" data-trim data-noescape>
+Template.<i>&lt;name&gt;</i>.helpers({})
+						</code></pre>	
+
+						<br/>
+						<pre><code class="js" data-trim >
+Template.question_list.helpers({
+	questions: function() {
+		return Questions.find();
+	}
+})
+						</code></pre>	
+
+
+						<aside class="notes">
+							<ul>
+								<li>
+									<code>body</code> and <code>head</code> are both available as Template helpers
+								</li>
+								<li>In this example we're creating a template named <code>question-list</code> and giving a property <code>questions</code></li>
+							</ul>
+						</aside>	
 					</section>
 
 
