@@ -38,12 +38,17 @@
 				border: 1px solid #e1e8ed;
 				border-radius: 4px;
 			}
+			/* Default Code to Double Size */
 			.reveal pre code {
 				font-size: 2rem;
 				line-height: 2rem;
 				padding-left: 10px;
 			}
-
+			.reveal pre code.sm {
+				font-size: 1.5rem;
+				line-height: 1.5rem;
+				padding-left: 10px;
+			}
 			.col-xs-6 {
 				width: 50%;
 				float: left;
@@ -156,6 +161,14 @@
 							/ <a href="http://twitter.com/kylemit2">@kylemit2</a>
 						</small>
 					</p>
+
+					<aside class="notes">
+						Presenter Notes:
+						<ul>
+							<li>If you add code - prove that it's working right away</li>
+
+						</ul>
+					</aside>
 				</section>
 
 				<section id="overview">
@@ -538,6 +551,43 @@ meteor add kylemit:nametag
 						<h4>It's really that easy</h4>	
 					</section>
 
+
+					<section id="build-pipeline">
+						<h3>Build Pipline</h3>
+
+						<p>No more of this:</p>
+						<pre><code class="js sm" data-trim >
+var result = '<a href="' + url + '">' + text + '</a>';
+						</code></pre>		
+						
+						<br/>
+						
+						<div class="fragment">
+							<p>No more of this either:</p>	
+							<pre><code class="js sm" data-trim >
+<script id="anchor-template" type="text/x-handlebars">
+  <a href="{{url}}">{{text}}</a>
+</script>
+<script>
+var source   = $("#anchor-template").html();
+var template = Handlebars.compile(source);
+</script>
+							</code></pre>	
+						</div>
+						<aside class="notes">
+							<ul>
+								<li>You might say, we don't do that anymore - we use templates</li>
+								<li>No more of manual template conversions</li>
+								<li>Whole bunch of things can be automatically converted: <ul>
+									<li>Less</li>
+									<li>SASS</li>
+									<li>Markdown</li>
+									<li>ECMA Script 2015</li>
+								</ul></li>
+							</ul>
+						</aside>
+					</section>
+
 					<section id="imperative-vs-delcarative">
 						<h3>Imperative vs Declarative</h3>
 						<p>Which would you rather write?</p>
@@ -559,6 +609,9 @@ meteor add kylemit:nametag
 						</dl>
 
 					</section>
+
+					
+
 				</section>
 
 
@@ -760,10 +813,17 @@ if (Meteor.isServer) {
 }
 							</code></pre>	
 							<ul>
-								<li>Two things I want to briefly expand on in next slides:
+								<li>Check that it's there: 
+							<pre><code class="js" data-trim >
+Questions.find();
+Questions.find().fetch()
+console.table(Questions.find().fetch());
+							</code></pre>	
+								</li>
+								<li>Now that we have a database, before we jump ahead, 2 things I want to briefly expand on in next slides:
 									<ol>
 										<li>Global Variabals</li>
-										<li>SQL vs Mongo</li>
+										<li>SQL vs Mongo Comparison</li>
 									</ol>
 								</li>
 							</ul>						
@@ -794,7 +854,7 @@ Questions = new Mongo.Collection('quest');
 
 						<aside class="notes">
 							<ul>
-								<li>Where will this colleciton be available</li>
+								<li>Where will this collection be available</li>
 								<li>What does the var keyword do?</li>
 								<li><a href="https://www.discovermeteor.com/blog/javascript-for-meteor/">JavaScript Primer For Meteor</a></li>
 								<li>But wait, normally var'd variables are available everywhere, right</li>
@@ -1202,7 +1262,7 @@ Template.question_list.helpers({
 
 					<section id="template-binding">
 						<h3>Template Binding</h3>
-						<h4><span class="highlight">Spacebars</span> | React | Angular</h4>
+						<h4><span class="highlight">Spacebars</span> | React | Angular | ?</h4>
 						
 						<p>Include Template</p>
 						<pre><code class="html" data-trim data-noescape>
@@ -1258,6 +1318,9 @@ Template.question_list.helpers({
 
 						<aside class="notes">
 							<ul>
+								<li><a href="https://github.com/meteor/meteor/blob/devel/packages/spacebars/README.md">
+									Spacebars Docs
+								</a></li>
 								<li>Print will automaticaly sanitize any output.  If you don't want to sanitize output, you can use three brackets, but be careful with user input</li>
 								<li>if has counterpart <code>{{#unless}}</code></li>
 								<li>You can even make your own keywords and call methods with parameters</li>
@@ -1281,74 +1344,19 @@ Template.question_list.helpers({
 							&mdash; Ben Halpern (@bhalp1) 
 							<a href="https://twitter.com/bhalp1/status/578925947245633536">March 20, 2015</a>
 						</blockquote>
-					</section>
-					
-					<section id="data-context-example">
-						<h3>Data Context Example</h3>
-
-						<p>Data</p>
-						<pre><code class="js" data-trim >
-{
-	name:     'Kyle',
-	comments: ['Great Job!','Only OK'	]
-}
-						</code></pre>	
-
-						<br/>
-
-						<p>Template</p>
-						<pre><code class="html" data-trim >
-<template name="data">
-	Name:     {{name}}
-	Comments: {{#each comments}}
-							{{this}}
-						{{/each}}						
-</template>
-						</code></pre>	
 
 						<aside class="notes">
 							<ul>
 								<li>More about data contexts:</li>
 								<li>In console<code>$0</code> will select whatever element is highlighted</li>
+								<li>To look at the data dependencies for any object, you can run <code>Blaze.get()</code></li>
 							</ul>
 						</aside>
 					</section>
+					
+						
 
 
-
-					<section id="insecure-example">
-						<h3>Insecure Package</h3>
-						<p>Will someone open their console and run this:</p>
-						<pre><code class="js" data-trim >
-Questions.remove({})
-						</code></pre>
-						<br/>
-
-
-						<p class="fragment">
-							What Happened?
-						</p>
-						<blockquote class="fragment error full-width">
-							"Not permitted. Untrusted code may only remove documents by ID."
-						</blockquote>
-
-						<br/>
-						<div class="fragment">
-						  <p>How about this instead?</p>
-							<pre><code class="js" data-trim >
-Questions.find().forEach(function(doc) {
-	Questions.remove(doc._id)
-});
-						</code></pre>
-						</div>
-
-						<aside class="notes">
-							<ul>
-								<li>Okay, we've slowed down an attacker for about a quarter second</li>
-								<li><a href="http://docs.mongodb.org/v3.0/reference/method/cursor.forEach/">cusor.forEach</a></li>
-							</ul>
-						</aside>
-					</section>
 
 
 
@@ -1419,6 +1427,50 @@ mup deploy
 					</section>
 
 				</section>
+
+
+
+
+
+
+					<section id="insecure-example">
+						<h3>Insecure Package</h3>
+						<p>Will someone open their console and run this:</p>
+						<pre><code class="js" data-trim >
+Questions.remove({})
+						</code></pre>
+						<br/>
+
+
+						<p class="fragment">
+							What Happened?
+						</p>
+						<blockquote class="fragment error full-width">
+							"Not permitted. Untrusted code may only remove documents by ID."
+						</blockquote>
+
+						<br/>
+						<div class="fragment">
+						  <p>How about this instead?</p>
+							<pre><code class="js" data-trim >
+Questions.find().forEach(function(doc) {
+	Questions.remove(doc._id)
+});
+						</code></pre>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>Okay, we've slowed down an attacker for about a quarter second</li>
+								<li><a href="http://docs.mongodb.org/v3.0/reference/method/cursor.forEach/">cusor.forEach</a></li>
+								<li><a href="http://docs.meteor.com/#/full/meteorlist"><code>meteor list</code></a> - list pacakages added to your project</li>
+								<li><a href="https://github.com/meteor/meteor/blob/devel/packages/meteor-platform/package.js">View Packages in meteor-platform</a></li>
+							</ul>
+						</aside>
+					</section>
+
+
+
 
 
 
