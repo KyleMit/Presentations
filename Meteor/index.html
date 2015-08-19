@@ -338,7 +338,7 @@
 							<h3>Framework Proliferation</h3>
 
 							<div class="img-with-cite">
-								<a href="http://www.isaacchansky.me/days-since-last-new-js-framework/" target="_blank">
+								<a href="http://www.isaacchansky.me/days-since-last-new-js-framework/" >
 									<img src="images/frameworks.png" alt="Frameworks - Geek and Poke">	
 								</a>
 								<cite> - 	
@@ -578,7 +578,7 @@ meteor add kylemit:nametag
 
 						<div class="stretch">
 							<div class="commit">
-								<a href="https://github.com/KyleMit/MeteorDemo/tags" target="_blank">
+								<a href="https://github.com/KyleMit/MeteorDemo/tags" >
 									<code>
 										git checkout tags/<i>[tagname]</i>
 									</code>
@@ -608,7 +608,7 @@ meteor
 
 						<div class="stretch">
 							<div class="commit">
-								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p0" target="_blank">
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p0" >
 									<code>
 										git co p0
 									</code>	
@@ -671,7 +671,7 @@ if (Meteor.isServer) {
 
 						<div class="stretch">
 							<div class="commit">
-								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p1" target="_blank">
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p1" >
 									<code>
 										git co p1
 									</code>	
@@ -738,7 +738,7 @@ Questions.insert(
 
 						<div class="stretch">
 							<div class="commit">
-								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p2" target="_blank">
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p2" >
 									<code>
 										git co p2
 									</code>									
@@ -1167,6 +1167,7 @@ Template.<i>&lt;name&gt;</i>.helpers({})
 						</code></pre>	
 
 						<br/>
+						<p>Our Code</p>
 						<pre><code class="js" data-trim >
 Template.question_list.helpers({
 	questions: function() {
@@ -1175,6 +1176,16 @@ Template.question_list.helpers({
 })
 						</code></pre>	
 
+						<!-- Git Committ -->
+						<div class="stretch">
+							<div class="commit">
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p3" >
+									<code>
+										git co p3
+									</code>
+								</a>
+							</div>
+						</div>
 
 						<aside class="notes">
 							<ul>
@@ -1182,8 +1193,15 @@ Template.question_list.helpers({
 									<code>body</code> and <code>head</code> are both available as Template helpers
 								</li>
 								<li>In this example we're creating a template named <code>question-list</code> and giving a property <code>questions</code></li>
+								<li><b>Note</b>: only things declared through this template helper are available to the template (with the exception of helper methods added to all templates).  <br>
+
+								Which means, within the data context of the template helper we can't access the questions collection directly.  We need to manually expose it.  This is a good thing.  Helps keep the scope of what the template small.  Whenever a change is made to one of the template items, it can re-render the relevant DOM elements.</li>
 							</ul>
 						</aside>	
+					</section>
+
+					<section id="template-binding">
+						<h3>Template Binding</h3>
 					</section>
 
 
@@ -1376,6 +1394,11 @@ mup deploy
 				]
 			});
 
+			// open all non-relative links in new tab
+			var extLinks = document.querySelectorAll("a[href^='http']")
+			for(i = 0; i < extLinks.length; i++ ){
+			  extLinks[i].setAttribute('target','_blank');
+			}
 		</script>
 		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</body>
