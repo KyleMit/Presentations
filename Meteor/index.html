@@ -1161,13 +1161,13 @@ db.users.remove(              // <span class="red-comment">Collection</span>
 					<section id="template-helper">
 						<h3>Template Helpers</h3>
 
-						<p>General Case</p>
+						<p>General</p>
 						<pre><code class="js" data-trim data-noescape>
 Template.<i>&lt;name&gt;</i>.helpers({})
 						</code></pre>	
 
 						<br/>
-						<p>Our Code</p>
+						<p>Example</p>
 						<pre><code class="js" data-trim >
 Template.question_list.helpers({
 	questions: function() {
@@ -1202,6 +1202,63 @@ Template.question_list.helpers({
 
 					<section id="template-binding">
 						<h3>Template Binding</h3>
+						<h4><span class="highlight">Spacebars</span> | React | Angular</h4>
+						
+						<p>Include Template</p>
+						<pre><code class="html" data-trim data-noescape>
+{{> <i>template_name</i>}}
+						</code></pre>	
+
+						<br/>
+
+						<p>Define Template</p>
+						<pre><code class="html" data-trim data-noescape>
+&lt;template name=&quot;<i>template_name</i>&quot;&gt;
+	I'm a Template!
+&lt;/template&gt;
+						</code></pre>	
+
+					<!-- Git Committ -->
+					<div class="stretch">
+						<div class="commit">
+							<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p4" >
+								<code>
+									git co p4
+								</code>
+							</a>
+						</div>
+					</div>
+
+					</section>
+
+					<section id="spacebars">
+						<h3>{{Spacebars}}</h3>
+
+						<ul>
+							<li> Print: 
+								<code><span class="highlight">{{</span>property<span class="highlight">}}</span></code>
+							</li>
+							<li> Inlcusion: 
+								<code><span class="highlight">{{</span>> template<span class="highlight">}}</span></code>
+							</li>
+							<li> Block Tags:
+								<ul>
+									<li>
+										<code><span class="highlight">{{</span>#if<span class="highlight">}}</span> &nbsp; ... <span class="highlight">{{</span>/if<span class="highlight">}}</span></code>
+									</li>		
+									<li>
+										<code><span class="highlight">{{</span>#each}} ... <span class="highlight">{{</span>/each<span class="highlight">}}</span></code>
+									</li>
+									<li>
+										<code><span class="highlight">{{</span>#with<span class="highlight">}}</span> ... <span class="highlight">{{</span>/with<span class="highlight">}}</span></code>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<aside class="notes">
+							<p>That's all you really need - much more than that and too much logic is going into the view.  Do it with helpers.  You might object: but that's fewer directives than angular provides: on the grounds that the more of something you can possibly have, the better it is.  Yeah, but things like ng-src only existed to prevent the flash of unstyled content issues.  There's a fundamental difference in ownership.  In angular, HTML owns all the code.  it's right there in the body.  In meteor, meteor owns everything.  So in angular, I put all that markup in regular HTML and then rely on angular kicking in at the last minute and saying, hey, there's a new element that matches my directive, I guess I'll do something about it.  In meteor, you write your templates and meteor renders good old fashioned mark up.</p>
+						</aside>
 					</section>
 
 
@@ -1216,7 +1273,30 @@ Template.question_list.helpers({
 						</blockquote>
 					</section>
 					
+					<section id="data-context-example">
+						<h3>Data Context Example</h3>
 
+						<p>Data</p>
+						<pre><code class="js" data-trim >
+{
+	name: 'Kyle',
+	comments: [
+		{text: 'Great Job!'},
+		{text: 'Only OK'}
+	]
+}
+						</code></pre>	
+
+						<br/>
+
+						<p>Template</p>
+						<pre><code class="html" data-trim >
+<template name="data">
+	Name: {{name}}
+	{{}}
+</template>
+						</code></pre>	
+					</section>
 
 
 
