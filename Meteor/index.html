@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Meteor Intro</title>
+		<title>Meteor Presentation</title>
 
 		<meta name="description" content="An Introduction to Meteor.JS and how to build awesome apps!">
 		<meta name="author" content="Kyle Mitofsky">
@@ -110,6 +110,17 @@
 			.yellow-comment .hljs-comment { color: #E3CEAB;}
 			.blue-comment   .hljs-comment { color: #8CD0D3;}
 			.green-comment  .hljs-comment { color: #238223;}
+			.reveal small {
+				vertical-align: middle;
+			}
+			.slides .error {
+				color: #C41A16;
+    		border: 1px solid rgb(255, 216, 216);
+    		background-color: rgb(255, 239, 239);
+			}
+			.slides .full-width {
+				width: 95%;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -367,6 +378,9 @@
 								<li>Meteor is MIT licensed - host anywhere - you own the code</li>
 								<li>Just passed Rails as the 9th most starred GitHub library</li>
 								<li>Huge Community Efforts (they're spending real money)</li>
+								<li>Community Packages - 
+								<a href="https://atmospherejs.com/">atmospherejs.com</a> - 6,893</li>
+								<li>Paid Packages - good for growth</li>
 							</ul>
 						</aside>
 					</section>
@@ -840,6 +854,34 @@ Questions = new Mongo.Collection('quest');
 					<section id="mongoDb1">
 						<h3>Mongo v SQL - Overview</h3>
 
+
+						<h4>Structural</h4>
+						<table>
+							<thead>
+								<tr>
+									<th>SQL</th>
+									<th>Mongo</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Normalized</td>
+									<td>Denormalized</td>
+								</tr>
+								<tr>
+									<td>Schema-Bound</td>
+									<td>Schema<i>Less</i></td>
+								</tr>
+							</tbody>							
+								<tr>
+									<td>PK - any unique column(s)</td>
+									<td>PK - always set to <code>_id</code></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<br/>	
+
 						<h4>Taxonomy</h4>
 						<table>
 							<thead>
@@ -864,40 +906,19 @@ Questions = new Mongo.Collection('quest');
 							</tbody>
 						</table>
 
-						<br/>
-
-						<h4>Conceptual</h4>
-						<table>
-							<thead>
-								<tr>
-									<th>SQL</th>
-									<th>Mongo</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Normalized</td>
-									<td>Denormalized</td>
-								</tr>
-								<tr>
-									<td>PK - any unique column(s)</td>
-									<td>PK - always set to <code>_id</code></td>
-								</tr>
-							</tbody>
-						</table>
-
 						<aside class="notes">
 							<ul>
 								<li>
 									<a href="http://docs.mongodb.org/manual/reference/sql-comparison/">docs.mongodb.org/manual/reference/sql-comparison/</a>
-
 								</li>
+								<li><b>Benefits:</b> Fast, Rich Denormalization, Schemaless</li>
 							</ul>
 						</aside>
 
 
 					</section>
 
+					<!-- Collection -->
 					<section id="mongodb2">
 						<h3>Mongo v SQL - New Table</h3>
 
@@ -917,6 +938,7 @@ new Mongo.Collection('col_name');
 
 					</section>
 
+					<!-- CREATE -->
 					<section id="mongodb3">
 						<h3>Mongo v SQL - <span class="highlight">C</span>RUD</h3>
 
@@ -938,9 +960,13 @@ db.users.insert({
   status: "A"
 })
 						</code></pre>
-
+						
+						<aside class="notes">
+							
+						</aside>
 					</section>
-
+					
+					<!-- READ -->
 					<section id="mongodb4">
 						<h3>Mongo v SQL - C<span class="highlight">R</span>UD</h3>
 
@@ -967,20 +993,117 @@ db.users.find(            // <span class="red-comment">Collection</span>
 
 						<aside class="notes">
 							<ul>
+								<li><a href="http://docs.mongodb.org/manual/crud/">Mongo CRUD</a></li>
 								<li>
 									<a href="http://docs.mongodb.org/manual/core/read-operations-introduction/">
 										docs.mongodb.org/manual/core/read-operations-introduction/
 									</a>
 								</li>
-								<li>Generally speaking:
-									<pre><code class="js" data-trim >
-db.users.find( { /* Query Criteria */ } [, { /* Projection */ } );
-									</code></pre>
+								<li>
+									<a href="http://docs.mongodb.org/manual/reference/method/db.collection.find/">
+										<code>
+											db.collection.find(query [, projection])
+										</code>
+									</a>
 								</li>
+								<li>
+									<a href="http://docs.mongodb.org/manual/reference/operator/query/">
+										Query and Projection Operators
+									</a> - Can't pass <code><</code> symbol - so we pass a keyword operator instead
+								</li>
+								<li>Order of operations makes so much more sense.  First, where are we looking, then what subset are we using, then what are we grabbing, then how do we want that info returned</li>
+							</ul>
+						</aside>
+					</section>
+
+					<!-- UPDATE -->
+					<section id="mongodb5">
+						<h3>Mongo v SQL - CR<span class="highlight">U</span>D</h3>
+
+						<br/>
+
+						<h4 class="text-left">SQL</h4>
+						<!-- There's no escape!!! -->						
+						<pre><code class="sql" data-trim data-noescape>
+UPDATE users                 -- <span class="red-comment">Table</span>
+SET    name = 'Ed', 		     -- <span class="blue-comment">Modify</span>
+       rel_status = 'Single' 
+WHERE  id = 1                -- <span class="yellow-comment">Criteria</span>
+						</code></pre>
+
+						<br/>
+
+						<h4 class="text-left">Mongo</h4>
+						<pre><code class="js" data-trim data-noescape>
+db.users.find(               // <span class="red-comment">Collection</span>
+ { id: 1 },                  // <span class="yellow-comment">Criteria</span>
+ { $set: {                   // <span class="blue-comment">Modify</span>
+ 		name: 'Ed',
+ 		rel_status: 'Married'
+  }}  
+)
+						</code></pre>						
+
+						<aside class="notes">
+							<ul>
+								<li>
+									<a href="http://docs.mongodb.org/manual/reference/method/db.collection.update/">
+										<code>
+											db.users.update(query,update,options);
+										</code>
+									</a>
+								</li>
+								<li>
+									<a href="http://docs.mongodb.org/manual/reference/operator/update/">
+										Update Operators
+									</a>
+									 (begin with <code>$</code>)
+									 <ul>
+									 	<li><b>$inc</b> - increments the value of the field</li>
+									 	<li><b>$mul</b> - multiplies the value of the field</li>
+									 	<li><b>$rename</b> - renames the field (might want to call on every field, but there's nothing to enforce that documents in a collection have the same property names</li>
+									 	<li><b>$set</b> - Sets the value of a field</li>
+									 	<li><b>$unset</b> - Removes the value of a field</li>
+									 </ul>
+								</li>
+								<li>Operators begin with $</li>
 							</ul>
 						</aside>
 					</section>
 		
+					<!-- DELETE -->
+					<section id="mongodb5">
+						<h3>Mongo v SQL - CRU<span class="highlight">D</span></h3>
+
+						<br/>
+
+						<h4 class="text-left">SQL</h4>
+						<!-- There's no escape!!! -->						
+						<pre><code class="sql" data-trim data-noescape>
+DELETE FROM users             -- <span class="red-comment">Table</span>
+WHERE  rel_status = 'single'  -- <span class="yellow-comment">Criteria</span>
+						</code></pre>
+
+						<br/>
+
+						<h4 class="text-left">Mongo</h4>
+						<pre><code class="js" data-trim data-noescape>
+db.users.remove(              // <span class="red-comment">Collection</span>
+ { rel_status: 'single' }     // <span class="yellow-comment">Criteria</span>
+)
+						</code></pre>						
+
+						<aside class="notes">
+							<ul>
+								<li>
+									<a href="http://docs.mongodb.org/manual/reference/method/db.collection.remove/">
+										<code>
+											db.users.remove(query);
+										</code>
+									</a>
+								</li>
+						</aside>
+					</section>		
 
 					<section id="Templates">
 						<h3>Templates</h3>
@@ -1007,6 +1130,45 @@ db.users.find( { /* Query Criteria */ } [, { /* Projection */ } );
 						</blockquote>
 					</section>
 					
+
+
+
+
+					<section id="insecureexample">
+						<h3>Insecure Package</h3>
+						<p>Will someone open their console and run this:</p>
+						<pre><code class="js" data-trim >
+Questions.remove({})
+						</code></pre>
+						<br/>
+
+
+						<p class="fragment">
+							What Happened?
+						</p>
+						<blockquote class="fragment error full-width">
+							"Not permitted. Untrusted code may only remove documents by ID."
+						</blockquote>
+
+						<br/>
+						<div class="fragment">
+						  <p>How about this instead?</p>
+							<pre><code class="js" data-trim >
+Questions.find().forEach(function(doc) {
+	Questions.remove(doc._id)
+});
+						</code></pre>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>Okay, we've slowed down an attacker for about a quarter second</li>
+								<li><a href="http://docs.mongodb.org/v3.0/reference/method/cursor.forEach/">cusor.forEach</a></li>
+							</ul>
+						</aside>
+					</section>
+
+
 
 					<section id="deployment">
 						<h3>Deployment</h3>
@@ -1082,9 +1244,25 @@ mup deploy
 				<section id="MoreResources">
 					<h2>More Resources</h2>
 
+					<ol>
+						<li><a href="https://www.meteor.com/tutorials/blaze/creating-an-app">Official Tutorial</a> - Basics</li>
+						<li><a href="https://www.discovermeteor.com/">Discover Meteor</a> - Build a full app</li>
+						<li><a href="https://bulletproofmeteor.com/">BulletProof Meteor</a> - Performance Tuning</li>
+					</ol>
+
+					<br/><br/>
+					<p>Community:</p>
 					<ul>
-						<li><b>First Step</b> -  <a href="https://www.meteor.com/tutorials/blaze/creating-an-app">Official Meteor Tutorial</a></li>
-						<li><b>Next Step</b> - <a href="https://www.discovermeteor.com/">Discover Meteor</a></li>
+						<li><a href="https://forums.meteor.com/">
+							Meteor Forums
+						</a> - Broad Questions</li>
+						<li><a href="https://crater.io/">
+							Crater.io
+						</a> - Meteor News 
+						<small>(built with <a href="http://www.telescopeapp.org/">Telescope</a>)</small></li>
+						<li><a href="http://www.meetup.com/meteor-burlington">Meetup</a> - Talks & Hacking</li>
+						<li><a href="http://stackoverflow.com/questions/popular/meteor?show=alltime&sort=votes">Stack Overflow</a> - Specifics
+						<small>(please use <a href="http://meteorpad.com/">MeteorPad</a>)</small></li>
 					</ul>
 				</section>
 
