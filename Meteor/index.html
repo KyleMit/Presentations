@@ -307,8 +307,8 @@
 								<span class="fragment highlight-current-blue" 
 								  data-fragment-index="1"> Reactive</span>
 								<ul>
-									<li><b>Application</b> - Hot Code Pushes</li>
 									<li><b>Database</b> - Distributed Data Protocol</li>
+									<li><b>Application</b> - Hot Code Pushes</li>
 								</ul>
 							</li><br/>
 							<li class="fragment" data-fragment-index="2">
@@ -672,6 +672,7 @@ var template = Handlebars.compile(source);
 								<li>This demo, or any meteor demo is not about css.  Any monkey with an infinite amount of patience and full access to stack overflow can figure out how to center a div verticaly. Presentation will be 70% Javascript and 30% Html and 10% teamwork</li>
 								<li>Don't really follow along</li>
 								<li><b>Alias</b> - <code>git config --global alias.co checkout</code></li>
+								<li>Show all tags - <code>git tag -n</code></li>
 							</ul>
 						</aside>
 					</section>
@@ -1532,9 +1533,66 @@ meteor add accounts-ui accounts-password
 						<pre><code class="html" data-trim >
 {{> loginButtons}}
 						</code></pre>						
+						
+						<aside class="notes">
+							<ul>
+								<li><a href="https://www.meteor.com/accounts">
+									Meteor Accounts Page
+								</a></li>
+								<li><a href="http://docs.meteor.com/#/full/accounts_api">
+									Accounts API
+								</a></li>
+								<li>Other Accounts:
+								<ul>
+									<li><code>accounts-facebook</code></li>
+									<li><code>accounts-github</code></li>
+									<li><code>accounts-google</code></li>
+									<li><code>accounts-twitter</code></li>
 
+
+								</ul>
+								</li>
+							</ul>
+						</aside>
 					</section>
 
+					<section id="users">
+						<h3>Wiring Up Accounts</h3>
+
+						<p>Spacebars Helper</p>
+						<pre><code class="html" data-trim >
+{{currentUser}}
+						</code></pre>
+
+						<br/>
+
+						<p>Everywhere else</p>
+						<pre><code class="js" data-trim >
+var user = Meteor.user();
+user._id
+user.username
+						</code></pre>						
+
+
+		
+						<div class="stretch">
+							<div class="commit">
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p7" >
+									<code>
+										git co p7
+									</code>
+								</a>
+							</div>
+						</div>
+
+						<aside class="notes">
+							<pre><code class="js" data-trim >
+Accounts.ui.config({
+	passwordSignupFields: 'USERNAME_ONLY'
+});
+							</code></pre>
+						</aside>
+					</section>
 
 
 
