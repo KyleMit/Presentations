@@ -1613,7 +1613,7 @@ meteor run android
 						</code></pre>
 						<aside class="notes">
 							<ul>
-								<li>Adding platform will kill other meteor apps</li>
+								<li><b>Note</b>: Adding platform will stop other apps from running</li>
 								<li><a href="http://phonegap.com/">Phonegap</a> doing heavy lifting</li>
 								<li><a href="http://electron.atom.io/">Electron</a> can deploy to desktop environments too!</li>
 								<li>iOS - download <a href="https://github.com/meteor/meteor/wiki/Mobile-Dev-Install:-iOS-on-Mac">Xcode</a></li>
@@ -1679,11 +1679,45 @@ Questions.find().forEach(function(doc) {
 
 					<section id="removing-insecure">
 						<h3><del>in</del> secure</h3>
+						
+						<p>Two Approaches</p>
+						<ol>
+							<li>
+								Allow/Deny - Explicitly declare what is allowed
+							</li>
+							<li>
+								Methods - Canonical method is run on server
+							</li>
+						</ol>
 
-
+						<aside class="notes">
+							<ul>
+								<li>You can use both interchangeably</li>
+								<li>Methods are always safe because you own the server code - but you still need to sanitze inputs <code>Check(property, type)</code></li>
+								<li>Latency compensation - canonical database operation is always preformed on server.  but the client will try to predict the outcome</li>
+								<li>Collection2</li>
+							</ul>
+						</aside>
 					</section>
 
+					<section id="methods">
+						<h3>Methods</h3>
+							<p>Add Method</p>
+							<pre><code class="js" data-trim data-noescape>
+Meteor.methods({
+	'<i>method-name</i>': function([<i>params</i>]) {
+		// Do Something
+	}
+})
+							</code></pre>
+							
+							<br>
 
+							<p>Call Method</p>
+							<pre><code class="js" data-trim data-noescape>
+Meteor.call('<i>method-name</i>' [, params])
+							</code></pre>
+					</section>
 
 				</section>
 
