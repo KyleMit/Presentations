@@ -130,6 +130,13 @@
 			.slides .full-width {
 				width: 95%;
 			}
+			@font-face {
+			    font-family: MythBusters;
+			    src: url(css/MythBusters.ttf);
+			}
+			.slides .myth {
+				font-family: 'MythBusters'
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -161,8 +168,24 @@
 					<h3>It came for the dinosaurs and now it's coming for you</h3>
 					<p>
 						<small> 
-							by <a href="http://kylemitofsky.com">Kyle Mitofsky</a>
-							/ <a href="http://twitter.com/kylemit2">@kylemit2</a>
+							by 
+							<a href="http://kylemitofsky.com">
+								Kyle Mitofsky
+							</a>
+							| 
+							<a href="http://twitter.com/kylemit2">
+								@kylemit2
+							</a>	
+						</small>
+						<br>
+						<small> 
+							<a href="https://github.com/KyleMit/Presentations">
+								Presentation
+							</a>
+							| 
+							<a href="https://github.com/KyleMit/MeteorDemo">
+								Demo
+							</a>
 						</small>
 					</p>
 
@@ -1441,6 +1464,9 @@ $(<i class="blue-hljs">template</i>).on('<i class="green-hljs">event</i>', '<i c
 										How to setup on Digital Ocean
 									</a>
 								</li>
+								<li><a href="https://trello.com/c/FMdB7GAu/78-galaxy-managed-production-quality-meteor-deploy\">
+									Galaxy Road Map
+								</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1474,12 +1500,19 @@ mup deploy
 						</aside>
 					</section>
 
-				</section>
 
+					<section id="security">
+						<h2><span class="myth">Meteor Myth</span> #23</h2>
+						<blockquote>"Meteor isn't secure"</blockquote>
 
-
-
-
+						<aside class="notes">
+							<ul>
+								<li><a href="http://www.dafont.com/mythbusters.font">
+									Font
+								</a></li>
+							</ul>
+						</aside>
+					</section>
 
 					<section id="insecure-example">
 						<h3>Insecure Package</h3>
@@ -1516,6 +1549,11 @@ Questions.find().forEach(function(doc) {
 							</ul>
 						</aside>
 					</section>
+
+
+				</section>
+
+
 
 
 
