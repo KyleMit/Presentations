@@ -1595,7 +1595,32 @@ Accounts.ui.config({
 					</section>
 
 
+					<section id="mobile">
+						<h3>Mobile</h3>
+						<blockquote>Write once; run <b>everywhere</b></blockquote>
+						<pre><code class="bash" data-trim >
+# iOS
+meteor install-sdk ios
+meteor add-platform ios
+meteor run ios
 
+# android
+meteor install-sdk android
+meteor add-platform android
+meteor run android
+
+
+						</code></pre>
+						<aside class="notes">
+							<ul>
+								<li>Adding platform will kill other meteor apps</li>
+								<li><a href="http://phonegap.com/">Phonegap</a> doing heavy lifting</li>
+								<li><a href="http://electron.atom.io/">Electron</a> can deploy to desktop environments too!</li>
+								<li>iOS - download <a href="https://github.com/meteor/meteor/wiki/Mobile-Dev-Install:-iOS-on-Mac">Xcode</a></li>
+								<li>Android - <a href="https://github.com/meteor/meteor/wiki/Mobile-Dev-Install:-Android-on-Mac#haxm">Enable acceleration</a></li>
+							</ul>
+						</aside>
+					</section>
 
 
 
@@ -1651,14 +1676,16 @@ Questions.find().forEach(function(doc) {
 						</aside>
 					</section>
 
-					
+
+					<section id="removing-insecure">
+						<h3><del>in</del> secure</h3>
+
+
+					</section>
+
+
 
 				</section>
-
-
-
-
-
 
 
 
