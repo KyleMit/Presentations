@@ -1499,19 +1499,43 @@ mup deploy
 					</section>
 
 					<section id="packages">
+						<h3>Packages</h3>
+
+
 						<a href="https://atmospherejs.com/">
 							<img src="images/atmosphere.png" alt="atmosphere">	
 						</a>
-						
 
-						<pre><code class="bash" data-trim data-noescape>
+						<aside class="notes">
+							<pre><code class="bash" data-trim data-noescape>
 # show all
 meteor list
 
 # add package
 meteor add <i>package-name</i>
 						</code></pre>
+							<ul>
+								<li>Smart packages mean packages can help take care of almost anything in the development pipeline</li>
+							</ul>
+						</aside>
 					</section>
+
+					<section id="accounts">
+						<h3>Accounts</h3>
+						
+						<p>Install:</p>
+						<pre><code class="bash" data-trim >
+meteor add accounts-ui accounts-password
+						</code></pre>
+
+						<p>Usage:</p>
+						<pre><code class="html" data-trim >
+{{> loginButtons}}
+						</code></pre>						
+
+					</section>
+
+
 
 
 
