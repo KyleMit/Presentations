@@ -1132,7 +1132,7 @@ WHERE  id = 1                -- <span class="yellow-hljs">Criteria</span>
 
 						<h4 class="text-left">Mongo</h4>
 						<pre><code class="js" data-trim data-noescape>
-db.users.find(               // <span class="red-hljs">Collection</span>
+db.users.update(             // <span class="red-hljs">Collection</span>
  { id: 1 },                  // <span class="yellow-hljs">Criteria</span>
  { $set: {                   // <span class="blue-hljs">Modify</span>
  		name: 'Ed',
