@@ -745,10 +745,10 @@ if (Meteor.isServer) {
 					<section id="file-structure">
 						<h3 class="has-commit-2">Directory Structure</h3>
 						<ul>
-							<li><code><b>/Client</b></code> - Runs only on the client</li>
-							<li><code><b>/Server</b></code> - Runs only on the server</li>
-							<li><code><b>/Public</b></code> - for static assets (images...)</li>
-							<li><code><b>/Lib</b></code> - loaded <i>before</i> anything else</li>
+							<li><code><b>/client</b></code> - Runs only on the client</li>
+							<li><code><b>/server</b></code> - Runs only on the server</li>
+							<li><code><b>/public</b></code> - for static assets (images...)</li>
+							<li><code><b>/lib</b></code> - loaded <i>before</i> anything else</li>
 							<li><code><b>main.*</b></code> - loaded <i>after</i> everything else</li>
 						</ul>
 
@@ -1136,7 +1136,7 @@ db.users.update(             // <span class="red-hljs">Collection</span>
  { id: 1 },                  // <span class="yellow-hljs">Criteria</span>
  { $set: {                   // <span class="blue-hljs">Modify</span>
  		name: 'Ed',
- 		rel_status: 'Married'
+ 		rel_status: 'Single'
   }}  
 )
 						</code></pre>						
@@ -1212,7 +1212,7 @@ db.users.remove(              // <span class="red-hljs">Collection</span>
 
 					<!-- Templates -->
 					<section id="demo-road-map-2">
-						<h3>Roadmap - Still with me?</h3>
+						<h3>Roadmap - Revisted</h3>
 						<img src="images/meteor-stack.png" alt="Meteor Stack">
 						<aside class="notes">
 							<ul>
@@ -1249,47 +1249,7 @@ db.users.remove(              // <span class="red-hljs">Collection</span>
 						</aside>
 					</section>
 
-					<section id="template-helper">
-						<h3>Template Helpers</h3>
 
-						<p>General</p>
-						<pre><code class="js" data-trim data-noescape>
-Template.<i>&lt;name&gt;</i>.helpers({})
-						</code></pre>	
-
-						<br/>
-						<p>Example</p>
-						<pre><code class="js" data-trim >
-Template.question_list.helpers({
-	questions: function() {
-		return Questions.find();
-	}
-})
-						</code></pre>	
-
-						<!-- Git Committ -->
-						<div class="stretch">
-							<div class="commit">
-								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p3" >
-									<code>
-										git co p3
-									</code>
-								</a>
-							</div>
-						</div>
-
-						<aside class="notes">
-							<ul>
-								<li>
-									<code>body</code> and <code>head</code> are both available as Template helpers
-								</li>
-								<li>In this example we're creating a template named <code>question-list</code> and giving a property <code>questions</code></li>
-								<li><b>Note</b>: only things declared through this template helper are available to the template (with the exception of helper methods added to all templates).  <br>
-
-								Which means, within the data context of the template helper we can't access the questions collection directly.  We need to manually expose it.  This is a good thing.  Helps keep the scope of what the template small.  Whenever a change is made to one of the template items, it can re-render the relevant DOM elements.</li>
-							</ul>
-						</aside>	
-					</section>
 
 					<section id="template-binding">
 						<h3>Template Binding</h3>
@@ -1385,6 +1345,49 @@ Template.question_list.helpers({
 						</aside>
 					</section>
 					
+					
+					<section id="template-helper">
+						<h3>Template Helpers</h3>
+
+						<p>General</p>
+						<pre><code class="js" data-trim data-noescape>
+Template.<i>&lt;name&gt;</i>.helpers({})
+						</code></pre>	
+
+						<br/>
+						<p>Example</p>
+						<pre><code class="js" data-trim >
+Template.question_list.helpers({
+	questions: function() {
+		return Questions.find();
+	}
+})
+						</code></pre>	
+
+						<!-- Git Committ -->
+						<div class="stretch">
+							<div class="commit">
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p3" >
+									<code>
+										git co p3
+									</code>
+								</a>
+							</div>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>
+									<code>body</code> and <code>head</code> are both available as Template helpers
+								</li>
+								<li>In this example we're creating a template named <code>question-list</code> and giving a property <code>questions</code></li>
+								<li><b>Note</b>: only things declared through this template helper are available to the template (with the exception of helper methods added to all templates).  <br>
+
+								Which means, within the data context of the template helper we can't access the questions collection directly.  We need to manually expose it.  This is a good thing.  Helps keep the scope of what the template small.  Whenever a change is made to one of the template items, it can re-render the relevant DOM elements.</li>
+							</ul>
+						</aside>	
+					</section>
+
 						
 					<section id="template-events">
 						<h3>Template Events</h3>
