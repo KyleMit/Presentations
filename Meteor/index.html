@@ -14,6 +14,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/night.css" id="theme">
 
@@ -1345,7 +1346,7 @@ db.users.remove(              // <span class="red-hljs">Collection</span>
 						</aside>
 					</section>
 					
-					
+
 					<section id="template-helper">
 						<h3>Template Helpers</h3>
 
@@ -1683,7 +1684,12 @@ Questions.find().forEach(function(doc) {
 					<section id="removing-insecure">
 						<h3><del>in</del> secure</h3>
 						
-						<p>Two Approaches</p>
+						<pre><code class="basg" data-trim >
+meteor remove insecure
+						</code></pre>
+						<br/>
+
+						<p>Two Solutions:</p>
 						<ol>
 							<li>
 								Allow/Deny - Explicitly declare what is allowed
@@ -1702,6 +1708,41 @@ Questions.find().forEach(function(doc) {
 							</ul>
 						</aside>
 					</section>
+
+<section id="allow-deny">
+						<h3>Allow / Deny</h3>
+							<p>Allow</p>
+							<pre><code class="js sm" data-trim>
+Posts.allow({
+  insert: function (userId, doc) {
+    // user must be logged in and modify their own doc
+    return (userId && doc.owner === userId);
+  }
+});
+							</code></pre>
+							<br>
+
+							<p>Deny</p>
+							<pre><code class="js sm" data-trim>
+Posts.deny({
+  update: function (userId, docs, fields, modifier) {
+    // can't change owners
+    return _.contains(fields, 'owner');
+  }
+});
+							</code></pre>
+							
+							<aside class="notes">
+								<ul>
+									<li><a href="http://docs.meteor.com/#/full/allow"><code>collection.allow</code></a></li>
+									<li><a href="http://docs.meteor.com/#/full/deny"><code>collection.deny</code></a></li>
+								</ul>
+							</aside>
+
+
+
+					</section>
+
 
 					<section id="methods">
 						<h3>Methods</h3>
@@ -1733,6 +1774,9 @@ Meteor.call('<i>method-name</i>' [, params])
 						</div>
 					</section>
 
+					<section id="busted" data-state="bustedSlide">
+						<img id="bustedImage" class="plain animated" src="images/myth-busted.png" alt="">
+					</section>
 				</section>
 
 
@@ -1803,6 +1847,17 @@ Meteor.call('<i>method-name</i>' [, params])
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+			Reveal.addEventListener('bustedSlide', function() {
+					var img = document.getElementById('bustedImage')
+					// make sure we have a new class to add
+					img.classList.remove('bounceInDown')
+					// slight delay before applying affect
+					setTimeout(function(){
+						img.classList.add('bounceInDown')
+					},400)
+					
+				});
 
 			// open all non-relative links in new tab
 			var extLinks = document.querySelectorAll("a[href^='http']")
