@@ -1756,7 +1756,9 @@ Meteor.call('<i>method-name</i>' [, params])
 			    	  event.currentSlide.classList.contains('long')) {
 			    	// we want to skip, now in what direction
 			      if (prevIndex.h < event.indexh ||
-			      	  prevIndex.v < event.indexv) {
+			      	   (prevIndex.h === event.indexh &&
+			      	    prevIndex.v < event.indexv)
+			      	  ) {
 			    	    Reveal.next();
 			    	 } else {
 			    	 		Reveal.prev();
