@@ -138,6 +138,9 @@
 			.slides .myth {
 				font-family: 'MythBusters'
 			}
+			.short .long {
+				display: none!important;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -156,7 +159,7 @@
 
 	</head>
 
-	<body>
+	<body class="short">
 
 		<div class="reveal">
 
@@ -164,40 +167,48 @@
 			<div class="slides">
 
 				<!-- INTRO -->
-				<section id="hello" >
-					<h1>Meteor</h1>
-					<h3>It came for the dinosaurs and now it's coming for you</h3>
-					<p>
-						<small> 
-							by 
-							<a href="http://kylemitofsky.com">
-								Kyle Mitofsky
-							</a>
-							| 
-							<a href="http://twitter.com/kylemit2">
-								@kylemit2
-							</a>	
-						</small>
-						<br>
-						<small> 
-							<a href="https://github.com/KyleMit/Presentations">
-								Presentation
-							</a>
-							| 
-							<a href="https://github.com/KyleMit/MeteorDemo">
-								Demo
-							</a>
-						</small>
-					</p>
+				<section id="welcome">
+					<section id="hello" >
+						<h1>Meteor</h1>
+						<h3>It came for the dinosaurs and now it's coming for you</h3>
+						<p>
+							<small> 
+								by 
+								<a href="http://kylemitofsky.com">
+									Kyle Mitofsky
+								</a>
+								| 
+								<a href="http://twitter.com/kylemit2">
+									@kylemit2
+								</a>	
+							</small>
+							<br>
+							<small> 
+								<a href="https://github.com/KyleMit/Presentations">
+									Presentation
+								</a>
+								| 
+								<a href="https://github.com/KyleMit/MeteorDemo">
+									Demo
+								</a>
+							</small>
+						</p>
 
-					<aside class="notes">
-						Presenter Notes:
-						<ul>
-							<li>If you add code - prove that it's working right away</li>
-							<li>Background Image by <a href="http://wallpaperose.com/meteor-shower-reflection.html">wallpaperose</a></li>
-						</ul>
-					</aside>
+						<aside class="notes">
+							Presenter Notes:
+							<ul>
+								<li>If you add code - prove that it's working right away</li>
+								<li>Background Image by <a href="http://wallpaperose.com/meteor-shower-reflection.html">wallpaperose</a></li>
+							</ul>
+						</aside>
+					</section>
+
+					<section id="bscc">
+						<h3>Thank you Boston Code Camp!</h3>
+						<img src="images/bscc.png" alt="sponsors">
+					</section>
 				</section>
+			
 
 				<section id="overview">
 					<h2>Overview</h2>
@@ -227,6 +238,12 @@
 						</p>
 						
 						<p>
+							<a href="https://twitter.com/Kylemit2" title="@KyleMit2">
+								<img src="http://i.imgur.com/J4j1vWR.png" alt="Twitter">
+							</a>
+							<a href="http://stackoverflow.com/users/1366033/kylemit" title="StackOverflow">
+								<img src="http://i.imgur.com/E6wWSKN.png" alt="Stack">
+							</a>						
 							<a href="http://www.kylemitofsky.com/" title="KyleMitofsky.com">
 								<img src="http://i.imgur.com/ZbJv4lN.png" alt="Web">
 							</a>
@@ -238,12 +255,6 @@
 							</a>
 							<a href="http://jsfiddle.net/user/KyleMit/fiddles/" title="jsFiddle">
 								<img src="http://i.imgur.com/AGK6bGV.png" alt="Fiddle">
-							</a>
-							<a href="http://stackoverflow.com/users/1366033/kylemit" title="StackOverflow">
-								<img src="http://i.imgur.com/E6wWSKN.png" alt="Stack">
-							</a>
-							<a href="https://twitter.com/Kylemit2" title="@KyleMit2">
-								<img src="http://i.imgur.com/J4j1vWR.png" alt="Twitter">
 							</a>
 						</p>
 
@@ -257,20 +268,16 @@
 					</section>
 
 					<section id="who-are-you">
-						
-						<h2>Show of Hands</h2>
+						<h2>Who Are you</h2>
 
-						<h3>How many people....</h3>
+						<h3>Show of Hands</h3>
+
+						<h4>How many people....</h4>
 
 						<ul >
 							<li class="fragment" >Have ever used Meteor?
-								<ul>
-									<li class="fragment">Are using it in production?</li>
-								</ul>
-							</li>
-							<li class="fragment" >Have ever used jQuery?</li>
-							<li class="fragment" >Have ever used AngularJS?</li>
-							<li class="fragment" >Do client side development</li>
+							<li class="fragment">Do JS Development</li>
+							<li class="fragment"><b>Don't</b> do JS Development</li>
 						</ul>
 
 						<aside class="notes">
@@ -278,6 +285,7 @@
 								<li>Don't worry, I'm not going to go around the room and make you you tell me your name and a fact about yourself</li>
 								<li><b>jQuery</b> - deployed alongside meteor.  useful for DOM retrieval</li>
 								<li><b>Angular</b> - very popular javascript framework - meteor is also a JS framework - that runs on client and server.  You can replace client side binding with Angular (or react)</li>
+								<li>Meteor is a good use case both for JS developers and people new to JavaScript.  It's a great way to leverage knowledge of an existing language, and it's also a great way to get into web development in a single isomorphic API - so you can build entire web applications without having to learn a whole new server side language</li>
 							</ul>
 
 						</aside>
@@ -375,6 +383,60 @@
 						</aside>
 					</section>
 					
+
+				</section>
+
+
+				<!-- WHY METEOR -->
+				<section >
+					<section id="why-should-i-care">
+						<h1>Why Should I care?</h1>
+					</section>
+
+					<section id="Modern Web Apps">
+						<h3>Modern Web Apps</h3>
+						
+						<table>
+							<thead>
+								<tr>
+									<th>Yesterday</th>
+									<th>Today</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Browser</td>
+									<td>Mobile</td>
+								</tr>
+								<tr>
+									<td>Refresh Button</td>
+									<td>Live Update</td>
+								</tr>						
+								<tr>
+									<td>Individual Sessions</td>
+									<td>Multi-User Collaboration</td>
+								</tr>
+								<tr>
+									<td>Links and Forms</td>
+									<td>Native Style GUI</td>
+								</tr>
+								<tr>
+									<td><img src="images/old.png" alt=""></td>
+									<td><img src="images/modern.png" alt=""></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<aside class="notes">
+							<ul>
+								<li>Goal: Build Modern Web Apps - i.e. Rich client side interaction - we know we need JavaScript for this on the client</li>
+								<li>You're goal should be to build the type of app on the right</li>
+								<li>Meteor is definitely not the only way to get there</li>
+								<li>But it's certainly one way - and it's goal is to be the easiest</li>
+							</ul>
+						</aside>
+					</section>
+
 					<section id="frameworks">
 							<h3>Framework Proliferation</h3>
 
@@ -425,221 +487,6 @@
 							</ul>
 						</aside>
 					</section>
-
-				</section>
-
-
-				<!-- WHY METEOR -->
-				<section >
-					<section id="why-should-i-care">
-						<h1>Why Should I care?</h1>
-					</section>
-
-					<section id="data-on-the-wire">
-						<h2>Data on the Wire</h2>
-						
-
-						<div>
-							<div class="col-xs-6">
-								<p><b>Image</b></p>
-
-								<img class="plain" src="data:image/jpeg;base64,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" alt="">
-								
-							</div>
-							<div class="col-xs-6">
-								<p><b>HTML + CSS</b></p>
-								
-								<article class="nametag"> 
-								    <header class="top"> 
-								        <h1>Hello</h1> 
-								        <p>my name is</p> 
-								    </header> 
-								    <div class="bottom"> 
-								        <p class="name">Kyle</p> 
-								        <address class="twitter">
-								        	<a href="http://twitter.com/kylemit">
-								        		@kylemit2
-								        	</a>
-							        	</address> 
-								    </div>
-								</article>
-
-
-								<style >
-									.nametag {
-									    width: 300px; 
-									    height: 200px;
-									    background: #e00;
-									    border-radius: 10px;
-									    box-shadow: 1px 2px 5px rgba(0,0,0,.5), inset 0 0 20px rgba(0,0,0,.25); 
-									    text-align: center;
-									}
-									.nametag .top {
-									    height: 65px;
-									    padding-top: 5px;
-									}
-									.nametag .top h1,
-									.nametag .top p {
-									    color: #fff;
-									    font-family: Helvetica, Arial, sans-serif;
-									    text-transform: uppercase;
-									    letter-spacing: .2rem;
-									}
-									.nametag h1,
-									.nametag p {
-									    padding: 0; margin: 0;
-									}
-									.nametag .top h1 {
-									    font-size: 2rem;
-									}
-									.nametag .top p {
-										font-size: 1rem;
-									}
-									.nametag .bottom {
-									    background: #fff;    
-									    height: 120px;
-									    font-family: "Comic Sans MS", cursive;
-									    padding-top: 5px;
-									    color: black;
-									}
-									.nametag .name {
-									    font-size: 3rem;
-									    font-weight: bold;
-									}    
-									.nametag .twitter {
-									    font-size: 1.5rem;
-									    font-weight: bold;
-									    font-style: normal;
-									} 
-									.nametag .twitter a {
-										text-decoration: none;
-										color: black;
-									}
-
-								</style>
-								
-							</div>
-						</div>
-
-						<aside class="notes">
-							Transmitting data and the ability to template out that data is like making a nametag out of HTML &amp; CSS instead of sending over a glob of data that can't be changed.
-
-							Demo zooming in with trackpad
-						</aside>
-					</section>
-
-					<section id="data-on-the-wire-2">
-						<h2>Data on the Wire</h2>
-						<div>
-							<div class="col-xs-6">
-								<p><b>Blob of Info</b></p>
-								<img src="images/nametag-image.png" alt="Nametag Image">
-							</div>
-							<div class="col-xs-6">
-								<p><b>Data + Template</b></p>					
-								<img src="images/nametag-html.png" alt="Nametag HTML">
-							</div>
-						</div>
-					</section>
-
-					<section id="data-on-the-wire-3">
-						<h2>Data on the Wire</h2>
-						<div>
-							<div class="col-xs-6">
-								<p><b>View Source</b></p>
-								<img src="images/view-source.png" alt="View Source">
-							</div>
-							<div class="col-xs-6">
-								<p><b>Web Socket</b></p>					
-								<img src="images/meteor-frame.png" alt="Web Socket Frames">
-							</div>
-						</div>
-					</section>
-
-					<section id="data-on-the-wire-4">
-						<h2>Data on the Wire</h2>
-						<a href="https://atmospherejs.com/kylemit/nametag">
-							atmospherejs.com/kylemit/nametag
-						</a>
-
-						<br><br>
-
-						<h5 class="align-left">Installation:</h5>
-						<pre><code class="bash" data-trim>
-meteor add kylemit:nametag
-						</code></pre>
-
-						<h5 class="align-left">Usage:</h5>
-						<pre><code class="bash" data-trim>
-{{> nametag name="Kyle" twitter="Kylemit2"}}
-						</code></pre>
-						
-						<br>
-
-						<h4>It's really that easy</h4>	
-
-					</section>
-
-
-					<section id="build-pipeline">
-						<h3>Build Pipline</h3>
-
-						<p>No more of this:</p>
-						<pre><code class="js sm" data-trim >
-var result = '<a href="' + url + '">' + text + '</a>';
-						</code></pre>		
-						
-						<br/>
-						
-						<div class="fragment">
-							<p>No more of this either:</p>	
-							<pre><code class="js sm" data-trim >
-<script id="anchor-template" type="text/x-handlebars">
-  <a href="{{url}}">{{text}}</a>
-</script>
-<script>
-var source   = $("#anchor-template").html();
-var template = Handlebars.compile(source);
-</script>
-							</code></pre>	
-						</div>
-						<aside class="notes">
-							<ul>
-								<li>You might say, we don't do that anymore - we use templates</li>
-								<li>No more of manual template conversions</li>
-								<li>Whole bunch of things can be automatically converted: <ul>
-									<li>Less</li>
-									<li>SASS</li>
-									<li>Markdown</li>
-									<li>ECMA Script 2015</li>
-								</ul></li>
-							</ul>
-						</aside>
-					</section>
-
-					<section id="imperative-vs-delcarative">
-						<h3>Imperative vs Declarative</h3>
-						<p>Which would you rather write?</p>
-						<dl>
-
-						
-							<dt>Imperative...</dt>
-							<dd class="fragment">
-								Describes step by step instructions
-							</dd>
-							
-							<br>
-
-							<dt>Declarative...</dt>
-							<dd class="fragment">
-								Describes desired end state, not <i>how</i> to get there
-							</dd>
-						
-						</dl>
-
-					</section>
-
-					
 
 				</section>
 
@@ -939,7 +786,7 @@ Questions = new Mongo.Collection('quest');
 						</aside>
 					</section>
 
-					<section id="mongodb-why-not">
+					<section id="mongodb-why-not" class="long">
 						<h3>MongoDB: Why Not?</h3>
 						<p><small>
 							I'll be available after the presentation to write slogans
@@ -948,7 +795,7 @@ Questions = new Mongo.Collection('quest');
 						<img src="images/whynot.jpg" alt="Why Not">
 					</section>
 
-					<section id="mongodb-1">
+					<section id="mongodb-1" class="long">
 						<h3>Mongo v SQL - Overview</h3>
 
 
@@ -1017,7 +864,8 @@ Questions = new Mongo.Collection('quest');
 					</section>
 
 					<!-- Collection -->
-					<section id="mongodb-2">
+					<section id="mongodb-2" class="long">
+
 						<h3>Mongo v SQL - New Table</h3>
 
 						<br/>
@@ -1037,7 +885,7 @@ new Mongo.Collection('col_name');
 					</section>
 
 					<!-- CREATE -->
-					<section id="mongodb-3">
+					<section id="mongodb-3" class="long">
 						<h3>Mongo v SQL - <span class="highlight">C</span>RUD</h3>
 
 						<br/>
@@ -1065,7 +913,7 @@ db.users.insert({
 					</section>
 					
 					<!-- READ -->
-					<section id="mongodb-4">
+					<section id="mongodb-4" class="long">
 						<h3>Mongo v SQL - C<span class="highlight">R</span>UD</h3>
 
 						<br/>
@@ -1115,7 +963,7 @@ db.users.find(            // <span class="red-hljs">Collection</span>
 					</section>
 
 					<!-- UPDATE -->
-					<section id="mongodb-5">
+					<section id="mongodb-5" class="long">
 						<h3>Mongo v SQL - CR<span class="highlight">U</span>D</h3>
 
 						<br/>
@@ -1170,7 +1018,7 @@ db.users.update(             // <span class="red-hljs">Collection</span>
 					</section>
 		
 					<!-- DELETE -->
-					<section id="mongodb-6">
+					<section id="mongodb-6" class="long">
 						<h3>Mongo v SQL - CRU<span class="highlight">D</span></h3>
 
 						<br/>
@@ -1212,7 +1060,7 @@ db.users.remove(              // <span class="red-hljs">Collection</span>
 
 
 					<!-- Templates -->
-					<section id="demo-road-map-2">
+					<section id="demo-road-map-2" class="long">
 						<h3>Roadmap - Revisted</h3>
 						<img src="images/meteor-stack.png" alt="Meteor Stack">
 						<aside class="notes">
@@ -1280,6 +1128,10 @@ db.users.remove(              // <span class="red-hljs">Collection</span>
 							</a>
 						</div>
 					</div>
+
+					<aside class="notes">
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template">Template Element</a>
+					</aside>
 
 					</section>
 
@@ -1393,6 +1245,17 @@ Template.question_list.helpers({
 					<section id="template-events">
 						<h3>Template Events</h3>
 						
+						<div >
+							<p>jQuery Example</p>
+							<pre><code class="js" data-trim data-noescape>
+$(<i class="blue-hljs">template</i>).on('<i class="green-hljs">event</i>', '<i class="red-hljs">selector</i>', (e) => {
+	//Do Stuff
+});
+							</code></pre>	
+						</div>
+
+					<div class="fragment">
+						<p>Spacebar Event Handling:</p>
 						<pre><code class="js" data-trim data-noescape>
 Template.<i class="blue-hljs">template-name</i>.events({
 	'<i class="green-hljs">event</i> <i class="red-hljs">selector</i>': (event, template) => {
@@ -1401,16 +1264,12 @@ Template.<i class="blue-hljs">template-name</i>.events({
 })
 						</code></pre>	
 
+					</div>
+
+
 						<br/>
 						
-						<div class="fragment">
-							<p>jQuery Analog</p>
-							<pre><code class="js" data-trim data-noescape>
-$(<i class="blue-hljs">template</i>).on('<i class="green-hljs">event</i>', '<i class="red-hljs">selector</i>', (e) => {
-	//Do Stuff
-});
-							</code></pre>	
-						</div>
+
 
 
 						<div class="stretch">
@@ -1430,6 +1289,30 @@ $(<i class="blue-hljs">template</i>).on('<i class="green-hljs">event</i>', '<i c
 									Arrow Functions
 								</a> - Mostly to shorten up code</li>
 							</ul>
+							We're going to do three things:
+							<ol>
+								<li>grab the event info</li>
+								<li>write to the database</li>
+								<li>Clean up after ourselves</li>
+							</ol>
+
+						<pre><code class="js" data-trim data-noescape>
+Template.question_submit.events({
+	'submit form': function (event, template) {
+		// grab the input
+		var text = event.target.question.value;
+
+		// write to the database
+		Questions.insert({
+			text: text
+		});
+
+		// clean up form events
+		event.preventDefault();
+		event.target.question.value = "";
+	}
+});
+						</code></pre>								
 						</aside>
 					</section>
 
@@ -1474,7 +1357,7 @@ $(<i class="blue-hljs">template</i>).on('<i class="green-hljs">event</i>', '<i c
 						</aside>
 					</section>
 
-					<section id="custom-deployment">
+					<section id="custom-deployment" class="long">
 						<h3>Custom Deployment</h3>
 						<pre><code class="js" data-trim>
 npm install -g mup
@@ -1631,7 +1514,7 @@ meteor run android
 
 
 
-					<section id="security">
+					<section id="security" class="long">
 						<h2><span class="myth">Meteor Myth</span> #23</h2>
 						<blockquote>"Meteor isn't secure"</blockquote>
 
@@ -1644,7 +1527,7 @@ meteor run android
 						</aside>
 					</section>
 
-					<section id="insecure-example">
+					<section id="insecure-example" class="long">
 						<h3>Insecure Package</h3>
 						<p>Will someone open their console and run this:</p>
 						<pre><code class="js" data-trim >
@@ -1681,7 +1564,7 @@ Questions.find().forEach(function(doc) {
 					</section>
 
 
-					<section id="removing-insecure">
+					<section id="removing-insecure" class="long">
 						<h3><del>in</del> secure</h3>
 						
 						<pre><code class="basg" data-trim >
@@ -1709,7 +1592,7 @@ meteor remove insecure
 						</aside>
 					</section>
 
-<section id="allow-deny">
+					<section id="allow-deny" class="long">
 						<h3>Allow / Deny</h3>
 							<p>Allow</p>
 							<pre><code class="js sm" data-trim>
@@ -1744,7 +1627,7 @@ Posts.deny({
 					</section>
 
 
-					<section id="methods">
+					<section id="methods" class="long">
 						<h3>Methods</h3>
 							<p>Add Method</p>
 							<pre><code class="js" data-trim data-noescape>
@@ -1774,7 +1657,7 @@ Meteor.call('<i>method-name</i>' [, params])
 						</div>
 					</section>
 
-					<section id="busted" data-state="bustedSlide">
+					<section id="busted" data-state="bustedSlide" class="long">
 						<img id="bustedImage" class="plain animated" src="images/myth-busted.png" alt="">
 					</section>
 				</section>
@@ -1802,6 +1685,7 @@ Meteor.call('<i>method-name</i>' [, params])
 						</a> - Meteor News 
 						<small>(built with <a href="http://www.telescopeapp.org/">Telescope</a>)</small></li>
 						<li><a href="http://www.meetup.com/meteor-burlington">Meetup</a> - Talks & Hacking</li>
+						<li><a href="http://www.meetup.com/Meteor-Boston/">Meteor Boston</a></li>
 						<li><a href="http://stackoverflow.com/questions/popular/meteor?show=alltime&sort=votes">Stack Overflow</a> - Specifics
 						<small>(please use <a href="http://meteorpad.com/">MeteorPad</a>)</small></li>
 					</ul>
@@ -1810,7 +1694,7 @@ Meteor.call('<i>method-name</i>' [, params])
 
 				<!-- THE END -->
 				<section id="the-end" style="text-align: left;">
-					<h1>THE END</h1>
+					<h1>Thank You!</h1>
 
 				</section>
 
@@ -1864,6 +1748,26 @@ Meteor.call('<i>method-name</i>' [, params])
 			for(i = 0; i < extLinks.length; i++ ){
 			  extLinks[i].setAttribute('target','_blank');
 			}
+
+			var prevIndex = Reveal.getIndices();
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+
+			    if (document.body.classList.contains('short') && 
+			    	  event.currentSlide.classList.contains('long')) {
+			    	// we want to skip, now in what direction
+			      if (prevIndex.h < event.indexh ||
+			      	  prevIndex.v < event.indexv) {
+			    	    Reveal.next();
+			    	 } else {
+			    	 		Reveal.prev();
+			      }
+			   
+			    }
+
+			    // everytime get (old) indices
+			    prevIndex = Reveal.getIndices();
+			});
+
 		</script>
 		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</body>
