@@ -1153,69 +1153,6 @@ db.users.remove(              // <span class="red-hljs">Collection</span>
 
 					</section>
 
-					<section id="spacebars">
-						<h3>{{Spacebars}}</h3>
-
-						<ul>
-							<li> Print: 
-								<code><span class="highlight">{{</span>property<span class="highlight">}}</span></code>
-							</li>
-							<li> Inlcusion: 
-								<code><span class="highlight">{{</span>> template<span class="highlight">}}</span></code>
-							</li>
-							<li> Block Tags:
-								<ul>
-									<li>
-										<code><span class="highlight">{{</span>#if<span class="highlight">}}</span> &nbsp; ... <span class="highlight">{{</span>/if<span class="highlight">}}</span></code>
-									</li>		
-									<li>
-										<code><span class="highlight">{{</span>#each}} ... <span class="highlight">{{</span>/each<span class="highlight">}}</span></code>
-									</li>
-									<li>
-										<code><span class="highlight">{{</span>#with<span class="highlight">}}</span> ... <span class="highlight">{{</span>/with<span class="highlight">}}</span></code>
-									</li>
-								</ul>
-							</li>
-						</ul>
-
-						<aside class="notes">
-							<ul>
-								<li><a href="https://github.com/meteor/meteor/blob/devel/packages/spacebars/README.md">
-									Spacebars Docs
-								</a></li>
-								<li>Print will automaticaly sanitize any output.  If you don't want to sanitize output, you can use three brackets, but be careful with user input</li>
-								<li>if has counterpart <code>{{#unless}}</code></li>
-								<li>You can even make your own keywords and call methods with parameters</li>
-								<li>Packages can install templates.  So sometimes templates are available without you having to define them 
-								i.e. 
-								<a href="https://atmospherejs.com/meteor/accounts-ui">
-									<code>{{login-buttons}}</code>
-								</a></li>
-							</ul>
-							<p>That's all you really need - much more than that and too much logic is going into the view.  Do it with helpers.  You might object: but that's fewer directives than angular provides: on the grounds that the more of something you can possibly have, the better it is.  Yeah, but things like ng-src only existed to prevent the flash of unstyled content issues.  There's a fundamental difference in ownership.  In angular, HTML owns all the code.  it's right there in the body.  In meteor, meteor owns everything.  So in angular, I put all that markup in regular HTML and then rely on angular kicking in at the last minute and saying, hey, there's a new element that matches my directive, I guess I'll do something about it.  In meteor, you write your templates and meteor renders good old fashioned mark up.</p>
-						</aside>
-					</section>
-
-
-					<section id="data-context">
-						<h3>Data Contexts</h3>
-						<blockquote class="twitter-tweet" lang="en">
-							<p lang="en" dir="ltr">
-								Sometimes when I&#39;m writing Javascript I want to throw up my hands and say &quot;this is bullshit!&quot; but I can never remember what &quot;this&quot; refers to
-							</p>
-							&mdash; Ben Halpern (@bhalp1) 
-							<a href="https://twitter.com/bhalp1/status/578925947245633536">March 20, 2015</a>
-						</blockquote>
-
-						<aside class="notes">
-							<ul>
-								<li>More about data contexts:</li>
-								<li>In console<code>$0</code> will select whatever element is highlighted</li>
-								<li>To look at the data dependencies for any object, you can run <code>Blaze.get()</code></li>
-							</ul>
-						</aside>
-					</section>
-					
 
 					<section id="template-helper">
 						<h3>Template Helpers</h3>
@@ -1256,9 +1193,86 @@ Template.question_list.helpers({
 
 								Which means, within the data context of the template helper we can't access the questions collection directly.  We need to manually expose it.  This is a good thing.  Helps keep the scope of what the template small.  Whenever a change is made to one of the template items, it can re-render the relevant DOM elements.</li>
 							</ul>
+							<span>git:p4</span>	
 						</aside>	
 					</section>
 
+
+					<section id="spacebars">
+						<h3>{{Spacebars}}</h3>
+
+						<ul>
+							<li> Print: 
+								<code><span class="highlight">{{</span>property<span class="highlight">}}</span></code>
+							</li>
+							<li> Inlcusion: 
+								<code><span class="highlight">{{</span>> template<span class="highlight">}}</span></code>
+							</li>
+							<li> Block Tags:
+								<ul>
+									<li>
+										<code><span class="highlight">{{</span>#if<span class="highlight">}}</span> &nbsp; ... <span class="highlight">{{</span>/if<span class="highlight">}}</span></code>
+									</li>		
+									<li>
+										<code><span class="highlight">{{</span>#each}} ... <span class="highlight">{{</span>/each<span class="highlight">}}</span></code>
+									</li>
+									<li>
+										<code><span class="highlight">{{</span>#with<span class="highlight">}}</span> ... <span class="highlight">{{</span>/with<span class="highlight">}}</span></code>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<!-- Git Committ -->
+						<div class="stretch">
+							<div class="commit">
+								<a href="https://github.com/KyleMit/MeteorDemo/releases/tag/p3" >
+									<code>
+										git co p3
+									</code>
+								</a>
+							</div>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li><a href="https://github.com/meteor/meteor/blob/devel/packages/spacebars/README.md">
+									Spacebars Docs
+								</a></li>
+								<li>Print will automaticaly sanitize any output.  If you don't want to sanitize output, you can use three brackets, but be careful with user input</li>
+								<li>if has counterpart <code>{{#unless}}</code></li>
+								<li>You can even make your own keywords and call methods with parameters</li>
+								<li>Packages can install templates.  So sometimes templates are available without you having to define them 
+								i.e. 
+								<a href="https://atmospherejs.com/meteor/accounts-ui">
+									<code>{{login-buttons}}</code>
+								</a></li>
+							</ul>
+							<p>That's all you really need - much more than that and too much logic is going into the view.  Do it with helpers.  You might object: but that's fewer directives than angular provides: on the grounds that the more of something you can possibly have, the better it is.  Yeah, but things like ng-src only existed to prevent the flash of unstyled content issues.  There's a fundamental difference in ownership.  In angular, HTML owns all the code.  it's right there in the body.  In meteor, meteor owns everything.  So in angular, I put all that markup in regular HTML and then rely on angular kicking in at the last minute and saying, hey, there's a new element that matches my directive, I guess I'll do something about it.  In meteor, you write your templates and meteor renders good old fashioned mark up.</p>
+							<span>git:p4</span>	
+						</aside>
+					</section>
+
+
+					<section id="data-context">
+						<h3>Data Contexts</h3>
+						<blockquote class="twitter-tweet" lang="en">
+							<p lang="en" dir="ltr">
+								Sometimes when I&#39;m writing Javascript I want to throw up my hands and say &quot;this is bullshit!&quot; but I can never remember what &quot;this&quot; refers to
+							</p>
+							&mdash; Ben Halpern (@bhalp1) 
+							<a href="https://twitter.com/bhalp1/status/578925947245633536">March 20, 2015</a>
+						</blockquote>
+
+						<aside class="notes">
+							<ul>
+								<li>More about data contexts:</li>
+								<li>In console<code>$0</code> will select whatever element is highlighted</li>
+								<li>To look at the data dependencies for any object, you can run <code>Blaze.get()</code></li>
+							</ul>
+						</aside>
+					</section>
+					
 						
 					<section id="template-events">
 						<h3>Template Events</h3>
@@ -1534,7 +1548,7 @@ meteor run android
 
 
 
-					<section id="security" class="long">
+					<section id="security" >
 						<h2><span class="myth">Meteor Myth</span> #23</h2>
 						<blockquote>"Meteor isn't secure"</blockquote>
 
@@ -1584,7 +1598,7 @@ Questions.find().forEach(function(doc) {
 					</section>
 
 
-					<section id="removing-insecure" class="long">
+					<section id="removing-insecure" >
 						<h3><del>in</del> secure</h3>
 						
 						<pre><code class="basg" data-trim >
@@ -1612,7 +1626,7 @@ meteor remove insecure
 						</aside>
 					</section>
 
-					<section id="allow-deny" class="long">
+					<section id="allow-deny" >
 						<h3>Allow / Deny</h3>
 							<p>Allow</p>
 							<pre><code class="js sm" data-trim>
@@ -1647,7 +1661,7 @@ Posts.deny({
 					</section>
 
 
-					<section id="methods" class="long">
+					<section id="methods" >
 						<h3>Methods</h3>
 							<p>Add Method</p>
 							<pre><code class="js" data-trim data-noescape>
@@ -1681,7 +1695,7 @@ Meteor.call('<i>method-name</i>' [, params])
 						</aside>
 					</section>
 
-					<section id="busted" data-state="bustedSlide" class="long">
+					<section id="busted" data-state="bustedSlide" >
 						<img id="bustedImage" class="plain animated" src="images/myth-busted.png" alt="">
 					</section>
 				</section>
@@ -1777,16 +1791,20 @@ Meteor.call('<i>method-name</i>' [, params])
 			  extLinks[i].setAttribute('target','_blank');
 			}
 
-			var prevIndex = Reveal.getIndices();
-			Reveal.addEventListener( 'slidechanged', function( event ) {
+			var prevProg = Reveal.getProgress();
+			Reveal.addEventListener('slidechanged', skipSlides );
+			Reveal.addEventListener( 'fragmentshown', skipSlides )
+			Reveal.addEventListener( 'fragmenthidden', skipSlides );
 
+			function skipSlides() {
+					// check if are doing short or long version
+					var curSlide = Reveal.getCurrentSlide()
 			    if (document.body.classList.contains('short') && 
-			    	  event.currentSlide.classList.contains('long')) {
+			    	  curSlide.classList.contains('long')) {
+
 			    	// we want to skip, now in what direction
-			      if (prevIndex.h < event.indexh ||
-			      	   (prevIndex.h === event.indexh &&
-			      	    prevIndex.v < event.indexv)
-			      	  ) {
+			      var curProg = Reveal.getProgress();
+			      if (prevProg < curProg) {
 			    	    Reveal.next();
 			    	 } else {
 			    	 		Reveal.prev();
@@ -1795,8 +1813,8 @@ Meteor.call('<i>method-name</i>' [, params])
 			    }
 
 			    // everytime get (old) indices
-			    prevIndex = Reveal.getIndices();
-			});
+			    prevProg = Reveal.getProgress();
+			};
 
 		</script>
 		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
