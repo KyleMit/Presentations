@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Meteor Presentation</title>
+		<title>Intro to Meteor</title>
 
 		<meta name="description" content="An Introduction to Meteor.JS and how to build awesome apps!">
 		<meta name="author" content="Kyle Mitofsky">
@@ -18,131 +18,13 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/night.css" id="theme">
 
+		
+
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<style>
-			.backgrounds {
-				opacity: .3;
-			}
-			iframe.twitter-tweet {
-					/* important to override local styles */
-				  width: 75% !important;
-				  margin-left: 25% !important;
-				  height: 400px !important;
-				  /* tweets are at most 520px */
-				  max-width: 520px !important;
-			}
-			blockquote.twitter-tweet {
-				background-color: white;
-				color: black;
-				border: 1px solid #e1e8ed;
-				border-radius: 4px;
-			}
-			/* Default Code to Double Size */
-			.reveal pre code {
-				font-size: 2rem;
-				line-height: 2rem;
-				padding-left: 10px;
-			}
-			.reveal pre code.sm {
-				font-size: 1.5rem;
-				line-height: 1.5rem;
-				padding-left: 10px;
-			}
-			.col-xs-6 {
-				width: 50%;
-				float: left;
-			}
-			img.plain.plain {
-				margin: 0;
-				background: none;
-				border: none;
-				box-shadow: none;
-			}
-			article.nametag {
-				margin-left: 25%;
-			}
-			pre code.tiny {
-				font-size: 1rem;
-				line-height: 1rem;
-			}
-			.align-left {
-				text-align: left;
-			}
-			.commit {
-			  position: fixed;
-			  left: 0;
-			  bottom: 0;
-			  font-family: consolas;
-			  color: #eee;
-			  font-size: 1rem;
-			}
-			img.plain {
-				margin: 0;
-			  background: none;
-			  border: none;
-			  box-shadow: none;
-			}
-			p.handwriting {
-			  font-family: comic sans MS;
-			  color: rgb(147, 38, 35);
-			  font-weight: bolder;
-			  font-size: 2.5rem;
-			}
-			div.img-with-cite img {
-				margin-bottom: 0;
-			}
-			div.img-with-cite cite {
-				display: block;
-				text-align: left;
-				margin-left: 5%;
-			}
-			code.hljs {
-				tab-size: 2;
-			}
-			.slides .has-commit-1 {	margin-top: 100px; }
-			.slides .has-commit-2 {	margin-top: 200px; }
-			.slides .has-commit-3 {	margin-top: 300px; }
-			.slides .text-left {
-				text-align: left;
-				margin-left: 5%;
-			}
-			.slides .highlight {
-				color: #1b91ff;
-				font-weight: bold;
-			}
-			.hljs .red-hljs,
-			.hljs .red-hljs    * { color: #CC9393;}
-			.hljs .yellow-hljs,
-			.hljs .yellow-hljs * { color: #E3CEAB;}
-			.hljs .blue-hljs,
-			.hljs .blue-hljs   * { color: #8CD0D3;}
-			.hljs .green-hljs,
-			.hljs .green-hljs  * { color: #238223;}
-			.reveal small {
-				vertical-align: middle;
-			}
-			.slides .error {
-				color: #C41A16;
-    		border: 1px solid rgb(255, 216, 216);
-    		background-color: rgb(255, 239, 239);
-			}
-			.slides .full-width {
-				width: 95%;
-			}
-			@font-face {
-			    font-family: MythBusters;
-			    src: url(css/MythBusters.ttf);
-			}
-			.slides .myth {
-				font-family: 'MythBusters'
-			}
-			.short .long {
-				display: none!important;
-			}
-		</style>
-
+		<link rel="stylesheet" href="css/style.css" id="theme">
+		
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -179,7 +61,7 @@
 								</a>
 								| 
 								<a href="http://twitter.com/kylemit2">
-									@kylemit2
+									@KyleMitBTV
 								</a>	
 							</small>
 							<br>
@@ -1887,7 +1769,7 @@ Meteor.call('<i>method-name</i>' [, params])
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'socket.io/socket.io.js', async: true },
-        	{ src: 'plugin/notes-server/client.js', async: true }
+        			{ src: 'plugin/notes-server/client.js', async: true }
 				]
 			});
 
