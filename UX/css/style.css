@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Smiler';
+	src: url('//2ttf.com/webfont/EoVxytkhYOw/webfont.ttf') format('truetype');
+}
+
+body {
+    background: #000;
+    background-color: #000;
+}
+.reveal .backgrounds {
+    opacity: .4;
+}
+
+/* sample using the font */
+body .reveal,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: 'Smiler';
+    text-transform: none;
+}
