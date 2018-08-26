@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -12,7 +12,10 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
-		<link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="css/style.css">
+
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -32,54 +35,369 @@
 		<div class="reveal">
 
 
-			<div class="slides">
+            <div class="slides">
 
 
 
-				<section>
-					<h2>Practical UX &amp; UI for Developers</h2>
-					<h4>Frameworks and Guidlines for delivering Exceptional User Interfaces</h4>
-					<p>
-						<small> 
-							by 
-							<a href="http://kylemitofsky.com">
-								Kyle Mitofsky
-							</a>
-							| 
-							<a href="http://twitter.com/kylemit2">
-								@KyleMitBTV
-							</a>	
-						</small>
-					</p>
+                <section id="initial">
+                
+                    <section id="welcome">
+                        <h2>Practical UX &amp; UI for Developers</h2>
+                        <h4>Frameworks and Guidelines for delivering Exceptional User Interfaces</h4>
+                        <p>
+                            <small>
+                                by
+                                <a href="http://kylemitofsky.com">
+                                    Kyle Mitofsky
+                                </a>
+                                |
+                                <a href="http://twitter.com/kylemit2">
+                                    @KyleMitBTV
+                                </a>
+                            </small>
+                        </p>
 
-					<aside class="notes">
-						Presenter Notes:
-						<ul>
-							<li>If you add code - prove that it's working right away</li>
-							<li>Background Image by <a href="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HEe-Q5C/clear-dark-night-stars-planets-and-a-few-aircraft-accompany-the-milky-way-through-its-transit-of-the-summer-sky_4jufjnqq__F0000.png">videoblocks</a></li>
-						</ul>
-					</aside>
-				</section>
+                        <aside class="notes">
+                            Notes:
+                            <ul>
+                                <li>If you add code - prove that it's working right away</li>
+                                <li>Background Image by <a href="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HEe-Q5C/clear-dark-night-stars-planets-and-a-few-aircraft-accompany-the-milky-way-through-its-transit-of-the-summer-sky_4jufjnqq__F0000.png">videoblocks</a></li>
+                            </ul>
+                        </aside>
+                    </section>
 
-				<section id="overview">
-						<h2>Overview</h2>
-	
-						<ul>
-							<li><b>Terms</b> <span class="fragment"> ... what are we talking about</span></li>
-							<li><b>Frameworks</b> <span class="fragment"> ... who else has talked about it</span></li>
-							<li><b>Guidelines</b> <span class="fragment"> ... rules of thumb</span></li>
-							<li><b>Controls</b> <span class="fragment"> ... the whole thumb</span></li>
-							<li><b>Resources</b> <span class="fragment"> ... continue the journey!</span></li>
-						</ul>
-					</section>
+                    <section id="overview">
+                        <h2>Overview</h2>
 
-				<section>
-					<h2>Thanks Everyone!</h2>
-					<p class="fragment">
-						Like, sincerely, I'm really excited to be able to talk about design with ya'll
-					</p>
-				</section>
-			</div>
+                        <ul>
+                            <li><b>Terms</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... what are we talking about</span></li>
+                            <li><b>Frameworks</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... who else has talked about it</span></li>
+                            <li><b>Guidelines</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... rules of thumb</span></li>
+                            <li><b>Controls</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... the whole thumb</span></li>
+                            <li><b>Resources</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... continue the journey!</span></li>
+                        </ul>
+                    </section>
+
+                </section>
+
+
+                <section id="terms-section">
+                    <!--<h4>
+        <span class="fragment highlight-blue" > Terms</span> |
+        <span class="fragment highlight-current-blue" > Frameworks</span> |
+        <span class="fragment highlight-current-blue" > Guidelines</span>
+    </h4>-->
+                    <section id="terms">
+                        <h1>Terms</h1>
+
+
+                    </section>
+
+                    <section id="UX≠UI">
+                        <h1>UX ≠ UI</h1>
+
+
+                    </section>
+
+                    <section id="ux-definition">
+                        <h2>UX =</h2>
+                        <h3>
+                            <span class="fragment highlight-current-blue"
+                                  data-fragment-index="1">User</span>
+                            +
+                            <span class="fragment highlight-current-blue"
+                                  data-fragment-index="2">Experience</span>
+                        </h3>
+                        <h3>
+                            <span class="fragment" data-fragment-index="1">
+                                <i class="fas fa-user"></i>
+                            </span>
+
+                            <span class="fragment" data-fragment-index="2">
+                                +
+                                <i class="fas fa-angry" style="color: #ff7676;"></i>
+                                <i class="fas fa-frown" style="color: #ffb476;"></i>
+                                <i class="fas fa-meh" style="color: #fff376;"></i>
+                                <i class="fas fa-smile" style="color: #acff76;"></i>
+                                <i class="fas fa-grin-hearts" style="color: #5adc5c;"></i>
+                            </span>
+                        </h3>
+
+
+                    </section>
+
+                    <section id="ux-dimensions">
+                        <h4>User Experience Facets</h4>
+
+                        <ul class="side-by-side small-font" style="width: 35%;">
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b>Surface</b>
+                                <ul>
+                                    <li>Graphic Design</li>
+                                    <li>Visual Design</li>
+                                </ul>
+
+                            </li>
+                            <hr />
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b>Skeleton</b>
+                                <ul>
+                                    <li>Interface Design</li>
+                                    <li>Navigation Design</li>
+                                </ul>
+                            </li>
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b>Structure</b>
+                                <ul>
+                                    <li>Interaction Design</li>
+                                    <li>Information Architecture</li>
+                                </ul>
+                            </li>
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b>Scope</b>
+                                <ul>
+                                    <li>Content Requirements</li>
+                                </ul>
+                            </li>
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b>Strategy</b>
+                                <ul>
+                                    <li>User Needs</li>
+                                    <li>Business Objectives</li>
+                                </ul>
+                            </li>
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b>Support</b>
+                                <ul>
+                                    <li>Marketing</li>
+                                    <li>Help Desk</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <img src="https://i.imgur.com/nYiHH5l.png" alt="Iceberg" class="side-by-side img-plain" style="width: 50%;" />
+
+                        <aside class="notes">
+                            Notes:
+                            <ul>
+                                <li>UX - All of the aspects that make up with way in which a user interacts with your company</li>
+                                <li>The Elements of User Experience by Jesse James Garrett</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section id="interfaces">
+                        <h3>Interface</h3>
+                        <h4>
+                            <em>
+                                Shared boundary between two layers
+                            </em>
+                        </h4>
+
+                        <br />
+
+
+                        <ul>
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b><strong>API</strong> - Application Programming Interface</b>
+                                <br />
+
+                                <i class="fas fa-robot"></i>
+                                <i class="fas fa-exchange-alt"></i>
+                                <i class="fas fa-database"></i>
+
+                                <span class="margin-lr">|</span>
+
+                                <i class="fas fa-laptop-code"></i>
+                                <i class="fas fa-exchange-alt"></i>
+                                <i class="fas fa-server"></i>
+                                <br /><br />
+                            </li>
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b><strong>UI</strong> - User Interface</b>
+                                <br />
+
+                                <i class="fas fa-female"></i>
+                                <i class="fas fa-exchange-alt"></i>
+                                <i class="fas fa-microscope"></i>
+
+                                <span class="margin-lr">|</span>
+
+                                <i class="fas fa-wheelchair"></i>
+                                <i class="fas fa-exchange-alt"></i>
+                                <i class="fas fa-coffee"></i>
+
+                                <span class="margin-lr">|</span>
+
+                                <i class="fas fa-child"></i>
+                                <i class="fas fa-exchange-alt"></i>
+                                <i class="fas fa-bowling-ball"></i>
+                                <br /><br />
+                            </li>
+                            <li class="fragment highlight-current-blue fragment-dimmed">
+                                <b><strong>GUI</strong> - Graphical User Interface</b>
+                                <br />
+
+                                <i class="fas fa-user-md"></i>
+                                <i class="fas fa-exchange-alt"></i>
+                                <i class="fas fa-mobile-alt"></i>
+
+                                <span class="margin-lr">|</span>
+
+                                <i class="fas fa-female"></i>
+                                <i class="fas fa-exchange-alt"></i>
+                                <i class="fas fa-desktop"></i>
+
+                                <br />
+                            </li>
+                        </ul>
+
+
+                    </section>
+
+                </section>
+
+
+
+
+
+            <section id="frameworks-section">
+
+                    <section id="framework">
+                        <h1>Frameworks</h1>
+                        <h4>Frameworks and Guidelines for delivering Exceptional User Interfaces</h4>
+                        <p>
+                            
+                        </p>
+
+                    </section>
+
+                    <section id="fundamental-principles">
+                        <h3>Fundamental Principles of Interaction</h3>
+
+                        <ul>
+                            <li><b>Affordances</b> </li>
+                            <li><b>Signifiers</b> </li>
+                            <li><b>Mapping</b> </li>
+                            <li><b>Feedback</b> </li>
+                            <li><b>Conceptual Models</b></li>
+                        </ul>
+                    </section>
+                    
+                    <section id="path">
+                        <h3>Steps & Path</h3>
+
+                        <ul>
+
+                            <li>
+                                <b>Step</b>
+                                <i class="fas fa-shoe-prints"></i> - Physical and Mental Effort
+                                <ul>
+                                    <li><i class="fas fa-arrows-alt-v fa-fw"></i> Length - Amount of Time to complete</li>
+                                    <li><i class="fas fa-arrows-alt-h fa-fw"></i> Width - Amount of Difficulty to complete</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Path</b>
+                                <code>
+                                    [<i class="fas fa-shoe-prints"></i>,
+                                    <i class="fas fa-shoe-prints"></i>,
+                                    <i class="fas fa-shoe-prints"></i>]
+                                </code>
+                                - Collection of Steps needed to complete a task
+                            </li>
+                        </ul>
+                    </section>
+
+                </section>
+
+
+
+
+                <section id="resources">
+                    <h2>Resources</h2>
+
+                    <section id="online">
+                        <h4><i class="fas fa-globe-africa fa-fw"></i> Online</h4>
+                        <a href="https://ux.stackexchange.com/">
+                            <img src="https://i.imgur.com/Jri452v.png" alt="User Experience Stack Exchange" class="img-grid" />
+                        </a>
+
+
+                    </section>
+
+                    <section id="books">
+                        <h4><i class="fas fa-book-open fa-fw"></i> Books</h4>
+                        <a href="https://www.amazon.com/dp/B00E257T6C/">
+                            <img src="https://i.imgur.com/LLcKROH.png" alt="The Design of Everyday Things by Don Norman" class="img-grid" />
+                        </a>
+                        <a href="https://www.amazon.com/dp/B00DG25HBG/">
+                            <img src="https://i.imgur.com/UFG4a6L.png" alt="UI is Communication by Everett N McKay" class="img-grid" />
+                        </a>
+                        <a href="https://www.amazon.com/dp/B00HJUBRPG/">
+                            <img src="https://i.imgur.com/jSvF5lP.png" alt="Don't Make Me Think by Steve Krug" class="img-grid" />
+                        </a>
+                        <a href="https://www.amazon.com/dp/B004JLMDOC/">
+                            <img src="https://i.imgur.com/80uX9y4.png" alt="The Elements of User Experience by Jesse James Garrett" class="img-grid" />
+                        </a>
+
+
+                    </section>
+
+                    <section id="video">
+                        <h4><i class="fas fa-video fa-fw"></i> Video</h4>
+
+                        <a href="https://app.deviq.com/courses/the-science-of-great-ui">
+                            <img src="https://i.imgur.com/i7boCQ0.png" alt="Science of Great UI by Mark Miller" class="img-grid" />
+                        </a>
+
+
+                        <a href="https://www.pluralsight.com/search?q=UX&categories=course">
+                            <img src="https://i.imgur.com/49YpYsY.png" alt="Pluralsight" class="img-grid" />
+                        </a>
+
+                    </section>
+
+                    <section id="podcasts">
+                        <h4><i class="fas fa-podcast fa-fw"></i> Podcasts</h4>
+
+                        <a href="https://uibreakfast.com/category/podcast/">
+                            <img src="https://i.imgur.com/brqTetx.png" alt="UI Breakfast" class="img-grid-sm" />
+                        </a>
+
+                        <a href="https://uxpodcast.com/">
+                            <img src="https://i.imgur.com/eILHNZF.png" alt="UX Podcast" class="img-grid-sm" />
+                        </a>
+
+                        <a href="https://99percentinvisible.org/">
+                            <img src="https://i.imgur.com/lXmuyvJ.png" alt="99 Percent Invisible" class="img-grid-sm" />
+                        </a>
+
+                        <a href="https://design.google/library/podcasts/">
+                            <img src="https://i.imgur.com/0hfqd2b.png" alt="Design Notes" class="img-grid-sm" />
+                        </a>
+
+                        <a href="http://hackingui.com/podcast/">
+                            <img src="https://i.imgur.com/F660bq2.png" alt="Hacking UI" class="img-grid-sm" />
+                        </a>
+
+                        <a href="https://dotnetrocks.com/">
+                            <img src="https://i.imgur.com/5lArETW.png" alt="Dot Net Rocks" class="img-grid-sm" />
+                        </a>
+                    </section>
+
+
+
+                </section>
+
+
+                <section id="thanks">
+                    <h2>Thanks Everyone!</h2>
+                    <p class="fragment handwriting">
+                        Like, sincerely, I'm really excited to be able to talk about design with y'all
+                    </p>
+                </section>
+            </div>
 
 
 
@@ -103,9 +421,13 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+			    progress: true,
+			    history: true,
+			    center: true,
+
+			    transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 				parallaxBackgroundImage: "content/background3.png",
-
 				parallaxBackgroundSize: "2040px 1060px",
 
 				dependencies: [

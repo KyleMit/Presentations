@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 	<head>
@@ -1757,7 +1757,6 @@ Meteor.call('<i>method-name</i>' [, params])
 				transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 				parallaxBackgroundImage: "images/background.jpg",
-
 				parallaxBackgroundSize: "1600px 1200px",
 
 				// Optional reveal.js plugins
@@ -1774,15 +1773,15 @@ Meteor.call('<i>method-name</i>' [, params])
 			});
 
 			Reveal.addEventListener('bustedSlide', function() {
-					var img = document.getElementById('bustedImage')
-					// make sure we have a new class to add
-					img.classList.remove('bounceInDown')
-					// slight delay before applying affect
-					setTimeout(function(){
-						img.classList.add('bounceInDown')
-					},400)
+				var img = document.getElementById('bustedImage');
+				// make sure we have a new class to add
+			    img.classList.remove('bounceInDown');
+				// slight delay before applying affect
+				setTimeout(function() {
+					img.classList.add('bounceInDown');
+				},400);
 					
-				});
+			});
 
 			// open all non-relative links in new tab
 			var extLinks = document.querySelectorAll("a[href^='http']")
@@ -1792,12 +1791,12 @@ Meteor.call('<i>method-name</i>' [, params])
 
 			var prevProg = Reveal.getProgress();
 			Reveal.addEventListener('slidechanged', skipSlides );
-			Reveal.addEventListener( 'fragmentshown', skipSlides )
+			Reveal.addEventListener('fragmentshown', skipSlides);
 			Reveal.addEventListener( 'fragmenthidden', skipSlides );
 
 			function skipSlides() {
-					// check if are doing short or long version
-					var curSlide = Reveal.getCurrentSlide()
+				// check if are doing short or long version
+			    var curSlide = Reveal.getCurrentSlide();
 			    if (document.body.classList.contains('short') && 
 			    	  curSlide.classList.contains('long')) {
 

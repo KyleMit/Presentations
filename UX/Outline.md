@@ -1,4 +1,4 @@
-# Practical UX Guidelines for Developers
+# Practical UX & UI Guidelines for Developers
 
 > As an end user, there's nothing more satisfying than a well crafted design.  As a developer, this often takes knowledge, forethought, and work to achieve.  We'll go over some fundamental design principles and models, and then build some guidelines and strategies for designing exceptional interfaces and experiences.  UI skills are easily transfered across organizations and tech stacks and allow you and your company's products to stand out and deliver value.
 
@@ -11,13 +11,13 @@
 * Application
 * Marketing
 * Support
-* Phone Calls
+* Content
 * Branding
 
 User Interface - 
 
 
-### Interface - Shared boundary betwen two layers
+### Interface - Shared boundary between two layers
 
 * API - Application Programing Interface
 * GUI - Graphical User Interface
@@ -30,6 +30,11 @@ Interaction Design
 Interface Design
 Graphical Design
 
+
+
+
+
+## Frameworks
 
 ## Philosophies
 
@@ -46,15 +51,12 @@ Graphical Design
 
 **Corner Cuts**
  * Closed Captions on a Loud Bar TV
- * Corner Cuts - help wheelcheers, but also people (blind users)
+ * Corner Cuts - help wheelchairs, but also people (blind users)
 
 ### Conversational Design
-* People talk to applications like they talk to peole
+* People talk to applications like they talk to people
 
 
-
-
-## Frameworks
 
 ### Fundamental Principles of Interaction
     Affordances
@@ -102,10 +104,10 @@ Page title should describe the purpose of the current page.  Page functionality 
 Layouts and Natural mapping convey information to the user without any cognitive overhead.  Labels and text require the user read and digest that information before it can be deployed, a step that many users will skip, regardless of whether they *should* or not. 
 
 Labels - Last refuge of a design scoundrel.  Expectations are much stronger than text and can be absorbed immediately without reading
-* Recyle Bin vs Trash Bin
+* Recycle Bin vs Trash Bin
 
 
-Create Distinct Visual Heirachy for master page layout
+Create Distinct Visual Hierarchy for master page layout
 
 Current Navigational state should be apparent to user (bread crumbs or active highlighting)
 
@@ -158,8 +160,8 @@ Grid Display
 * \< 10 records   - display
 * \> 10 records   - sort
 * \> 25 records   - sort + filter
-* \> 50 records   - sort + filter + client level* pa\gination
-* \> 500 records  - sort + filter + server level* pa\gination
+* \> 50 records   - sort + filter + client level* pagination
+* \> 500 records  - sort + filter + server level* pagination
 * \> 1000 records - sort + filter + database level pagination
     
 ## Forms 
@@ -184,7 +186,7 @@ Users should be warned before abandoning unsaved changes
 
 ## Errors - be Friendly
 
-Clients should not be able to produce an error state within the application.  The ability to do so should be considered a bug and should be caught ahead of time with forcing functions.  If this happens, the dev, via the applicaiton, should strive to be human and apologetic with appropriate levity.
+Clients should not be able to produce an error state within the application.  The ability to do so should be considered a bug and should be caught ahead of time with forcing functions.  If this happens, the dev, via the application, should strive to be human and apologetic with appropriate levity.
 
 *`Forcing functions`* are constraints that prevent users from performing incorrect operations/actions
 
@@ -202,7 +204,7 @@ Any operations that take longer than 2 seconds more than 50% of the time (includ
 
 ## Reach Guidelines
 
-Users should be notified when their Session is about to expire on the sever so they have the oportunity to extend their session before losing their progress
+Users should be notified when their Session is about to expire on the sever so they have the opportunity to extend their session before losing their progress
 
 Application State should be managed exclusively though URL
     With the exception of page specific data entry, the URL should dictate everything you need to know about the state
@@ -226,5 +228,5 @@ Application State should be managed exclusively though URL
 
 
     
-Microgrammars
+Micro-grammars
 http://miksovsky.blogs.com/flowstate/2007/03/collecting_data.html

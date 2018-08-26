@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono');
 @font-face {
 	font-family: 'Smiler';
 	src: url('//2ttf.com/webfont/EoVxytkhYOw/webfont.ttf') format('truetype');
 }
+
+
+
+
 
 body {
     background: #000;
@@ -19,6 +24,46 @@ body .reveal,
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-    font-family: 'Smiler';
+    font-family: 'Roboto', sans-serif;
     text-transform: none;
+}
+.reveal .handwriting {
+    font-family: 'Smiler', sans-serif;
+}
+.reveal.reveal code,pre {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.fragment-dimmed {
+    visibility: visible;
+    color: grey;
+
+}
+.fragment-dimmed.visible {
+    visibility: visible;
+    color: white;
+
+}
+
+.reveal .img-plain {
+    border: none;
+}
+.reveal .margin-lr {
+    margin: 0px 20px;
+}
+.reveal .img-grid {
+    height: 225px;
+}
+.reveal .img-grid-sm {
+    height: 120px;
+}
+.side-by-side {
+    display: inline-block;
+    width: 40%;
+}
+.small-font,
+.small-font li,
+.small-font li ul,
+.small-font li ul li {
+    font-size: 24px;
 }
