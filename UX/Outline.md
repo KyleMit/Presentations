@@ -20,6 +20,7 @@ User Interface -
 ### Interface - Shared boundary between two layers
 
 * API - Application Programing Interface
+* UI - User Interface
 * GUI - Graphical User Interface
 
 

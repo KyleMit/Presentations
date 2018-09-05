@@ -70,11 +70,12 @@
                         <h2>Overview</h2>
 
                         <ul>
-                            <li><b>Terms</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... what are we talking about</span></li>
-                            <li><b>Frameworks</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... who else has talked about it</span></li>
-                            <li><b>Guidelines</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... rules of thumb</span></li>
-                            <li><b>Controls</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... the whole thumb</span></li>
-                            <li><b>Resources</b> <span class="fragment highlight-current-blue fragment-dimmed"> ... continue the journey!</span></li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Terms</b>  ... shared terminology</li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Frameworks</b> ... conceptual models</span></li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Guidelines</b> ... rules of thumb</span></li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Components</b> ... specifics</li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Process</b> ... how to fish</li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Resources</b> ... next steps</li>
                         </ul>
                     </section>
 
@@ -82,11 +83,7 @@
 
 
                 <section id="terms-section">
-                    <!--<h4>
-        <span class="fragment highlight-blue" > Terms</span> |
-        <span class="fragment highlight-current-blue" > Frameworks</span> |
-        <span class="fragment highlight-current-blue" > Guidelines</span>
-    </h4>-->
+
                     <section id="terms">
                         <h1>Terms</h1>
 
@@ -127,11 +124,11 @@
                     </section>
 
                     <section id="ux-dimensions">
-                        <h4>User Experience Facets</h4>
+                        <h4>User Experience Components</h4>
 
                         <ul class="side-by-side small-font" style="width: 35%;">
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b>Surface</b>
+                                <b class="accent">Surface</b>
                                 <ul>
                                     <li>Graphic Design</li>
                                     <li>Visual Design</li>
@@ -140,34 +137,34 @@
                             </li>
                             <hr />
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b>Skeleton</b>
+                                <b class="accent">Skeleton</b>
                                 <ul>
                                     <li>Interface Design</li>
                                     <li>Navigation Design</li>
                                 </ul>
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b>Structure</b>
+                                <b class="accent" >Structure</b>
                                 <ul>
                                     <li>Interaction Design</li>
                                     <li>Information Architecture</li>
                                 </ul>
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b>Scope</b>
+                                <b class="accent" >Scope</b>
                                 <ul>
                                     <li>Content Requirements</li>
                                 </ul>
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b>Strategy</b>
+                                <b class="accent" >Strategy</b>
                                 <ul>
                                     <li>User Needs</li>
                                     <li>Business Objectives</li>
                                 </ul>
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b>Support</b>
+                                <b class="accent">Support</b>
                                 <ul>
                                     <li>Marketing</li>
                                     <li>Help Desk</li>
@@ -177,83 +174,100 @@
 
                         <img src="https://i.imgur.com/nYiHH5l.png" alt="Iceberg" class="side-by-side img-plain" style="width: 50%;" />
 
+                        <cite class="footnote">
+                            <em>The Elements of User Experience</em> by <b>Jesse James Garrett</b>
+                        </cite>
+
                         <aside class="notes">
                             Notes:
                             <ul>
                                 <li>UX - All of the aspects that make up with way in which a user interacts with your company</li>
-                                <li>The Elements of User Experience by Jesse James Garrett</li>
                             </ul>
                         </aside>
+
                     </section>
 
                     <section id="interfaces">
                         <h3>Interface</h3>
-                        <h4>
-                            <em>
-                                Shared boundary between two layers
-                            </em>
-                        </h4>
-
-                        <br />
-
-
+                        
+                        <blockquote class="font-md">
+                            Shared boundary between two layers
+                        </blockquote>
+                        
                         <ul>
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b><strong>API</strong> - Application Programming Interface</b>
-                                <br />
-
-                                <i class="fas fa-robot"></i>
-                                <i class="fas fa-exchange-alt"></i>
-                                <i class="fas fa-database"></i>
-
-                                <span class="margin-lr">|</span>
-
-                                <i class="fas fa-laptop-code"></i>
-                                <i class="fas fa-exchange-alt"></i>
-                                <i class="fas fa-server"></i>
-                                <br /><br />
+                                <strong class="accent">API</strong> - <b class="accent">A</b>pplication <b class="accent">P</b>rogramming <b class="accent">I</b>nterface
+                                <div>
+                                    <i class="fas fa-fw fa-robot"></i>
+                                    <i class="fas fa-fw fa-exchange-alt"></i>
+                                    <i class="fas fa-fw fa-database"></i>
+                                </div>
+                                <div>
+                                    <i class="fas fa-fw fa-laptop-code"></i>
+                                    <i class="fas fa-fw fa-exchange-alt"></i>
+                                    <i class="fas fa-fw fa-server"></i>
+                                </div>
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b><strong>UI</strong> - User Interface</b>
-                                <br />
-
-                                <i class="fas fa-female"></i>
-                                <i class="fas fa-exchange-alt"></i>
-                                <i class="fas fa-microscope"></i>
-
-                                <span class="margin-lr">|</span>
-
-                                <i class="fas fa-wheelchair"></i>
-                                <i class="fas fa-exchange-alt"></i>
-                                <i class="fas fa-coffee"></i>
-
-                                <span class="margin-lr">|</span>
-
-                                <i class="fas fa-child"></i>
-                                <i class="fas fa-exchange-alt"></i>
-                                <i class="fas fa-bowling-ball"></i>
-                                <br /><br />
+                                <strong class="accent">UI</strong> - <b class="accent">U</b>ser <b class="accent">I</b>nterface
+                                <div cite="Nicole">
+                                    <i class="fas fa-fw fa-female"></i>
+                                    <i class="fas fa-fw fa-exchange-alt"></i>
+                                    <i class="fas fa-fw fa-microscope"></i>
+                                </div>
+                                <div>
+                                    <i class="fas fa-fw fa-hand-spock"></i>
+                                    <i class="fas fa-fw fa-exchange-alt"></i>
+                                    <i class="fas fa-fw fa-bowling-ball"></i>
+                                </div>
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed">
-                                <b><strong>GUI</strong> - Graphical User Interface</b>
-                                <br />
-
-                                <i class="fas fa-user-md"></i>
-                                <i class="fas fa-exchange-alt"></i>
-                                <i class="fas fa-mobile-alt"></i>
-
-                                <span class="margin-lr">|</span>
-
-                                <i class="fas fa-female"></i>
-                                <i class="fas fa-exchange-alt"></i>
-                                <i class="fas fa-desktop"></i>
-
-                                <br />
+                                <strong class="accent">GUI</strong> - <b class="accent">G</b>raphical  <b class="accent">U</b>ser <b class="accent">I</b>nterface
+                                <div>
+                                    <i class="fas fa-fw fa-user-md"></i>
+                                    <i class="fas fa-fw fa-exchange-alt"></i>
+                                    <i class="fas fa-fw fa-desktop"></i>
+                                </div>
+                                <div>
+                                    <i class="fas fa-fw fa-male"></i>
+                                    <i class="fas fa-fw fa-exchange-alt"></i>
+                                    <i class="fas fa-fw fa-mobile-alt"></i>        
+                                </div>
                             </li>
                         </ul>
 
 
                     </section>
+
+
+                    <section id="fundamental-principles">
+                            <h3>Fundamental Principles of Interaction</h3>
+    
+ 
+                            <ul>
+                                
+                                <li >
+                                   <span class="fragment highlight-current-blue fragment-dimmed"><b class="">Discoverability</b></span> 
+                                   <ul>
+                                        <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Affordances</b> ... what actions are possible</span></li>
+                                        <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Signifiers</b> ... where the action should occur</span></li>
+                                   </ul>
+                                </li>
+                                <li >
+                                    <span class="fragment highlight-current-blue fragment-dimmed"> <b class="">Understanding</b></span> 
+                                    <ul>
+                                        <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Mapping</b> ... layout of actions</span></li>
+                                        <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Feedback</b> ... results of an action</span></li>
+                                        <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Conceptual Models</b> ... universe of actions</span></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                            <cite class="footnote">
+                                <em>The Design of Everyday Things</em> by <b>Don Norman</b>
+                            </cite>
+                        </section>
 
                 </section>
 
@@ -265,24 +279,11 @@
 
                     <section id="framework">
                         <h1>Frameworks</h1>
-                        <h4>Frameworks and Guidelines for delivering Exceptional User Interfaces</h4>
-                        <p>
-                            
-                        </p>
+                        
+
 
                     </section>
 
-                    <section id="fundamental-principles">
-                        <h3>Fundamental Principles of Interaction</h3>
-
-                        <ul>
-                            <li><b>Affordances</b> </li>
-                            <li><b>Signifiers</b> </li>
-                            <li><b>Mapping</b> </li>
-                            <li><b>Feedback</b> </li>
-                            <li><b>Conceptual Models</b></li>
-                        </ul>
-                    </section>
                     
                     <section id="path">
                         <h3>Steps & Path</h3>
@@ -307,12 +308,82 @@
                                 - Collection of Steps needed to complete a task
                             </li>
                         </ul>
+                        <cite class="footnote">
+                                <em>The Science of Great Design</em> by <b>Mark Miller</b>
+                            </cite>
+                    </section>
+
+                    <section id="path">
+                        <h3>Informational Relevance & Emphasis</h3>
+
+
+                        <cite class="footnote">
+                            <em>The Science of Great Design</em> by <b>Mark Miller</b>
+                        </cite>
+                    </section>
+
+
+                    <section id="path">
+                        <h3>Conceptual Relationship & Proximity</h3>
+
+                        <cite class="footnote">
+                            <em>The Science of Great Design</em> by <b>Mark Miller</b>
+                        </cite>
                     </section>
 
                 </section>
 
 
+                
 
+
+                <section id="process-section">
+                        <section id="process">
+                            <h2>Process</h2>
+                        </section>
+                        
+                        <section id="prototype">
+                            <h4>Prototyping</h4>
+                            
+                            <p>
+                                Balsamiq
+
+                            </p>
+
+                        </section>
+    
+                        <section id="usability">
+                            <h4>Hallway Usability Testing</h4>
+                            <blockquote class="font-md">Grab a random person from the hallway and watch them use your product</blockquote>
+                            <ul>
+     
+                                <li>
+                                    Watch & Listen, Don't Talk
+                                    <div>
+                                        <span class="fa-stack fa-2x">
+                                            <i class="fas fa-eye fa-stack-2x"></i>
+                                            <i class="fas fa-check" style="color:green;top: -14px;right: -14px;position: absolute;"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    Check your Ego
+                                    <div>
+                                        <span class="fa-stack fa-2x">
+                                            <i class="fas fa-brain fa-stack-2x"></i>
+                                            <i class="fas fa-times" style="color:Tomato;top: -14px;right: -14px;position: absolute;"></i>
+                                        </span>
+
+                                    </div>
+                                        
+                                </li>
+                            </ul>
+    
+    
+                        </section>
+
+
+                </section>
 
                 <section id="resources">
                     <h2>Resources</h2>

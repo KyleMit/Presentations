@@ -39,11 +39,23 @@ body .reveal,
     color: grey;
 
 }
+.fragment-dimmed .accent {
+    color: #b9b9b9;
+}
 .fragment-dimmed.visible {
     visibility: visible;
     color: white;
 
 }
+.fragment-dimmed.visible .accent {
+    color: #edff6c;
+}
+
+.reveal .slides section .fragment.highlight-current-blue.current-fragment .accent {
+    color: #b4ce00;
+}
+
+
 
 .reveal .img-plain {
     border: none;
@@ -66,4 +78,16 @@ body .reveal,
 .small-font li ul,
 .small-font li ul li {
     font-size: 24px;
+}
+
+cite.footnote {
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #ffa900;
+}
+
+.font-md.font-md {
+    font-size: 90%
 }
