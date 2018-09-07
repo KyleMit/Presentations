@@ -1,12 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono');
-@font-face {
+/*
+    Fonts:
+    Google
+    https://fonts.google.com/?selection.family=Roboto|Ubuntu+Mono
+    https://google-webfonts-helper.herokuapp.com/fonts/roboto?subsets=latin
+
+    FA
+    https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css
+
+    Smiler
+    http://2ttf.com/EoVxytkhYOw
+*/
+/*@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono');*/
+/*@font-face {
 	font-family: 'Smiler';
 	src: url('//2ttf.com/webfont/EoVxytkhYOw/webfont.ttf') format('truetype');
-}
-
-
-
-
+}*/
 
 body {
     background: #000;

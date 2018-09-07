@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Smiler';
+    src: url('../fonts/smiler.ttf') format('truetype');
+}
+../fonts/ubuntu-mono-v7-latin-regular.woff2
+/* sample using the font */
+/*.handwriting {
+    font-family: 'Smiler';
+}*/
