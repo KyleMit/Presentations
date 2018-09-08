@@ -88,14 +88,107 @@ body .reveal,
     font-size: 24px;
 }
 
-cite.footnote {
+cite.footnote.footnote {
     font-size: 16px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    position: fixed;
+    top: 660px;
+    right: 100px;
+}
+cite.footnote a {
+    color: #c18000;
+}
+cite.footnote a:hover {
     color: #ffa900;
+}
+
+.section-header {
+    color: #bec9ff;
 }
 
 .font-md.font-md {
     font-size: 90%
+}
+
+.fa-ul.fa-ul.fa-ul {
+    list-style-type: none;
+    margin-left: 2.5em;
+    padding-left: 0; 
+}
+
+li.hr {
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    margin: 10px;
+    margin-left: -10px;
+}
+
+span.replace-text {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+span.top {
+    display: block;
+}
+
+span.bottom {
+    display: block;
+    margin-top: 18px;
+    font-size: 125%;
+}
+
+span.slash {
+    border-bottom: 5px solid red;
+    display: block;
+    transform: rotate(-7deg);
+    margin-top: -31px;
+}
+.arrow-right.arrow-right,
+.arrow-right::before,
+.arrow-right::after {
+    height: 4px;
+    background: white;
+}
+.arrow-right.arrow-right {
+    display: block;
+    width: 70%;
+    margin: 5px auto;
+    position: relative;
+}
+
+.arrow-right::before,
+.arrow-right::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+   
+}
+
+.arrow-right::before {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    transform-origin: top right;
+}
+.arrow-right::after {
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+    transform-origin: bottom right;
+}
+
+.kbd.kbd {
+    color: #1b1b1b;
+    background-color: #f2f2f2;
+    transition: background-color;
+    padding: 0px 8px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 2px #aaaaaa;
+    cursor: pointer;
+}
+.kbd.kbd:hover {
+    background-color: white;
+    color: black;
 }
