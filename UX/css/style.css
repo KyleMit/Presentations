@@ -182,7 +182,7 @@ span.slash {
     color: #1b1b1b;
     background-color: #f2f2f2;
     transition: background-color;
-    padding: 0px 8px;
+    padding: 0px 15px;
     border-radius: 5px;
     border: 1px solid grey;
     box-shadow: 2px 2px 2px #aaaaaa;
@@ -277,4 +277,11 @@ span.slash {
 
 .noUi-value.noUi-value-horizontal.noUi-value-large {
     font-size: 20px;
+}
+
+.chart.chart.chart {
+    min-width: 310px;
+    max-width: 700px;
+    height: 400px;
+    margin: 0 auto
 }
