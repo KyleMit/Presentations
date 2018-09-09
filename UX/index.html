@@ -21,8 +21,9 @@
 	    <link rel="stylesheet" href="content/fonts/ubuntu/css/ubuntu.css">
 	    <link rel="stylesheet" href="content/fonts/smiler/css/smiler.css">
         
+	    <link rel="stylesheet" href="css/nouislider.css">
         
-		<!-- Theme used for syntax highlighting of code -->
+	    <!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
@@ -71,19 +72,6 @@
                     </section>
 
 
-
-                    <section id="links">
-                        <h2>Follow Along!</h2>
-                        
-                        <img src="https://i.imgur.com/8cM7Vvk.png" alt="Presentation QR Code" />
-
-                        <h5>
-                            <a href="https://kylemit.github.io/Presentations/UX/">
-                                https://kylemit.github.io/Presentations/UX/
-                            </a>
-                        </h5>
-                    </section>
-
                     <section id="overview">
                         <h2>Overview <kbd class="kbd overview">O</kbd> </h2>
 
@@ -95,6 +83,19 @@
                             <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Process</b> ... how to fish</li>
                             <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Resources</b> ... next steps</li>
                         </ul>
+                    </section>
+
+
+                    <section id="links">
+                        <h2>Follow Along!</h2>
+
+                        <img src="https://i.imgur.com/8cM7Vvk.png" alt="Presentation QR Code" />
+
+                        <h5>
+                            <a href="https://kylemit.github.io/Presentations/UX/">
+                                https://kylemit.github.io/Presentations/UX/
+                            </a>
+                        </h5>
                     </section>
 
                 </section>
@@ -401,6 +402,58 @@
                             </a>
                         </cite>
                     </section>
+                    
+                    <section id="proximity-irl">
+                        <h3>Proximity IRL - Elevators</h3>
+
+                        <div class="elevator">
+                            <div class="row">
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label">7</span>
+                                </span>
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label">8</span>
+                                </span>
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label">9</span>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label">4</span>
+                                </span>
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label">5</span>
+                                </span>
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label">6</span>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label"><i class="fas fa-star fa-xs"></i>1</span>
+                                </span>
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label">2</span>
+                                </span>
+                                <span class="control">
+                                    <span class="button"></span>
+                                    <span class="label">3</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="proximity-slider"></div>
+
+                    </section>
 
                 </section>
 
@@ -690,39 +743,95 @@
 		</div>
 
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="lib/js/head.min.js" type="text/javascript"></script>
+		<script src="js/reveal.js" type="text/javascript"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-			    progress: true,
-			    history: true,
-			    center: true,
+	    <script type="text/javascript">
+	        // More info about config & dependencies:
+	        // - https://github.com/hakimel/reveal.js#configuration
+	        // - https://github.com/hakimel/reveal.js#dependencies
+	        Reveal.initialize({
+	            progress: true,
+	            history: true,
+	            center: true,
 
-			    transition: 'convex', // none/fade/slide/convex/concave/zoom
+	            transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-				parallaxBackgroundImage: "content/images/background.png",
-				parallaxBackgroundSize: "2040px 1060px",
+	            parallaxBackgroundImage: "content/images/background.png",
+	            parallaxBackgroundSize: "2040px 1060px",
 
-			    backgroundTransition: 'slide',
+	            backgroundTransition: 'slide',
 
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+	            dependencies: [
+	                { src: 'plugin/markdown/marked.js' },
+	                { src: 'plugin/markdown/markdown.js' },
+	                { src: 'plugin/notes/notes.js', async: true },
+	                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+	            ]
+	        });
+
+	        document.querySelector('.overview').addEventListener('click', function(event) {
+	            Reveal.toggleOverview();
+	        });
+
+	      
+
+	    </script>
+        
+	    <script src="js/nouislider.js"></script>
+        
+        
+	    <script type="text/javascript">
+            var rangeSlider = document.getElementById('proximity-slider');
+
+    	    noUiSlider.create(rangeSlider, {
+    	        start: 0 ,
+    	        range: {
+    	            'min': [  -80 ],
+    	            'max': [ 80 ]
+                },
+	            pips: {
+                    mode: 'positions',
+                    values: [0, 25, 50, 75, 100],
+                    density: 25,
+                    format: {
+                        to: function (value) {
+                            if (value < -60) return "contained";
+                            if (value < -20) return "adjacent";
+                            if (value < 20) return "buffered";
+                            if (value < 60) return "apart";
+                            if (value >60) return "distant";
+                            return value + ',-';
+                        }
+                    }
+	            }
             });
 
-            document.querySelector('.overview').addEventListener('click', function(event) {
-                Reveal.toggleOverview();
+            rangeSlider.noUiSlider.on('update', function( values, handle ) {
+                var value = values[handle];
+                console.log(value);
+
+                var isContained = value < -55;
+                var isAdjacent = value < -20 && value > -55;
+
+                document.querySelectorAll(".elevator .control").forEach(function(el) {
+                    
+                    el.classList.toggle("contained", isContained);
+                    el.classList.toggle("adjacent", isAdjacent);
+
+                    el.querySelector(".label").style.marginLeft = value + "px";
+                });
+            });
+            
+            document.querySelectorAll('.elevator .button').forEach(function(el) {
+                el.addEventListener('click', function(event) {
+                    el.classList.toggle("active");
+                });
             });
 
-			
+	    </script>
+	
+	
 
-		</script>
 	</body>
 </html>

@@ -192,3 +192,89 @@ span.slash {
     background-color: white;
     color: black;
 }
+
+.elevator {
+    display: inline-block;
+    background: silver;
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   3%, hsla(0,0%,100%, .1) 11.5%),
+                      -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 49.1%),
+                      -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 1.5%),
+                                        linear-gradient(180deg, hsl(0,0%,78%)  0%, hsl(0,0%,90%) 47%, hsl(0,0%,78%) 53%, hsl(0,0%,70%)100%);
+}
+
+
+.elevator .control {
+    position: relative;
+}
+
+.elevator .control.adjacent::before {
+    content: " ";
+    background-color: #363636;
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    
+    display: inline-block;    
+    width: 30px;
+    height: 58px;
+}
+
+
+.elevator .button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #686868;
+    display: inline-block;
+    margin: 20px 10px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.elevator .button.active {
+    border-color: #3434df;
+    box-shadow: 0px 0px 10px 4px #7878ff;
+}
+
+.elevator .label {
+    display: inline-block;
+    background-color: #363636;
+    padding: 1px;
+    width: 60px;
+    border: 1px solid grey;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.elevator .fa-star {
+    font-size: 18px;
+    vertical-align: middle;
+}
+.elevator .button, 
+.elevator .label {
+    vertical-align: middle;
+}
+
+.adjacent .label {
+    border-radius: 0px 20px 20px 0px;  
+}
+.contained .label {
+    background: none;
+    border: none;
+    color: black;
+    position: relative;
+}
+
+#proximity-slider {
+    text-align: center;
+    width: 500px;
+    margin: 30px auto;
+}
+
+.noUi-value.noUi-value-horizontal.noUi-value-large {
+    font-size: 20px;
+}
