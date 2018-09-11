@@ -227,29 +227,34 @@
                                 <b class="accent">P</b>rogramming
                                 <b class="accent">I</b>nterface
                                 <div>
-                                    <i class="fas fa-fw fa-robot"></i>
-                                    <i class="fas fa-fw fa-exchange-alt"></i>
-                                    <i class="fas fa-fw fa-database"></i>
-                                </div>
-                                <div>
-                                    <i class="fas fa-fw fa-laptop-code"></i>
-                                    <i class="fas fa-fw fa-exchange-alt"></i>
-                                    <i class="fas fa-fw fa-server"></i>
+                                    <span class="icon-set">
+                                        <i class="fas fa-fw fa-robot"></i>
+                                        <i class="fas fa-fw fa-exchange-alt"></i>
+                                        <i class="fas fa-fw fa-database"></i>
+                                    </span>
+                                    <span class="icon-set">
+                                        <i class="fas fa-fw fa-laptop-code"></i>
+                                        <i class="fas fa-fw fa-exchange-alt"></i>
+                                        <i class="fas fa-fw fa-server"></i>
+                                    </span>
                                 </div>
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed">
                                 <strong class="accent">UI</strong> -
                                 <b class="accent">U</b>ser
                                 <b class="accent">I</b>nterface
-                                <div cite="Nicole">
-                                    <i class="fas fa-fw fa-female"></i>
-                                    <i class="fas fa-fw fa-exchange-alt"></i>
-                                    <i class="fas fa-fw fa-microscope"></i>
-                                </div>
-                                <div>
-                                    <i class="fas fa-fw fa-hand-spock"></i>
-                                    <i class="fas fa-fw fa-exchange-alt"></i>
-                                    <i class="fas fa-fw fa-bowling-ball"></i>
+                                <div >
+                                    <span class="icon-set" >
+                                        <i class="fas fa-fw fa-female" cite="Nicole"></i>
+                                        <i class="fas fa-fw fa-exchange-alt"></i>
+                                        <i class="fas fa-fw fa-microscope"></i>
+                                    </span>
+                                    <span class="icon-set">
+                                        <i class="fas fa-fw fa-hand-spock"></i>
+                                        <i class="fas fa-fw fa-exchange-alt"></i>
+                                        <i class="fas fa-fw fa-bowling-ball"></i>
+                                    </span>
+                                    
                                 </div>
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed">
@@ -258,14 +263,16 @@
                                 <b class="accent">U</b>ser
                                 <b class="accent">I</b>nterface
                                 <div>
-                                    <i class="fas fa-fw fa-user-md"></i>
-                                    <i class="fas fa-fw fa-exchange-alt"></i>
-                                    <i class="fas fa-fw fa-desktop"></i>
-                                </div>
-                                <div>
-                                    <i class="fas fa-fw fa-male"></i>
-                                    <i class="fas fa-fw fa-exchange-alt"></i>
-                                    <i class="fas fa-fw fa-mobile-alt"></i>
+                                    <span class="icon-set">
+                                        <i class="fas fa-fw fa-user-md"></i>
+                                        <i class="fas fa-fw fa-exchange-alt"></i>
+                                        <i class="fas fa-fw fa-desktop"></i>
+                                    </span>
+                                    <span class="icon-set">
+                                        <i class="fas fa-fw fa-male"></i>
+                                        <i class="fas fa-fw fa-exchange-alt"></i>
+                                        <i class="fas fa-fw fa-mobile-alt"></i>
+                                    </span>
                                 </div>
                             </li>
                         </ul>
@@ -312,10 +319,12 @@
                         <div class="fragment">
                             <h5>Kiosk vs. Cockpit</h5>
                             <div class="side-by-side">
-                                <img src="https://i.imgur.com/V7uQ97M.png" alt="Kiosk" style="height: 275px;" />
+                                <!--<img src="https://i.imgur.com/V7uQ97M.png" alt="Kiosk" style="height: 275px;" />-->
+                                <img class="sprite-responsive-kiosk" alt="Kiosk" style="height: 275px;"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcUAAAKgAQMAAADQ3vSzAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADxJREFUeNrtwTEBAAAAwqD1T+1vBqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgDeYQAABe+TTKwAAAABJRU5ErkJggg==">
                             </div>
                             <div class="side-by-side">
-                                <img src="https://i.imgur.com/N4dZXgw.png" alt="Cockpit" style="height: 275px;" />
+                                <!--<img src="https://i.imgur.com/N4dZXgw.png" alt="Cockpit" style="height: 275px;" />-->
+                                <img class="sprite-responsive-cockpit" alt="Cockpit" style="height: 275px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA4QAAAKjAQMAAAB/XlNCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAGFJREFUeNrtwTEBAAAAwqD1T20IX6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA1LKUAAZ9790IAAAAASUVORK5CYII=">
                             </div>
 
 
@@ -360,20 +369,20 @@
                                 <strong class="accent">Path</strong>
                                 - Set of Steps needed to complete a task
                             </li>
-                            <li class="fragment highlight-current-blue fragment-dimmed">
-                                <span class="fa-li"><i class="fas fa-shoe-prints"></i></span>
+                            <li class="fragment highlight-current-blue fragment-dimmed" style="margin-bottom: 10px;">
+                                <span class="fa-li"><i class="fas fa-fw fa-shoe-prints fa-rotate-270 fa-box"></i></span>
                                 <strong class="accent">Step</strong>
                                 - Physical and Mental Effort
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed" style="margin-left: 30px;">
                                 <span class="fa-li"><i class="fas fa-arrows-alt-v"></i></span>
                                 <strong class="accent">Length</strong>
-                                - Amount of Time to complete
+                                - Amount of <em>Time</em> to complete
                             </li>
                             <li class="fragment highlight-current-blue fragment-dimmed"  style="margin-left: 30px;">
                                 <span class="fa-li"><i class="fas fa-arrows-alt-h"></i></span>
                                 <strong class="accent">Width</strong>
-                                - Amount of Difficulty to complete
+                                - Amount of <em>Difficulty</em> to complete
                             </li>
 
                         </ul>
@@ -389,12 +398,34 @@
                         <h3>Path Example</h3>
 
                         <h5>ex. Buying a Sandwich</h5>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-shoe-prints"></i></span> Walk to car </li>
-                            <li><span class="fa-li"><i class="fas fa-shoe-prints"></i></span> Drive to store</li>
-                            <li><span class="fa-li"><i class="fas fa-shoe-prints"></i></span> Insert credit card</li>
+                        <ul class="fa-ul path-list">
+                            <li style="margin-bottom: 10px;"><span class="fa-li"><i class="fas fa-shoe-prints fa-rotate-270 fa-box" ></i></span> Walk to car </li>
+                            <li style="margin-bottom: 10px;"><span class="fa-li"><i class="fas fa-shoe-prints fa-rotate-270 fa-box" ></i></span> Drive to store</li>
+                            <li style="margin-bottom: 10px;"><span class="fa-li"><i class="fas fa-shoe-prints fa-rotate-270 fa-box" ></i></span> Insert credit card</li>
                         </ul>
                         
+                    </section>
+                    
+                    <section id="path-easy">
+                        <h3>How to Make a Path <b>Easier</b>:</h3>
+
+
+                        <ul class="side-by-side  ">
+                            <li class="fragment highlight-current-blue fragment-dimmed" data-fragment-index="1" style="margin-bottom: 10px;"> <b class="accent">Reduce</b> # of Steps </li>
+                            <li class="fragment highlight-current-blue fragment-dimmed" data-fragment-index="2" style="margin-bottom: 10px;"> <b class="accent">Shorten</b> Steps </li>
+                            <li class="fragment highlight-current-blue fragment-dimmed" data-fragment-index="3" style="margin-bottom: 10px;"> <b class="accent">Widen</b> Steps</li>
+                            <li class="fragment highlight-current-blue fragment-dimmed" data-fragment-index="4" style="margin-bottom: 10px;"> <b class="accent">Redundant</b> Steps</li>
+                        </ul>
+
+                        <ul class="fa-ul path-list side-by-side" style="width: 2%;margin-left: 24%;">
+                            <li class="fragment fragment-hide" data-fragment-index="1" style="margin-bottom: 10px;"><span class="fa-li"><i class="fas fa-shoe-prints fa-rotate-270 fa-box"></i></span> &nbsp; </li>
+                            <li class="fragment fragment-shorter" data-fragment-index="2" style="margin-bottom: 10px;"><span class="fa-li"><i class="fas fa-shoe-prints fa-rotate-270 fa-box"></i></span> &nbsp;</li>
+                            <li class="fragment fragment-wider" data-fragment-index="3" style="margin-bottom: 10px;"><span class="fa-li"><i class="fas fa-shoe-prints fa-rotate-270 fa-box"></i></span> &nbsp;</li>
+                            <li style="margin-bottom: 10px;"><span class="fa-li"><i class="fas fa-shoe-prints fa-rotate-270 fa-box"></i></span>
+                            <i class="fragment fas fa-shoe-prints fa-rotate-270 fa-box" data-fragment-index="4"></i> &nbsp;</li>
+                        </ul>
+
+
                     </section>
 
                     <section id="proximity">
@@ -489,6 +520,38 @@
                     </section>
 
 
+                    <section id="jakobs-law">
+                        <h3>Jakob's Law</h3>
+
+                        <blockquote>Users spend most of their time on a site that's not yours</blockquote>
+
+                        <cite class="footnote">
+                            <a href="https://www.nngroup.com/videos/jakobs-law-internet-ux/">
+                                <em>Jakob's Law of Internet User Experience</em> by <b> Jakob Nielsen</b>
+                            </a>
+                        </cite>
+                        <br />
+                        <h5 class="fragment">AKA Don't re-invent the wheel
+                            <!--<i class="fas fa-fw fa-hexagon"></i>
+                            <i class="fas fa-fw fa-dharmachakra"></i>
+                            <i class="fas fa-fw fa-tire"></i>-->
+                        </h5>
+
+                    </section>
+
+                    <section id="adding-components">
+                        <h3>When adding components...</h3>
+                        
+                        <h5>Check if a similar UI Metaphor already exists:</h5>
+                        <ol style="width: 83%">
+                            <li class="fragment highlight-current-blue fragment-dimmed"> Somewhere else in your <b class="accent">project</b></li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"> In whatever <b class="accent">framework</b> you're using</li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"> In any <b class="accent">commercial</b> products</li>
+                            <li class="fragment highlight-current-blue fragment-dimmed"> <em>Otherwise</em>, do lots of <b class="accent">research</b> and design</li>
+                        </ol>
+                   
+                    </section>
+
                     <section id="Forms">
                         <h3>Forms</h3>
 
@@ -546,8 +609,8 @@
 
 
                         <a href="https://balsamiq.cloud/">
-                            <img src="https://i.imgur.com/UELovux.png" alt="Balsamiq" style="width:65%;">
-
+                            <!--<img src="https://i.imgur.com/UELovux.png" alt="Balsamiq" >-->
+                            <img class="sprite-responsive-balsamiq" alt="Balsamiq" style="width:65%;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABV4AAAPOAQMAAADNxZGxAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAALpJREFUeNrtwYEAAAAAw6D5U5/gBlUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8A2SVAAB7LdY3gAAAABJRU5ErkJggg==">
                         </a>
                         <div>...with Balsamiq</div>
 
@@ -623,10 +686,10 @@
 
                         <br />
 
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-phone"></i></span> Help Desk </li>
-                            <li><span class="fa-li"><i class="fas fa-file-code"></i></span> Code Base</li>
-                        </ul>
+                        <ol style="font-size: 110%" >
+                            <li><i class="fas fa-fw fa-phone"></i> Help Desk </li>
+                            <li><i class="fas fa-fw fa-file-code"></i> Code Base</li>
+                        </ol>
 
                         <cite class="footnote">
                             <a href="https://www.joelonsoftware.com/2007/02/19/seven-steps-to-remarkable-customer-service/">
@@ -654,84 +717,150 @@
 
                     <section id="online">
                         <h4><i class="fas fa-globe-africa fa-fw"></i> Online</h4>
-                        <a href="https://ux.stackexchange.com/">
-                            <!-- <img src="https://i.imgur.com/Jri452v.png" alt="User Experience Stack Exchange" class="img-grid" /> -->
-                            <img class="sprite-responsive-ux-stackexchange img-grid" alt="User Experience Stack Exchange" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjsAAAE8AQMAAAAc9eI9AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAC1JREFUeNrtwTEBAAAAwqD1T20LL6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeBlaHAABkEtGHwAAAABJRU5ErkJggg==">
-                        </a>
+
+                        <div class="img-grid">
+                            
+                            <a href="https://ux.stackexchange.com/" class="">
+                                <!-- <img src="https://i.imgur.com/Jri452v.png" alt="User Experience Stack Exchange" class="img-grid"/> -->
+                                <img class="sprite-responsive-ux-stackexchange " alt="User Experience Stack Exchange" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjsAAAE8AQMAAAAc9eI9AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAC1JREFUeNrtwTEBAAAAwqD1T20LL6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeBlaHAABkEtGHwAAAABJRU5ErkJggg==">
+                                <div class="caption caption-lg">
+                                    UX StackExchange
+                                </div>
+                            </a>
+
+                            <a href="https://ux.stackexchange.com/" class="">
+                                <!-- <img src="https://i.imgur.com/Jri452v.png" alt="Nielsen Norman Group" class="img-grid"/> -->
+                                <img class="sprite-responsive-nng" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAADIAQMAAAAk14GrAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACNJREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAB4NjIAAAHrgs+hAAAAAElFTkSuQmCC">
+                                <div class="caption caption-lg">
+                                    Nielsen Norman Group
+                                </div>
+                            </a>
+                        </div>
+                       
 
 
                     </section>
 
                     <section id="books">
                         <h4><i class="fas fa-book-open fa-fw"></i> Books</h4>
-                        <a href="https://www.amazon.com/dp/B00E257T6C/">
-                            <!-- <img src="https://i.imgur.com/LLcKROH.png" alt="The Design of Everyday Things by Don Norman" class="img-grid" /> -->
-                            <img class="sprite-responsive-design-of-everyday-things img-grid" alt="The Design of Everyday Things by Don Norman" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOcAAAFaAQMAAADfGdh8AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACFJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAAAAAAfgMojAABOuSA9wAAAABJRU5ErkJggg==">
-                        </a>
-                        <a href="https://www.amazon.com/dp/B00DG25HBG/">
-                            <!-- <img src="https://i.imgur.com/UFG4a6L.png" alt="UI is Communication by Everett N McKay" class="img-grid" /> -->
-                            <img class="sprite-responsive-ui-is-communiation img-grid" alt="UI is Communication by Everett N McKay" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVYAAAGkAQMAAABQO5/SAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAClJREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAIB3A0gwAAEWlXp4AAAAAElFTkSuQmCC">
-                        </a>
-                        <a href="https://www.amazon.com/dp/B00HJUBRPG/">
-                            <!-- <img src="https://i.imgur.com/jSvF5lP.png" alt="Don't Make Me Think by Steve Krug" class="img-grid" /> -->
-                            <img class="sprite-responsive-dont-make-me-think img-grid" alt="Don't Make Me Think by Steve Krug" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVYAAAG4AQMAAAAkL10yAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAClJREFUeNrtwTEBAAAAwqD1T+1lC6AAAAAAAAAAAAAAAAAAAAAAAACAG0ugAAEFgEEdAAAAAElFTkSuQmCC">
-                        </a>
-                        <a href="https://www.amazon.com/dp/B004JLMDOC/">
-                            <!-- <img src="https://i.imgur.com/80uX9y4.png" alt="The Elements of User Experience by Jesse James Garrett" class="img-grid" /> -->
-                            <img class="sprite-responsive-elements-of-ux img-grid" alt="The Elements of User Experience by Jesse James Garrett" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF+AQMAAAAC9bXKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAPg2OjIAAcGAEu4AAAAASUVORK5CYII=">
-                        </a>
+                        <div class="img-grid">
+                            <a href="https://www.amazon.com/dp/B00E257T6C/">
+                                <!-- <img src="https://i.imgur.com/LLcKROH.png" alt="The Design of Everyday Things by Don Norman" class="img-grid" /> -->
+                                <img class="sprite-responsive-design-of-everyday-things " alt="The Design of Everyday Things by Don Norman" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOcAAAFaAQMAAADfGdh8AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACFJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAAAAAAfgMojAABOuSA9wAAAABJRU5ErkJggg==">
+                                <div class="caption">
+                                    <strong>The Design of Everyday Things</strong> <br />
+                                    by <em>Don Norman</em> 
+                                </div>
+                            </a>
+                            <a href="https://www.amazon.com/dp/B00DG25HBG/">
+                                <!-- <img src="https://i.imgur.com/UFG4a6L.png" alt="UI is Communication by Everett N McKay" class="img-grid" /> -->
+                                <img class="sprite-responsive-ui-is-communiation " alt="UI is Communication by Everett N McKay" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVYAAAGkAQMAAABQO5/SAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAClJREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAIB3A0gwAAEWlXp4AAAAAElFTkSuQmCC">
+                                <div class="caption">
+                                    <strong>UI is Communication</strong> <br />
+                                    by <em>Everett N McKay</em> 
+                                </div>
+                            </a>
+                            <a href="https://www.amazon.com/dp/B00HJUBRPG/">
+                                <!-- <img src="https://i.imgur.com/jSvF5lP.png" alt="Don't Make Me Think by Steve Krug" class="img-grid" /> -->
+                                <img class="sprite-responsive-dont-make-me-think " alt="Don't Make Me Think by Steve Krug" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVYAAAG4AQMAAAAkL10yAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAClJREFUeNrtwTEBAAAAwqD1T+1lC6AAAAAAAAAAAAAAAAAAAAAAAACAG0ugAAEFgEEdAAAAAElFTkSuQmCC">
+                                <div class="caption">
+                                    <strong>Don't Make Me Think</strong> <br />
+                                    by <em>Steve Krug</em>  
+                                </div>
+                            </a>
+                            <a href="https://www.amazon.com/dp/B004JLMDOC/">
+                                <!-- <img src="https://i.imgur.com/80uX9y4.png" alt="The Elements of User Experience by Jesse James Garrett" class="img-grid" /> -->
+                                <img class="sprite-responsive-elements-of-ux" alt="The Elements of User Experience by Jesse James Garrett" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF+AQMAAAAC9bXKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAPg2OjIAAcGAEu4AAAAASUVORK5CYII=">
+                                <div class="caption">
+                                    <strong>The Elements of User Experience</strong> <br />
+                                    by <em>Jesse James Garrett</em> 
+                                </div>
+                            </a>
 
+                        </div>
+                           
 
                     </section>
 
                     <section id="video">
                         <h4><i class="fas fa-video fa-fw"></i> Video</h4>
 
-                        <a href="https://app.deviq.com/courses/the-science-of-great-ui">
-                            <!-- <img src="https://i.imgur.com/i7boCQ0.png" alt="Science of Great UI by Mark Miller" class="img-grid" /> -->
-                            <img class="sprite-responsive-science-of-great-ui img-grid" alt="Science of Great UI by Mark Miller" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABRIAAALcAQMAAAChKt67AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAItJREFUeNrtwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHga1P8AAWJM6xQAAAAASUVORK5CYII=">
-                        </a>
+                        <div class="img-grid">
+
+                            <a href="https://app.deviq.com/courses/the-science-of-great-ui">
+                                <!-- <img src="https://i.imgur.com/i7boCQ0.png" alt="Science of Great UI by Mark Miller" class="img-grid" /> -->
+                                <img class="sprite-responsive-science-of-great-ui" alt="Science of Great UI by Mark Miller" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABRIAAALcAQMAAAChKt67AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAItJREFUeNrtwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHga1P8AAWJM6xQAAAAASUVORK5CYII=">
+                                <div class="caption caption-lg">
+                                    <strong>Science of Great UI</strong> by <em>Mark Miller</em>
+                                </div>
+                            </a>
 
 
-                        <a href="https://www.pluralsight.com/search?q=UX&categories=course">
-                            <!-- <img src="https://i.imgur.com/49YpYsY.png" alt="Pluralsight" class="img-grid" /> -->
-                            <img class="sprite-responsive-pluralsight img-grid" alt="Pluralsight" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAD6AQMAAADtIG3vAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACZJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAMCzAT96AAGQ+2rIAAAAAElFTkSuQmCC">
-                        </a>
+                            <a href="https://www.pluralsight.com/search?q=UX&categories=course">
+                                <!-- <img src="https://i.imgur.com/49YpYsY.png" alt="Pluralsight" class="img-grid" /> -->
+                                <img class="sprite-responsive-pluralsight" alt="Pluralsight" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAD6AQMAAADtIG3vAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACZJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAMCzAT96AAGQ+2rIAAAAAElFTkSuQmCC">
+                                <div class="caption caption-lg">
+                                    <strong>Pluralsight</strong>
+                                </div>
+                            </a>
 
+                        </div>
                     </section>
 
                     <section id="podcasts">
                         <h4><i class="fas fa-podcast fa-fw"></i> Podcasts</h4>
 
-                        <a href="https://uibreakfast.com/category/podcast/">
-                            <!-- <img src="https://i.imgur.com/brqTetx.png" alt="UI Breakfast" class="img-grid-sm" /> -->
-                            <img class="sprite-responsive-ui-breakfast img-grid-sm" alt="UI Breakfast" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
-                        </a>
+                        <div class="img-grid-sm" style="width: 52%;margin: 0 auto;">
 
-                        <a href="https://uxpodcast.com/">
-                            <!-- <img src="https://i.imgur.com/eILHNZF.png" alt="UX Podcast" class="img-grid-sm" /> -->
-                            <img class="sprite-responsive-ux-podcast img-grid-sm" alt="UX Podcast" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
-                        </a>
+                            <a href="https://uibreakfast.com/category/podcast/">
+                                <!-- <img src="https://i.imgur.com/brqTetx.png" alt="UI Breakfast" class="img-grid-sm" /> -->
+                                <img class="sprite-responsive-ui-breakfast " alt="UI Breakfast" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
+                                <div class="caption">
+                                    UI Breakfast
+                                </div>
+                            </a>
 
-                        <a href="https://99percentinvisible.org/">
-                            <!-- <img src="https://i.imgur.com/lXmuyvJ.png" alt="99 Percent Invisible" class="img-grid-sm" /> -->
-                            <img class="sprite-responsive-99-pi img-grid-sm" alt="99 Percent Invisible" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
-                        </a>
+                            <a href="https://uxpodcast.com/">
+                                <!-- <img src="https://i.imgur.com/eILHNZF.png" alt="UX Podcast" class="img-grid-sm" /> -->
+                                <img class="sprite-responsive-ux-podcast " alt="UX Podcast" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
+                                <div class="caption">
+                                    UX Podcast
+                                </div>
+                            </a>
 
-                        <a href="https://design.google/library/podcasts/">
-                            <!-- <img src="https://i.imgur.com/0hfqd2b.png" alt="Design Notes" class="img-grid-sm" /> -->
-                            <img class="sprite-responsive-design-notes img-grid-sm" alt="Design Notes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
-                        </a>
+                            <a href="https://99percentinvisible.org/">
+                                <!-- <img src="https://i.imgur.com/lXmuyvJ.png" alt="99 Percent Invisible" class="img-grid-sm" /> -->
+                                <img class="sprite-responsive-99-pi " alt="99 Percent Invisible" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
+                                <div class="caption">
+                                    99% Invisible
+                                </div>
+                            </a>
 
-                        <a href="http://hackingui.com/podcast/">
-                            <!-- <img src="https://i.imgur.com/F660bq2.png" alt="Hacking UI" class="img-grid-sm" /> -->
-                            <img class="sprite-responsive-hacking-ui img-grid-sm" alt="Hacking UI" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
-                        </a>
+                            <a href="https://design.google/library/podcasts/">
+                                <!-- <img src="https://i.imgur.com/0hfqd2b.png" alt="Design Notes" class="img-grid-sm" /> -->
+                                <img class="sprite-responsive-design-notes " alt="Design Notes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
+                                <div class="caption">
+                                    Design Notes
+                                </div>
+                            </a>
 
-                        <a href="https://dotnetrocks.com/">
-                            <!-- <img src="https://i.imgur.com/5lArETW.png" alt="Dot Net Rocks" class="img-grid-sm" /> -->
-                            <img class="sprite-responsive-dot-net-rocks img-grid-sm" alt="Dot Net Rocks" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
-                        </a>
+                            <a href="http://hackingui.com/podcast/">
+                                <!-- <img src="https://i.imgur.com/F660bq2.png" alt="Hacking UI" class="img-grid-sm" /> -->
+                                <img class="sprite-responsive-hacking-ui" alt="Hacking UI" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
+                                <div class="caption">
+                                    Hacking UI
+                                </div>
+                            </a>
+
+                            <a href="https://dotnetrocks.com/">
+                                <!-- <img src="https://i.imgur.com/5lArETW.png" alt="Dot Net Rocks" class="img-grid-sm" /> -->
+                                <img class="sprite-responsive-dot-net-rocks" alt="Dot Net Rocks" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAB+DRjsAAFa9qSiAAAAAElFTkSuQmCC">
+                                <div class="caption">
+                                    Dot Net Rocks
+                                </div>
+                            </a>
+                            
+                            </div>
                     </section>
 
 
@@ -772,13 +901,14 @@
 	            progress: true,
 	            history: true,
 	            center: true,
-
+                controlsTutorial: false,
+                controlsLayout: "edges",
 	            transition: 'convex', // none/fade/slide/convex/concave/zoom
-
+	            backgroundTransition: 'zoom',
 	            parallaxBackgroundImage: "content/images/background.png",
 	            parallaxBackgroundSize: "2040px 1060px",
 
-	            backgroundTransition: 'slide',
+	            
 
 	            dependencies: [
 	                { src: 'plugin/markdown/marked.js' },
@@ -798,7 +928,7 @@
         
 	    <script src="js/highcharts.js" type="text/javascript"></script>
 	    <script type="text/javascript">
-	        // https://jsfiddle.net/KyleMit/frbzcLtd/30/
+	        // https://jsfiddle.net/KyleMit/frbzcLtd/
 
 	        /* #########################
                Proximity

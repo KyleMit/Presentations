@@ -45,7 +45,6 @@ body .reveal,
 .fragment-dimmed {
     visibility: visible;
     color: grey;
-
 }
 .fragment-dimmed .accent {
     color: #b9b9b9;
@@ -53,8 +52,8 @@ body .reveal,
 .fragment-dimmed.visible {
     visibility: visible;
     color: white;
-
 }
+
 .fragment-dimmed.visible .accent {
     color: #edff6c;
 }
@@ -63,7 +62,9 @@ body .reveal,
     color: #b4ce00;
 }
 
-
+span.icon-set {
+    margin: 40px;
+}
 
 .reveal .img-plain {
     border: none;
@@ -71,12 +72,30 @@ body .reveal,
 .reveal .margin-lr {
     margin: 0px 20px;
 }
-.reveal .img-grid {
-    height: 225px;
+.img-grid a,
+.img-grid-sm a {
+    display: inline-block;
+    vertical-align: top;
 }
-.reveal .img-grid-sm {
-    height: 120px;
+.reveal .img-grid img {
+    height: 200px;
 }
+.reveal .img-grid-sm img {
+    height: 140px;
+}
+
+a .caption {
+    margin-top: -24px;
+    color: white;
+    font-size: 12px;
+}
+.caption.caption-lg {
+    font-size: 18px;
+}
+a:hover .caption {
+    color: #8dcffc;;
+}
+
 .side-by-side {
     display: inline-block;
     width: 40%;
@@ -205,6 +224,7 @@ span.slash {
 
 .elevator .control {
     position: relative;
+    transition: all;
 }
 
 .elevator .control.adjacent::before {
@@ -230,6 +250,7 @@ span.slash {
     background: white;
     position: relative;
     cursor: pointer;
+    transition: all;
 }
 
 .elevator .button.active {
@@ -284,4 +305,70 @@ span.slash {
     max-width: 700px;
     height: 400px;
     margin: 0 auto
+}
+
+.fa-box {
+    padding: .1em;
+    background: white;
+    color: black;
+    border-radius: 1px;
+    border: 2px solid #afafaf;
+    font-size: 38px;
+}
+.fragment-dimmed .fa-box {
+    visibility: visible;
+    background: grey;
+}
+.fragment-dimmed.visible .fa-box {
+    visibility: visible;
+    background: white;
+}
+
+.path-list {
+    position: relative;
+}
+.path-list::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: -12px;
+    bottom: -6px;
+    left: -90px;
+
+    border: 3px solid grey;
+    border-right-width: 0px;
+    
+    width: 16px;
+
+}
+
+.path-list::after {
+    content: "Path";
+    position: absolute;
+    top: 31%;
+    left: -191px;
+}
+
+.reveal .slides section .fragment.fragment-hide {
+    visibility: visible;
+    opacity: 1;
+}
+.reveal .slides section .fragment.fragment-hide.visible {
+    display: none;
+}
+
+.reveal .slides section .fragment.fragment-shorter {
+    visibility: visible;
+    opacity: 1;
+}
+.reveal .slides section .fragment.fragment-shorter.visible {
+    transform: scaleY(.5)
+}
+
+.reveal .slides section .fragment.fragment-wider {
+    visibility: visible;
+    opacity: 1;
+}
+.reveal .slides section .fragment.fragment-wider.visible {
+    transform: scaleX(1.5)
 }
