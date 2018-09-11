@@ -89,8 +89,8 @@
                     <section id="links">
                         <h2>Follow Along!</h2>
 
-                        <img src="https://i.imgur.com/8cM7Vvk.png" alt="Presentation QR Code" />
-
+                        <!--<img src="https://i.imgur.com/8cM7Vvk.png" alt="Presentation QR Code" />-->
+                        <img class="sprite-responsive-qr-code" alt="Presentation QR Code" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
                         <h5>
                             <a href="https://kylemit.github.io/Presentations/UX/">
                                 https://kylemit.github.io/Presentations/UX/
@@ -432,6 +432,11 @@
                         <h3>Conceptual Relationship & Proximity</h3>
 
                         <div id="proximity-chart" class="chart"></div>
+                        
+                        <p style="background: white; color: black; font-size: 24px">
+                            <i class="fas fa-fw fa-check-circle" style="color:green;"></i>
+                            <i class="fas fa-fw fa-exclamation-triangle" style="color: Tomato"></i>
+                        </p>
 
                         <cite class="footnote">
                             <a href="https://app.deviq.com/courses/the-science-of-great-ui">
@@ -928,10 +933,9 @@
         
 	    <script src="js/highcharts.js" type="text/javascript"></script>
 	    <script type="text/javascript">
-	        // https://jsfiddle.net/KyleMit/frbzcLtd/
-
 	        /* #########################
                Proximity
+               https://jsfiddle.net/KyleMit/frbzcLtd/
                ####################### */
 	        var xCategories = ['Equivalent','Similar', 'Connected', 'Unrelated', 'Opposed'];
 	        var yCategories = ['Contained','Adjacent', 'Buffered', 'Apart', 'Distant']
@@ -1001,81 +1005,73 @@
 
             /* #########################
                Emphasis
+               https://jsfiddle.net/KyleMit/vh56sjd8/
                ####################### */
 
-            Highcharts.chart('emphasis-chart', {
+	        var xCategories = ['Low', 'Medium', 'High'];
+	        var yCategories = ['Low', 'Medium', 'High'];
 
-                title: {
-                    text: 'Information Relevance & Emphasis',
-                    style: {
-                        fontSize: '25px'
-                    }
-                },
-                xAxis: {
-                    title: {
-                        text: 'Information Relevance',
-                        style: {
-                            fontSize: '20px'
-                        },
-                        range: {
-                            min: 0,
-                            max: 4
-                        },
-                        tickInterval: 5,
-                        gridLineWidth: 0,
-                        minorGridLineWidth: 0,
-                        gridLineColor: 'transparent',
-                    },
-                    labels: { enabled: false }
-                },
-                yAxis: {
-                    title: {
-                        text: 'Emphasis',
-                        style: {
-                            fontSize: '20px'
-                        },
-                        range: {
-                            min: 0,
-                            max: 4
-                        },
-                        tickInterval: 5,
-                        gridLineWidth: 0,
-                    },
-                    labels: { enabled: false }
-                },
-                legend: { enabled: false },
-                credits: { enabled: false },
-                tooltip: {
-                    formatter: function () {
-                        return this.point.description ;
-                    }
-                },
-                series: [{
-                    name: 'Ideal',
-                    data: [
-                        { x: 0, y: 0, description: "A" },
-                        { x: 1, y: 1, description: "B" },
-                        { x: 2, y: 2, description: "C" },
-                        { x: 3, y: 3, description: "D" },
-                        { x: 4, y: 4, description: "E" }
-                    ],
-                    label: { enabled: false },
-                    type: "line",
-                    color: "#4747ec"
-                },
-                {
-                    name: 'Problematic',
-                    data: [
-                        { x: 0, y: 4, description: "A" },
-                        { x: 4, y: 0, description: "B" },
-                    ],
-                    label: { enabled: false },
-                    type: "scatter",
-                    color: "red"
-                }],
+	        Highcharts.chart('emphasis-chart', {
 
+	            title: {
+	                text: 'Information Relevance & Emphasis',
+	                style: {
+	                    fontSize:'25px'
+	                }
+	            },
+	            xAxis: {
+	                title: {
+	                    text: 'Information Relevance',
+	                    style: {
+	                        fontSize:'20px'
+	                    }
+	                },
+	                categories: xCategories
+	            },
+	            yAxis: {
+	                title: {
+	                    text: 'Emphasis',
+	                    style: {
+	                        fontSize:'20px'
+	                    }
+	                },
+	                categories: yCategories
+	            },
 
-            });
+	            legend: {enabled: false },
+	            credits: {enabled: false },
+	            useHTML: true,
+	            tooltip: {
+	                formatter: function () {
+	                    return "<h3 style='font-size:16px;'>" + this.point.title + "</h3><br/><hr/>" +
+	                        'Information: <b>' + xCategories[this.point.x] + "</b><br/>" + 
+	                        'Emphasis: <b>' + yCategories[this.point.y] + "</b><br/><br/>" + 
+	                        this.point.description ;
+	                }
+	            },
+	            series: [{
+	                    name: 'Ideal',
+	                    data: [
+	                        {x:0,y:0,title:"Clarity",description:"A"},
+	                        {x:1,y:1,title:"Clarity",description:"B"},
+	                        {x:2,y:2,title:"Clarity",description:"C"},
+	                    ],
+	                    label: {enabled: false },
+	                    type: "line",
+	                    color: "#4747ec"
+	                },
+	                {
+	                    name: 'Problematic',
+	                    data: [
+	                        {x:0,y:2,title:"Visual Noise", description:"A"},
+	                        {x:2,y:0,title:"Weak Signal", description: "B"},
+	                    ],
+	                    label: {enabled: false },
+	                    type: "scatter",
+	                    color: "red"
+           
+	                }]
+	        });
 
 	    </script>
 
