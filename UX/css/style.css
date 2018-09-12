@@ -65,6 +65,7 @@ body .reveal,
 .reveal .slides section .fragment.highlight-current-blue.current-fragment .accent {
     color: #b4ce00;
 }
+/* https://stackoverflow.com/a/17158366/1366033 */
 .definition-list-item.definition-list-item {
     padding-left: 1.5em;
     text-indent:-1.5em;
@@ -360,26 +361,23 @@ span.slash {
     left: -191px;
 }
 
-.reveal .slides section .fragment.fragment-hide {
+.reveal .slides section .fragment.fragment-hide,
+.reveal .slides section .fragment.fragment-shorter,
+.reveal .slides section .fragment.fragment-wider,
+.reveal .slides section .fragment.fragment-bold,
+.reveal .slides section .fragment.fragment-white,
+.reveal .slides section .fragment.fragment-green,
+.reveal .slides section .fragment.fragment-bigger,
+.reveal .slides section .fragment.fragment-indent {
     visibility: visible;
     opacity: 1;
+    transition: all .6s ease;
 }
-.reveal .slides section .fragment.fragment-hide.visible {
-    display: none;
-}
-
-.reveal .slides section .fragment.fragment-shorter {
-    visibility: visible;
-    opacity: 1;
-}
-.reveal .slides section .fragment.fragment-shorter.visible {
-    transform: scaleY(.5)
-}
-
-.reveal .slides section .fragment.fragment-wider {
-    visibility: visible;
-    opacity: 1;
-}
-.reveal .slides section .fragment.fragment-wider.visible {
-    transform: scaleX(1.5)
-}
+.reveal .slides section .fragment.fragment-hide.visible {display: none;}
+.reveal .slides section .fragment.fragment-shorter.visible {transform: scaleY(.5)}
+.reveal .slides section .fragment.fragment-wider.visible {transform: scaleX(1.5)}
+.reveal .slides section .fragment.fragment-bold.visible {font-weight: bold}
+.reveal .slides section .fragment.fragment-white.visible {color:white}
+.reveal .slides section .fragment.fragment-green.visible {color:seagreen}
+.reveal .slides section .fragment.fragment-bigger.visible {font-size:150%}
+.reveal .slides section .fragment.fragment-indent.visible {margin-left:30px}
