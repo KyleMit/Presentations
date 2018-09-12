@@ -42,6 +42,10 @@ body .reveal,
     font-family: 'Ubuntu Mono', monospace;
 }
 
+.dimmed.dimmed.dimmed {
+    color: grey;
+}
+
 .fragment-dimmed {
     visibility: visible;
     color: grey;
@@ -61,7 +65,10 @@ body .reveal,
 .reveal .slides section .fragment.highlight-current-blue.current-fragment .accent {
     color: #b4ce00;
 }
-
+.definition-list-item.definition-list-item {
+    padding-left: 1.5em;
+    text-indent:-1.5em;
+}
 span.icon-set {
     margin: 40px;
 }
@@ -298,6 +305,10 @@ span.slash {
 
 .noUi-value.noUi-value-horizontal.noUi-value-large {
     font-size: 20px;
+}
+
+.sublist.sublist {
+    margin-left: 30px;
 }
 
 .chart.chart.chart {
