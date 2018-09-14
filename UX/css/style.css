@@ -104,9 +104,10 @@ a:hover .caption {
     color: #8dcffc;;
 }
 
-.side-by-side {
+.side-by-side.side-by-side {
     display: inline-block;
     width: 40%;
+    vertical-align: top;
 }
 .small-font,
 .small-font li,
@@ -140,6 +141,15 @@ cite.footnote a:hover {
     list-style-type: none;
     margin-left: 2.5em;
     padding-left: 0; 
+}
+
+.list-unstyled.list-unstyled li {
+    list-style: none;
+    margin-left: -27px;
+}
+
+.ul-spacing.ul-spacing li {
+    margin-bottom: 15px;
 }
 
 li.hr {
@@ -318,7 +328,15 @@ span.slash {
     height: 400px;
     margin: 0 auto
 }
-
+.span-box.span-box {
+    padding: .1em;
+    background: white;
+    color: black;
+    border-radius: 1px;
+    border: 2px solid #afafaf;
+    font-size: 38px;
+    display: inline-block;
+}
 .fa-box {
     padding: .1em;
     background: white;
@@ -362,8 +380,9 @@ span.slash {
 }
 
 .reveal .slides section .fragment.fragment-hide,
-.reveal .slides section .fragment.fragment-shorter,
-.reveal .slides section .fragment.fragment-wider,
+.reveal .slides section .fragment.fragment-box-shorter,
+.reveal .slides section .fragment.fragment-box-wider,
+.reveal .slides section .fragment.fragment-box-collapse,
 .reveal .slides section .fragment.fragment-bold,
 .reveal .slides section .fragment.fragment-white,
 .reveal .slides section .fragment.fragment-green,
@@ -373,11 +392,34 @@ span.slash {
     opacity: 1;
     transition: all .6s ease;
 }
-.reveal .slides section .fragment.fragment-hide.visible {display: none;}
-.reveal .slides section .fragment.fragment-shorter.visible {transform: scaleY(.5)}
-.reveal .slides section .fragment.fragment-wider.visible {transform: scaleX(1.5)}
+/* specific initial settings */
+.reveal .slides section .fragment.fragment-box-shorter {height: 52px;}
+.reveal .slides section .fragment.fragment-box-collapse {height: 52px;}
+.reveal .slides section .fragment.fragment-box-wider {width: 48px;}
+
+.reveal .slides section .fragment.fragment-hide.visible {transform:scaleY(0)}
+.reveal .slides section .fragment.fragment-box-shorter.visible {
+    text-align: center;
+    font-size: 20px;
+    width: 51px;
+    height: 26px;
+}
+.reveal .slides section .fragment.fragment-box-wider.visible {
+    width: 117px;
+    transition: width .5s ease;
+    text-align: center;
+}
+.reveal .slides section .fragment.fragment-box-collapse.visible {
+    height: 0px;
+    overflow: hidden;
+    margin-bottom: -7px;
+}
 .reveal .slides section .fragment.fragment-bold.visible {font-weight: bold}
 .reveal .slides section .fragment.fragment-white.visible {color:white}
 .reveal .slides section .fragment.fragment-green.visible {color:seagreen}
 .reveal .slides section .fragment.fragment-bigger.visible {font-size:150%}
 .reveal .slides section .fragment.fragment-indent.visible {margin-left:30px}
+
+.transition-child * {
+    transition: all .5s ease;
+}
