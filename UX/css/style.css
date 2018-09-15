@@ -101,6 +101,13 @@ span.icon-set {
     height: 140px;
 }
 
+.reveal .highcharts-tooltip img {
+    width: 200px;
+    /* height: 300px; */
+    max-width: none;
+    max-height: none;
+}
+
 a .caption {
     margin-top: -24px;
     color: white;
@@ -111,6 +118,20 @@ a .caption {
 }
 a:hover .caption {
     color: #8dcffc;;
+}
+
+span.btn {
+    background: #ffff26;
+    color: #2f1e00;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px #b3b320;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+span.btn:hover {
+    background: #e4e400;
+    color: black;
 }
 
 .side-by-side.side-by-side {
@@ -242,6 +263,7 @@ span.slash {
 
 .elevator {
     display: inline-block;
+    user-select: none;
     background: silver;
     background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   3%, hsla(0,0%,100%, .1) 11.5%),
                       -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 49.1%),
@@ -433,3 +455,11 @@ span.slash {
 .transition-child * {
     transition: all .5s ease;
 }
+
+#canvas {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    top: 0;
+  }
