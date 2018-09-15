@@ -21,9 +21,18 @@ body {
     background-color: #000;
 }
 .reveal .backgrounds {
-    opacity: .4;
+    opacity: .6;
+}
+.sponsors .reveal .backgrounds {
+    opacity: 1;;
 }
 
+#fork-image {
+    display: none;
+}
+.first-slide #fork-image {
+    display: blocks;
+}
 /* sample using the font */
 body .reveal,
 .reveal h1,
@@ -219,11 +228,12 @@ span.slash {
     color: #1b1b1b;
     background-color: #f2f2f2;
     transition: background-color;
-    padding: 0px 15px;
+    padding: 0px 15px 4px 15px;
     border-radius: 5px;
-    border: 1px solid grey;
-    box-shadow: 2px 2px 2px #aaaaaa;
+    border: 1px solid #131313;
+    box-shadow: inset 0px -4px 1px 5px #696868;
     cursor: pointer;
+    text-shadow: 0px 0px 1px #94abfd;
 }
 .kbd.kbd:hover {
     background-color: white;
