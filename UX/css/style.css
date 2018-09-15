@@ -31,7 +31,7 @@ body {
     display: none;
 }
 .first-slide #fork-image {
-    display: blocks;
+    display: block;
 }
 /* sample using the font */
 body .reveal,
