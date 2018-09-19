@@ -27,12 +27,25 @@ body {
     opacity: 1;;
 }
 
-#fork-image {
+.visible-first-slide {
     display: none;
 }
-.first-slide #fork-image {
+.first-slide .visible-first-slide {
     display: block;
 }
+
+.visible-print.visible-print {
+    display: none;
+}
+.print-pdf .visible-print {
+    display: block;
+}
+.print-pdf .hidden-print {
+    display: none;
+}
+
+
+
 /* sample using the font */
 body .reveal,
 .reveal h1,
@@ -456,12 +469,9 @@ span.slash {
     transition: all .5s ease;
 }
 
-#canvas {
-    display: block;
-    position: absolute;
-    z-index: 1;
+#confettiCanvas {
+    z-index: 1 !important;
     pointer-events: none;
-    top: 0;
   }
 
 
@@ -479,4 +489,8 @@ span.slash {
 .print-pdf .reveal[data-background-transition=zoom] > .backgrounds .slide-background.future,
 .print-pdf .reveal > .backgrounds .slide-background.future[data-background-transition=zoom] {
     background: none !important;
+}
+
+.ribbon-warning::before {
+    background-color: #f80;
 }
