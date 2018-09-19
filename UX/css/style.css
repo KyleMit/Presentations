@@ -463,3 +463,20 @@ span.slash {
     pointer-events: none;
     top: 0;
   }
+
+
+  .print-pdf cite.footnote.footnote {
+    position: absolute;
+    bottom: -50px;
+    top: initial;
+}
+
+.print-pdf  .reveal .backgrounds {
+    background: #1c0340 !important;
+    opacity: 1 !important;
+}
+
+.print-pdf .reveal[data-background-transition=zoom] > .backgrounds .slide-background.future,
+.print-pdf .reveal > .backgrounds .slide-background.future[data-background-transition=zoom] {
+    background: none !important;
+}
