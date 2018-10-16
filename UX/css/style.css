@@ -296,10 +296,9 @@ span.slash {
     position: absolute;
     top: 0px;
     left: 40px;
-    
-    display: inline-block;    
+    display: inline-block;
     width: 30px;
-    height: 58px;
+    height: 57px;
 }
 
 
@@ -330,8 +329,9 @@ span.slash {
     margin-left: 0;
     margin-right: 10px;
     margin-right: 5px;
-    margin-top: 20px;
+    margin-top: 20.2px;
     margin-bottom: 20px;
+    height: 53px;
 }
 
 .elevator .fa-star {
