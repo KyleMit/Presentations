@@ -133,8 +133,8 @@ a:hover .caption {
     color: #8dcffc;;
 }
 
-span.btn {
-    background: #ffff26;
+.btn-span.btn-span {
+    background: #e4e400;
     color: #2f1e00;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 2px #b3b320;
@@ -142,9 +142,69 @@ span.btn {
     transition: all .5s ease;
 }
 
-span.btn:hover {
-    background: #e4e400;
+.btn-span.btn-span:hover {
+    background: #ffff35;
     color: black;
+}
+
+.animate {
+    transition: all .8s ease;
+}
+
+.btn-primary.btn-primary {
+    background: hsla(125, 97%, 25%, 1);
+    color: #2f1e00;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 0px hsla(125, 100%, 22%, 1);
+    cursor: pointer;
+    transition: all .5s ease;
+    color: white;
+    padding: 5px 10px;
+}
+
+.btn-primary.btn-primary:hover {
+    background: hsla(125, 97%, 29%, 1);
+    color: white;
+}
+
+.reveal .btn-xl {
+    font-size: 54px;
+    padding: 15px;
+}
+
+.btn.btn {
+    background: #e4e400;
+    color: #2f1e00;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px #b3b320;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.btn.btn:hover {
+    background: #ffff35;
+    color: black;
+}
+
+
+
+.reveal .card {
+    background: white;
+    color: black;
+    padding: 15px;
+    box-shadow: 1px 1px 1px #a5a5a5;
+}
+
+.reveal .card-box {
+    min-height: 120px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.card-center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .side-by-side.side-by-side {

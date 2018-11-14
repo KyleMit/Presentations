@@ -112,7 +112,7 @@
             <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Terms</b>  ... shared terminology</li>
             <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Frameworks</b> ... conceptual models</li>
             <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Processes</b> ... how to fish</li>
-            <!-- <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Components</b> ... specifics</li> -->
+            <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Components</b> ... specifics</li>
             <li class="fragment highlight-current-blue fragment-dimmed"><b class="accent">Resources</b> ... next steps</li>
         </ul>
 
@@ -357,7 +357,7 @@
 
 
 <section id="fundamental-principles">
-    <h3 style="user-select: none;"> <span id="hiddenButton">Fundamental</span> Principles of Inter<span id="startButton" class="btn">action</span> </h3>
+    <h3 style="user-select: none;"> <span id="hiddenButton">Fundamental</span> Principles of Inter<span id="startButton" class="btn-span">action</span> </h3>
 
 
     <ul>
@@ -934,9 +934,7 @@
 </section>
 
 
-<!--
-
-<section id="components-section" data-background="#4B3621">
+<section id="components-section" data-background="#542a00">
 
     <section id="components">
         <h1 class="section-header">Components</h1>
@@ -956,26 +954,80 @@
 
     </section>
 
-    <section id="Dropdown">
-        <h3>Dropdown</h3>
+    <section id="User-Selection">
+        <h3>User Selection</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th># Options</th>
+                    <th>Component</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;5</td>
+                    <td>Radio Button</td>
+                    <td>
+                        <label for="">
+                            <input type="radio">
+                            Yes
+                        </label>
+                        <label for="">
+                            <input type="radio">
+                            No
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;20</td>
+                    <td>Dropdown</td>
+                    <td>
+                        <!-- <label for="animal">Favorite Animal</label> -->
+                        <select name="animal" id="">
+                            <option >Dogs</option>
+                            <option >Cats</option>
+                            <option >Girrafee</option>
+                            <option >Elephant</option>
+                            <option >Baby Hippo</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="Buttons">
+        <h3>Buttons</h3>
+        <ol >
+            <li class="fragment highlight-current-blue fragment-dimmed" data-fragment-action="button-text"> Use Good, Descriptive Verbs <small> <sup> <a href="https://medium.com/@heyoka/dont-use-click-here-f32f445d1021">[1]</a></sup></small></li>
+            <li class="fragment highlight-current-blue fragment-dimmed" data-fragment-action="button-signifier"> Use Signifiers for discoverability &amp; feedback</li>
+            <li class="fragment highlight-current-blue fragment-dimmed" data-fragment-action="button-size"> Bigger <i class="fas fa-arrow-right"></i> Easier (<a href="https://lawsofux.com/fittss-law">Fitts' Law</a>)</li>
+        </ol>
+
+        
+        <h3 style="margin-top:35px;">Example</h3>
+        
+            <div class="card card-box card-center-content" >
+                <span >
+                    <span id="link-text-intro">Create</span>
+                    <a id="link-text" href="javascript:void(0);" class="animate" >Here</a>
+                </span> 
+            </div>   
+        
+ 
+        
+    </section>
+
+
+    <section id="Tables">
+        <h3>Tables</h3>
 
     </section>
 
-    <section id="Button">
-        <h3>Button</h3>
 
-
-
-    </section>
-
-
-    <section id="Grids">
-        <h3>Grids</h3>
-
-    </section>
-
-
-</section> -->
+</section>
 
 
 <section id="resources-section" data-background="#555D50">
@@ -1028,7 +1080,7 @@
                 </div>
             </a>
 
-            <a href="https://ux.stackexchange.com/" class="">
+            <a href="https://www.nngroup.com/topic/web-usability/" class="">
                 <!-- <img src="https://i.imgur.com/Jri452v.png" alt="Nielsen Norman Group" class="img-grid"/> -->
                 <img class="sprite-responsive-nng" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAADIAQMAAAAk14GrAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACNJREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAB4NjIAAAHrgs+hAAAAAElFTkSuQmCC">
                 <div class="caption caption-lg">
@@ -1309,6 +1361,8 @@
 <script src="js/lib/jquery.js" type="text/javascript"></script>
 <script src="js/lib/highcharts.js" type="text/javascript"></script>
 <script src="js/lib/nouislider.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js" type="text/javascript"></script>
+
 
 <script src="js/charts.js?v=9-19-2018" type="text/javascript"></script>
 <script src="js/slider.js?v=9-19-2018" type="text/javascript"></script>
@@ -1354,6 +1408,78 @@
     });
 
 
+    Reveal.addEventListener( 'fragmentshown', function( event ) {
+        // event.fragment = the fragment DOM element
+        setButtonUI(event.fragment, event.type)
+
+    } );
+    Reveal.addEventListener( 'fragmenthidden', function( event ) {
+        // event.fragment = the fragment DOM element
+        setButtonUI(event.fragment, event.type)
+    } );
+
+
+    var typedJsOptions = {
+        backSpeed: 60,
+        typeSpeed: 115,
+        preStringTyped: function(pos, self) { 
+            
+        },
+        onStringTyped: function(pos, self) { 
+            //
+        },
+        onComplete: function(self) {
+            // https://mattboldt.com/typed.js/
+            //console.log(this,self,typed)
+            //self.destroy();
+            $(self.cursor).remove();
+            
+        }
+    };
+
+    function TypedJS(selector, newText, oldText) {
+        oldText = oldText || "";
+        var text = {
+            strings: [oldText, newText]
+        }
+        var options = $.extend(typedJsOptions,text);
+        var typed = new Typed(selector,options);
+    }
+
+    function setButtonUI(fragment, direction) {
+        var action =  $(fragment).data("fragment-action")
+        if (action != "") {
+
+            if (action == "button-text" ) {
+                var shown = direction == "fragmentshown";
+                var introText = shown ? "" : "Create"
+                var linkText = shown ? "Create Client" : "Here"
+                var delay = shown ? 700 : 2000;
+
+                TypedJS('#link-text-intro', introText)
+
+                // onComplete handler is busy, just wait your turn
+                setTimeout(function() {
+                    TypedJS('#link-text',linkText)
+                },delay)
+
+            }
+
+            if (action == "button-signifier" ) {
+                var shown = direction == "fragmentshown";
+                $("#link-text").toggleClass("btn-primary", shown)
+
+            }
+            if (action == "button-size" ) {
+                var shown = direction == "fragmentshown";
+                $("#link-text").toggleClass("btn-xl", shown)
+
+            }
+
+            
+        }
+        
+    }
 
 </script>
 
