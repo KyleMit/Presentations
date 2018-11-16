@@ -169,7 +169,7 @@ a:hover .caption {
 
 .reveal .btn-xl {
     font-size: 54px;
-    padding: 15px;
+    padding: 15px 25px;
 }
 
 .btn.btn {
@@ -551,6 +551,16 @@ span.slash {
     background: none !important;
 }
 
-.ribbon-warning::before {
-    background-color: #f80;
+.github-fork-ribbon {
+    font-size: 15px;
 }
+.github-fork-ribbon::before {
+    background-color: #a62305;
+}
+.ribbon-info::before {
+    background-color: #6005a6;
+}
+
+.reveal .select2-container {
+    font-size: 1.1rem;
+}  

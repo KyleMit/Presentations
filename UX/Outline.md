@@ -120,6 +120,8 @@ Create Distinct Visual Hierarchy for master page layout
 
 Current Navigational state should be apparent to user (bread crumbs or active highlighting)
 
+[Visibility of System Status](https://www.nngroup.com/articles/visibility-system-status/)
+
 
 Use icons for visual clarity but always include a label text
   https://ux.stackexchange.com/a/64494/34594
@@ -152,19 +154,24 @@ All disabled fields should include a message as to why they're disabled
 
 ### User Selection amongst predefined options:
 
-* \<5 Options -> Radio Button (list)
-* \<20 Options -> Dropdown / Comobobox / `<Select>`
-* \>20 Options -> Filterable dropdown
-* \>100 Options -> Filterable dropdown **with template** (or if differentiated by more than just name)
+| # Options | Component                     |
+|-----------|-------------------------------|
+| \<5       | Radio Button (List)           |
+| \<20      | Dropdown / Comobobox / Select |
+| \<50      | Filterable Dropdown           |
+| \<200     | Filterable Dropdown **with template** <br/>(*or if differentiated by more than just name*) |
+| 200+      | Use Table / Flow              |
  
 ### Table / Grid
 
-* \< 10 records   - display
-* \> 10 records   - sort
-* \> 25 records   - sort + filter
-* \> 50 records   - sort + filter + client level* pagination
-* \> 500 records  - sort + filter + server level* pagination
-* \> 1000 records - sort + filter + database level pagination
+| # Records | Style       |
+|-----------|-------------|
+| \< 10   | display       |
+| \> 10   | sort          |
+| \> 25   | sort + filter |
+| \> 50   | sort + filter + client level* pagination  |
+| \> 500  | sort + filter + server level* pagination  |
+| \> 1000 | sort + filter + database level pagination |
     
 ## Forms 
 
@@ -239,7 +246,7 @@ Application State should be managed exclusively though URL
 ### Online
 
 * [UX Stack Exchange](https://ux.stackexchange.com/)
-* [Nielsen Norman Group]
+* [Nielsen Norman Group]()
 
 ### Books
 
@@ -257,3 +264,28 @@ Application State should be managed exclusively though URL
 
 * [Nielsen Norman Group - Website Forms Usability: Top 10 Recommendations](https://www.nngroup.com/articles/web-form-design/)
 * [FlowState - Micro Grammers](http://miksovsky.blogs.com/flowstate/2007/03/collecting_data.html)
+* [Nielsen Norman Group - 10 Usability Hueristics](https://www.nngroup.com/articles/ten-usability-heuristics/)  
+  [10 Usability Hueristics Graphic](https://i.imgur.com/EkfaSkJ.jpg) by [Scott Klemmer & Janaki Kumar](https://www.coursera.org/specializations/interaction-design)
+  
+
+### Material Design Frameworks
+
+[Material Design Spec](https://material.io/guidelines/)
+
+* **Material Components** by *Google* – 10,857★s  
+  [Github](https://github.com/material-components/material-components-web/) | [Docs](https://material.io/components/web/catalog/input-controls/form-fields/) | [Demo](http://material-components-web.appspot.com/text-field.html)
+
+* **Bootstrap Material Design** by *FezVrasta* – 19,609★s  
+  [GitHub](https://github.com/FezVrasta/bootstrap-material-design) | [Docs / Demo](https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/material-design/forms/)
+
+* **Materialize** by *Dogfalo* – 34,405★s  
+  [Github](https://github.com/dogfalo/materialize/) | [Docs / Demo](http://materializecss.com/text-inputs.html)
+
+* **Material UI** by *MUI Org* – 41,983★s  
+  [Github](https://github.com/mui-org/material-ui) | [Docs / Demo](https://www.material-ui.com/#/components/text-field)
+
+* **MD Bootstrap** – 4,877★s  $$  
+  [GitHub](https://github.com/mdbootstrap/bootstrap-material-design) | [Docs / Demo](https://mdbootstrap.com/components/forms/)
+
+* **MUI CSS** – 4,085★s  
+  [Github](https://github.com/muicss/mui) | [Docs / Demo](https://www.muicss.com/docs/v1/css-js/forms)
