@@ -86,7 +86,9 @@ To make things easier:
 * **Human Centered Design**
   * A human is using the product - is it designed how humans think
 * **Conversational Design**
-  People talk to applications like they talk to people
+  * People talk to applications like they talk to people
+  * [**The Media Equation** by *Byron Reeves & Clifford Nass*](https://www.amazon.com/dp/B0116WC5JE/)
+  * We are "polite" to our computers
 * **Universal Design**
   * Accessibility(#a11y) along a spectrum
   * "Everyone, at some point, has temporary or situational impairments" - [Mandy Sithenbank](https://docs.google.com/presentation/d/1qRi2jNZ_PY9h7Yt0A8Bht3y1vljAv0INY_n-FnD8OaU/edit#slide=id.g410f36332e_0_35)
@@ -108,6 +110,8 @@ To make things easier:
 
 ### Page / Layout
 
+Create Distinct Visual Hierarchy for master page layout
+
 Page title should describe the purpose of the current page.  Page functionality should answer the question how easy is it to do that thing.  What tools / info do I need to do it?
 
 Layouts and Natural mapping convey information to the user without any cognitive overhead.  Labels and text require the user read and digest that information before it can be deployed, a step that many users will skip, regardless of whether they *should* or not.
@@ -115,8 +119,7 @@ Layouts and Natural mapping convey information to the user without any cognitive
 Labels - Last refuge of a design scoundrel.  Expectations are much stronger than text and can be absorbed immediately without reading
 * Recycle Bin vs Trash Bin
 
-
-Create Distinct Visual Hierarchy for master page layout
+#### System Status
 
 Current Navigational state should be apparent to user (bread crumbs or active highlighting)
 
@@ -137,6 +140,53 @@ Conditional fields
 All disabled fields should include a message as to why they're disabled
 
 
+## Forms 
+
+Required fields should be visible before attempting a save
+  This is even true of fields that become conditionally required while editing a field
+
+Required field messages should appear next to the invalid fields they describe in red text
+
+
+[Do not use form reset buttons](https://ux.stackexchange.com/a/42773/34594)
+
+
+Save buttons should be visible at all times to alert the user they have unsaved data
+
+Users should be warned before abandoning unsaved changes
+
+## Errors - be Friendly
+
+Clients should not be able to produce an error state within the application.  The ability to do so should be considered a bug and should be caught ahead of time with forcing functions.  If this happens, the dev, via the application, should strive to be human and apologetic with appropriate levity.
+
+*`Forcing functions`* are constraints that prevent users from performing incorrect operations/actions
+
+
+
+## Feedback
+
+All operations that change data state (non-idempotent) should display a modeless confirmation of successful completion to the user. 
+
+Actions which update the state of the application should provide immediate visual feedback that the action has been initiated
+
+Any operations that take longer than 2 seconds more than 50% of the time (including non-ideal network conditions / processors) should have a visual indication that the process is taking place
+
+
+
+## Reach Guidelines
+
+Users should be notified when their Session is about to expire on the sever so they have the opportunity to extend their session before losing their progress
+
+### Deep Linking
+
+Application State should be managed exclusively though URL
+    With the exception of page specific data entry, the URL should dictate everything you need to know about the state
+    One upshot of this is having specific, deep URLs that can be shared across users/time
+    But it's also a smell that something *could* go wrong on the client if you're relying on Session to manage State (as opposed to globally cached data)
+    Since users may open multiple tabs, it's never safe to assume we know where we're coming from outside of the  URL
+    http://localhost:50004/CSHN-DEV/Client/1480/Service/20622/Assessment/Edit/8#Social
+    http://localhost:50004/CSHN-DEV/Reports?ReportName=ClientList
+
 
 
 ----
@@ -152,7 +202,7 @@ All disabled fields should include a message as to why they're disabled
 * Bigger → Easier
   * [Fitts's Law](https://lawsofux.com/fittss-law)
 
-### User Selection amongst predefined options:
+### User Selection
 
 | # Options | Component                     |
 |-----------|-------------------------------|
@@ -173,31 +223,6 @@ All disabled fields should include a message as to why they're disabled
 | \> 500  | sort + filter + server level* pagination  |
 | \> 1000 | sort + filter + database level pagination |
     
-## Forms 
-
-Required fields should be visible before attempting a save
-  This is even true of fields that become conditionally required while editing a field
-
-Required field messages should appear next to the invalid fields they describe in red text
-
-
-Do not use form reset buttons
-https://ux.stackexchange.com/a/42773/34594
-
-
-Save buttons should be visible at all times to alert the user they have unsaved data
-
-Users should be warned before abandoning unsaved changes
-
-
-### Progressive Improvement
-
-
-## Errors - be Friendly
-
-Clients should not be able to produce an error state within the application.  The ability to do so should be considered a bug and should be caught ahead of time with forcing functions.  If this happens, the dev, via the application, should strive to be human and apologetic with appropriate levity.
-
-*`Forcing functions`* are constraints that prevent users from performing incorrect operations/actions
 
 
 ----
@@ -218,28 +243,6 @@ When adding new UI elements - Check if a similar UI metaphor already exists
 4. Else - Do heavy user research and design if it's truly novel outside those arenas
 
 
-
-## Feedback
-
-All operations that change data state (non-idempotent) should display a modeless confirmation of successful completion to the user. 
-
-Actions which update the state of the application should provide immediate visual feedback that the action has been initiated
-
-Any operations that take longer than 2 seconds more than 50% of the time (including non-ideal network conditions / processors) should have a visual indication that the process is taking place
-
-
-
-## Reach Guidelines
-
-Users should be notified when their Session is about to expire on the sever so they have the opportunity to extend their session before losing their progress
-
-Application State should be managed exclusively though URL
-    With the exception of page specific data entry, the URL should dictate everything you need to know about the state
-    One upshot of this is having specific, deep URLs that can be shared across users/time
-    But it's also a smell that something *could* go wrong on the client if you're relying on Session to manage State (as opposed to globally cached data)
-    Since users may open multiple tabs, it's never safe to assume we know where we're coming from outside of the  URL
-    http://localhost:50004/CSHN-DEV/Client/1480/Service/20622/Assessment/Edit/8#Social
-    http://localhost:50004/CSHN-DEV/Reports?ReportName=ClientList
 
 ## Resources
 

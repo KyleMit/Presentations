@@ -564,3 +564,44 @@ span.slash {
 .reveal .select2-container {
     font-size: 1.1rem;
 }  
+
+
+
+
+/* Toast Cusomization */
+#toast-container > .toast {
+    background-image: none !important;
+  }
+  #toast-container > div {
+    padding: 15px;
+    width: 13em;
+    font-size: 1.1em;
+  }
+  .toast-success {
+    background-color: #226d22;
+  }
+  .toast-title {
+    margin-bottom: 7px;
+    font-size: 1.2em;
+  }
+  .toast-message .label-row {
+    display: block;
+    color: #98c563;
+    transition: all .5 ease;
+  }
+  .label-row input {
+    top: -2px;
+    position: relative;
+  }
+  .toast-message .label-row.complete {
+    /*   text-decoration: line-through; */
+    color: #e9f3dd;
+    font-weight: bold;
+  }
+  
+  #tightrope {
+    width: 155px;
+    position: absolute;
+    right: 24px;
+    top: 12px;
+  }
