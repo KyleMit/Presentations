@@ -619,12 +619,15 @@ span.slash {
     margin-top: 30px;
     margin-bottom: 0px;
 }
-.reveal .alert .alert-buttons button {
+.reveal .alert .alert-buttons .alert-button {
     width: 158px;
     font-size: .8em;
     border-radius: 4px;
     box-shadow: 2px 2px 2px grey;
     cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid grey;
 }
 
 
