@@ -143,7 +143,7 @@ a:hover .caption {
 }
 
 .btn-span.btn-span:hover {
-    background: #ffff35;
+    background: #ffff60;
     color: black;
 }
 
@@ -599,6 +599,43 @@ span.slash {
     font-weight: bold;
   }
   
+
+/* alert */
+.reveal .alert {
+    border-radius: 4px;
+    background: white;
+    width: 536px;
+    color: black;
+    box-shadow: 2px 2px 2px grey;
+    padding: 15px;
+    margin: 0 auto;
+}
+.reveal .alert .alert-message {
+    font-size: .8em;
+}
+.reveal .alert .alert-buttons {
+    text-align: right;
+    margin: 5px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.reveal .alert .alert-buttons button {
+    width: 158px;
+    font-size: .8em;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px grey;
+    cursor: pointer;
+}
+
+
+
+
+
+  /* big overview */
+  .reveal.overview {
+    zoom: .4;
+}
+
   #tightrope {
     width: 155px;
     position: absolute;
