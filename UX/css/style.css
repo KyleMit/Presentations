@@ -605,3 +605,13 @@ span.slash {
     right: 24px;
     top: 12px;
   }
+
+  #arrow {
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    width: 81px;
+    top: 99px;
+    right: 167px;
+    transform: rotate(24deg);
+  }
