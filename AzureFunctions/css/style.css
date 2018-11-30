@@ -1,5 +1,10 @@
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-
     text-transform: none;
+}
 
+.transparent-img.transparent-img {
+    margin: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
 }

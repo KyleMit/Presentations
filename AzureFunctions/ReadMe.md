@@ -3,20 +3,22 @@
 An Introduction to Serverless Compute  
 on the .NET Cloud
 
+<img src="https://i.imgur.com/PayeuSI.png" width="150" alt="azure" class="transparent-img">
+
 
 By me, Kyle Mitofsky, a developer
 
 ---
 
-## [___aaS](https://en.wikipedia.org/wiki/As_a_service)
+## ___aaS
 
-* [Infastructure](https://en.wikipedia.org/wiki/Infrastructure_as_a_service)___ (VM)
-* [Platform](https://en.wikipedia.org/wiki/Platform_as_a_service)___(Container)
-* [Functions](https://en.wikipedia.org/wiki/Function_as_a_service)___(micro-service)
-* [Storage](https://en.wikipedia.org/wiki/Cloud_storage) + [Database](https://en.wikipedia.org/wiki/Cloud_database)
+* **Infastructure** (VM)
+* **Platform** (Container)
+* **Functions** (micro-service)
+<!-- * **Storage** + **Database** -->
 
 
----
+
 
 ## Concern vs. Control
 
@@ -31,27 +33,27 @@ Con(cern + trol)
 * Service
 * Logic Apps
 
+
+
+
+## Ecosystem
+
+Azure is Pickle Jar
+
+![Tom Hanks Pickle Jar](https://i.imgur.com/XNXWWdG.gif)
+
+
 ---
 
 ## Functions
 
-* Benefits
-* Pricing
+* Web Apps + Web Jobs
+* Events + Code d
 
----
 
-## Ecosystem
-
-* Azure is Pickle Jar
-
-![Tom Hanks Pickle Jar](https://media.giphy.com/media/IyrtK0SXyy4rS/giphy.gif)
-
----
 
 ## Triggers
 
-* [Triggers and Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
-* [Http Binding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook)
 
 * HTTP 
   * Web API
@@ -59,27 +61,51 @@ Con(cern + trol)
 * Time / Events
   * IFFTT
 
----
+
+
 
 ## Binding
 
 Shortcuts
 
+
+
+## Pricing
+
+
 ---
 
 ## Tooling
 
-* VS Code
+* **VS Code** (VS 2017, but worse)
   * Extensions
-* Postman
-* Azure Table Storage Explorer  
+* **Postman** (Browser, but better0)
+* **Azure Table Storage Explorer** (SSMS, but worse)
 
 ---
 
 ## CloudTable CRUD
 
+Read
 
 ```cs
 var finder = TableOperation.Retrieve<MyTableEntity>("key", id);
 var findResult = await reminderTable.ExecuteAsync(finder);
 ```
+
+
+
+## Input / Output Bindings
+
+
+---
+
+# Demo Time
+
+---
+
+## Resources
+
+* [* as a Service](https://en.wikipedia.org/wiki/As_a_service)
+* [Function - Triggers and Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
+
