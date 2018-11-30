@@ -1,5 +1,6 @@
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
     text-transform: none;
+    font-variant: small-caps;
 }
 
 .transparent-img.transparent-img {
@@ -7,4 +8,9 @@
     background: none;
     border: none;
     box-shadow: none;
+}
+.reveal code {
+    font-family: 'DejaVu Sans';
+    text-transform: none;
+    font-variant: none;
 }
