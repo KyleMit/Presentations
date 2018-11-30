@@ -12,10 +12,13 @@ By me, Kyle Mitofsky, a developer
 
 ## ___aaS
 
-* **Infastructure** (VM)
-* **Platform** (Container)
-* **Functions** (micro-service)
+* **Infastructure** (*VM*)
+* **Platform** (*Container*)
+* **Functions** (*micro-service*)
 <!-- * **Storage** + **Database** -->
+
+Note: Abstraction + Provider
+
 
 
 
@@ -28,11 +31,12 @@ Con(cern + trol)
 
 ## Azure
 
-* Web Apps
-* Web Jobs
-* Service
-* Logic Apps
+### smaller, better, faster
 
+* Virtual Machines
+* Web Apps + Web Jobs
+* Logic Apps + Event Grids
+* Functions
 
 
 
@@ -43,59 +47,113 @@ Azure is Pickle Jar
 ![Tom Hanks Pickle Jar](https://i.imgur.com/XNXWWdG.gif)
 
 
+Note: if you have data, azure wants it.  Also plays host to hundreds of Saas providers
+
 ---
 
 ## Functions
 
-* Web Apps + Web Jobs
-* Events + Code d
+Events + Code
 
 
 
 ## Triggers
 
 
-* HTTP 
-  * Web API
+* HTTP
+* Timer
+* Event Grid
+* Blob Storage
+* Table Storage
+* Queue Storage
+* \+ many many more
 
-* Time / Events
-  * IFFTT
+
+
+## Bindings
+
+### Syntatic Sugar
+
+Input  & Output
 
 
 
 
-## Binding
 
-Shortcuts
+### Binding Types
+
+* Http
+* Blob Storage
+* Queue Storage
+* Notification Hubs
+* Twilio
+* Send Grid
+* \+ many many more
+
+
+
+
+## Scaling
+
+* Resources ✓
+* Architecture ?
+
 
 
 
 ## Pricing
 
+[![Azure Pricing](https://i.imgur.com/SOXN7A3.png)](https://azure.microsoft.com/en-us/pricing/)
 
 ---
 
 ## Tooling
 
-* **VS Code** (VS 2017, but worse)
-  * Extensions
-* **Postman** (Browser, but better0)
-* **Azure Table Storage Explorer** (SSMS, but worse)
+* **Visual Studio Code**
+  * Amazing Extension Market
+* **Postman**
+* **Azure Table Storage Explorer**
 
 ---
 
-## CloudTable CRUD
+## [`CloudTable`][CloudTable] CRUD
 
-Read
+[CloudTable]: https://docs.microsoft.com/en-us/dotnet/api/microsoft.windowsazure.storage.table.cloudtable?view=azure-dotnet "Microsoft.WindowsAzure.Storage.Table.CloudTable"
 
 ```cs
-var finder = TableOperation.Retrieve<MyTableEntity>("key", id);
-var findResult = await reminderTable.ExecuteAsync(finder);
+var credentials = new StorageCredentials("<name>", "<account-key>");
+var storageAccount = new CloudStorageAccount(credentials, true);
+var tableClient = storageAccount.CreateCloudTableClient();
+var myTable = tableClient.GetTableReference("<table-name>");
 ```
 
 
 
-## Input / Output Bindings
+### Create
+
+```cs
+var data = new MyTableEntity() { Name = "Kyle" };
+var operation = TableOperation.Insert(data);
+var result = await myTable.ExecuteAsync(operation);
+```
+
+
+
+### Read
+
+```cs
+var operation = TableOperation.Retrieve<MyTableEntity>("key", id);
+var result = await myTable.ExecuteAsync(operation);
+```
+
+
+
+### Delete
+
+```cs
+var operation = TableOperation.Delete(myTableEntity);
+var result = await myTable.ExecuteAsync(operation);
+```
 
 
 ---
