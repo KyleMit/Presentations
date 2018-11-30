@@ -128,6 +128,9 @@
 
 		options = getSlidifyOptions( options );
 
+		// FIX how newlines are handled on win / mac - https://github.com/hakimel/reveal.js/issues/929
+		markdown = markdown.replace(/(\r\n|\r)/g, '\n');
+		
 		var separatorRegex = new RegExp( options.separator + ( options.verticalSeparator ? '|' + options.verticalSeparator : '' ), 'mg' ),
 			horizontalSeparatorRegex = new RegExp( options.separator );
 
