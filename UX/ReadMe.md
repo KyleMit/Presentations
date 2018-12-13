@@ -214,15 +214,15 @@ Application State should be managed exclusively though URL
  
 ### Table / Grid
 
-| # Records | Style       |
-|-----------|-------------|
-| \< 10   | display       |
-| \> 10   | sort          |
-| \> 25   | sort + filter |
-| \> 50   | sort + filter + client level* pagination  |
-| \> 500  | sort + filter + server level* pagination  |
-| \> 1000 | sort + filter + database level pagination |
-    
+
+| # Records | View  | Sort  | Filter  | Pagination  |
+|-----------|:-----:|:-----:|:-------:|-------------|
+| \< 10     | **✓** |       |         |             |
+| \> 10     | **✓** | **✓** |        |             |
+| \> 25     | **✓** | **✓** | **✓**  |             |
+| \> 50     | **✓** | **✓** | **✓**  | client      |
+| \> 500    | **✓** | **✓** | **✓**  | server      |
+| \> 1000   | **✓** | **✓** | **✓**  | database    |
 
 
 ----
