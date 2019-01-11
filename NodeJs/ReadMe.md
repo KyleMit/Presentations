@@ -22,8 +22,12 @@ By me, Kyle Mitofsky, a developer
 
 ---
 
+## Functions 101
 
-## ECMAScript [20??](https://codeburst.io/javascript-wtf-is-es6-es8-es-2017-ecmascript-dca859e4821c)
+* ECMAScript [20??](https://codeburst.io/javascript-wtf-is-es6-es8-es-2017-ecmascript-dca859e4821c)
+* Callbacks
+* Promises
+* Async / Await
 
 
 
@@ -65,9 +69,8 @@ SayHi.Apply(this, ['kyle']); // A for Array
 
 
 
-### Function Return
 
-#### Return Value
+#### Return Result
 
 ```js
 function Multiply(a, b) {
@@ -78,7 +81,7 @@ let result = Multiply(2,5)
 console.log(result)
 ```
 
-#### Callbacks
+#### Callback w/ Result
 
 ```js
 function Multiply(a, b, callback) {
@@ -100,7 +103,7 @@ Multiply(2,5, (result) => {
 function MultiplyPromise(a,b) {
     return new Promise((resolve) => {
         Multiply(a, b, (result) => {
-            // resolve promise from inside callback
+            // resolve promise from in callback
             resolve(result)
         });
     });
@@ -119,11 +122,7 @@ multPromise.then(result => {
 })
 ```
 
-<a href="https://bevacqua.github.io/promisees/#code=var+p1+%3D+Promise.race(%5B%0A++new+Promise(resolve+%3D%3E+setTimeout(resolve%2C+4000))%2C%0A++new+Promise((resolve%2C+reject)+%3D%3E+setTimeout(reject%2C+8000))%0A%5D)%0A%0Avar+p2+%3D+Promise.race(%5B%0A++p1%2C%0A++new+Promise(resolve+%3D%3E+setTimeout(resolve%2C+6000))%2C%0A++new+Promise(resolve+%3D%3E+setTimeout(resolve%2C+10000))%2C%0A++new+Promise((resolve%2C+reject)+%3D%3E+setTimeout(reject%2C+2000))%0A%5D)%0A%0Ap2.then(result+%3D%3E+console.log(result))%0Ap2.catch(err+%3D%3E+console.error(err)))">
-    <img src="content/images/promise.png" width="300" alt="promise vizualizer">
-</a>
-
-
+[<img src="content/images/promise.png" width="300" alt="promise vizualizer">](https://bevacqua.github.io/promisees/#)
 
 ### Promise with `Async` / `Await`
 

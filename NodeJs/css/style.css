@@ -10,11 +10,11 @@
     box-shadow: none;
 }
 .reveal code {
-    font-family: 'DejaVu Sans';
+    font-family: 'PT Mono', monospace;
     text-transform: none;
     font-variant: none;
 }
 
 .reveal pre {
-    width: 60%;
+    width: 70%;
 }
