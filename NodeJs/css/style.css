@@ -14,8 +14,7 @@
     text-transform: none;
     font-variant: none;
 }
-.reveal img, 
-.reveal video,
-.reveal iframe {
-    max-width: 50vh;
+
+.reveal pre {
+    width: 60%;
 }

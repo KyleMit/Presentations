@@ -18,104 +18,10 @@ By me, Kyle Mitofsky, a developer
 
 ### Client and Server
 
-
-![JavaScript Execution Environment](content/images/ClientServerJS.png)
-
-
-
-
-## Concern vs. Control
-
-Con(cern + trol)
+<img src="content/images/ClientServerJS.png" width="450" alt="JavaScript Execution Environment" >
 
 ---
 
-## Azure
-
-### smaller, better, faster
-
-* Virtual Machines
-* Web Apps + Web Jobs
-* Logic Apps + Event Grids
-* Functions
-
-
-
-## Ecosystem
-
-Azure is Pickle Jar
-
-![Tom Hanks Pickle Jar](https://i.imgur.com/XNXWWdG.gif)
-
-
-Note: if you have data, azure wants it.  Also plays host to hundreds of Saas providers
-
----
-
-## Functions
-
-Events + Code
-
-
-
-## Triggers
-
-
-* HTTP
-* Timer
-* Event Grid
-* Blob Storage
-* Table Storage
-* Queue Storage
-* \+ many many more
-
-
-
-## Bindings
-
-### Syntatic Sugar
-
-Input  & Output
-
-
-
-
-
-### Binding Types
-
-* Http
-* Blob Storage
-* Queue Storage
-* Notification Hubs
-* Twilio
-* Send Grid
-* \+ many many more
-
-
-
-
-## Scaling
-
-* Resources ✓
-* Architecture ?
-
-
-
-
-## Pricing
-
-[![Azure Pricing](https://i.imgur.com/SOXN7A3.png)](https://azure.microsoft.com/en-us/pricing/)
-
----
-
-## Tooling
-
-* **Visual Studio Code**
-  * Amazing Extension Market
-* **Postman**
-* **Azure Table Storage Explorer**
-
----
 
 ## ECMAScript [20??](https://codeburst.io/javascript-wtf-is-es6-es8-es-2017-ecmascript-dca859e4821c)
 
@@ -238,6 +144,4 @@ multPromise.then(result => {
 
 ## Resources
 
-* [* as a Service](https://en.wikipedia.org/wiki/As_a_service)
-* [Function - Triggers and Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
-
+* [NodeJs Calendar Quickstart](https://developers.google.com/calendar/quickstart/nodejs)
