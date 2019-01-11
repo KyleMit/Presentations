@@ -9,6 +9,13 @@ By me, Kyle Mitofsky, a developer
 
 ---
 
+## NodeJS
+
+> ... an asynchronous, event-driven, JavaScript runtime, designed to build scalable network applications
+
+---
+
+
 ## Execute Code
 
 * **Language**
@@ -77,6 +84,7 @@ function Multiply(a, b) {
     return a * b
 }
 // invoke
+
 let result = Multiply(2,5)
 console.log(result)
 ```
@@ -124,6 +132,9 @@ multPromise.then(result => {
 
 [<img src="content/images/promise.png" width="300" alt="promise vizualizer">](https://bevacqua.github.io/promisees/#)
 
+
+
+
 ### Promise with `Async` / `Await`
 
 ```js
@@ -134,6 +145,17 @@ multPromise.then(result => {
 
 })()
 ```
+
+---
+
+## Node vs .NET
+
+|              | .NET            | Node             |
+|--|--|--|
+| **Language** | C# / VB / F#    | JS / TS          |
+| **Runtime**  | MSIL            | V8               |
+| **Platform** | Win, Mac, Linux | Win, Mac, Linux  |
+| **Packages** | Nuget           | npm              |
 
 ---
 
