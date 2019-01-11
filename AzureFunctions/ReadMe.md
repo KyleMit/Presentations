@@ -3,7 +3,7 @@
 An Introduction to Serverless Compute  
 on the .NET Cloud
 
-<img src="https://i.imgur.com/PayeuSI.png" width="150" alt="azure" class="transparent-img">
+<img src="content/images/azure_functions.png" width="150" alt="azure" class="transparent-img">
 
 
 By me, Kyle Mitofsky, a developer
@@ -44,7 +44,7 @@ Con(cern + trol)
 
 Azure is Pickle Jar
 
-![Tom Hanks Pickle Jar](https://i.imgur.com/XNXWWdG.gif)
+![Tom Hanks Pickle Jar](content/images/pickles.gif)
 
 
 Note: if you have data, azure wants it.  Also plays host to hundreds of Saas providers
@@ -103,7 +103,7 @@ Input  & Output
 
 ## Pricing
 
-[![Azure Pricing](https://i.imgur.com/SOXN7A3.png)](https://azure.microsoft.com/en-us/pricing/)
+[![Azure Pricing](content/images/pricing.png)](https://azure.microsoft.com/en-us/pricing/)
 
 ---
 
