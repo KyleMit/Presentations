@@ -340,6 +340,7 @@ span.slash {
 }
 
 .elevator {
+    min-width: 270px;
     display: inline-block;
     user-select: none;
     background: silver;
